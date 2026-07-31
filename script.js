@@ -39,15 +39,29 @@ window.addEventListener("resize", requestWatermarkUpdate, { passive: true });
 menuButton.addEventListener("click", () => {
   const isOpen = menuButton.classList.toggle("open");
   nav.classList.toggle("open", isOpen);
+  document.body.classList.toggle("menu-open", isOpen);
   menuButton.setAttribute("aria-expanded", String(isOpen));
+  menuButton.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
 });
 
 nav.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", () => {
     menuButton.classList.remove("open");
     nav.classList.remove("open");
+    document.body.classList.remove("menu-open");
     menuButton.setAttribute("aria-expanded", "false");
+    menuButton.setAttribute("aria-label", "Open navigation");
   });
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key !== "Escape" || !nav.classList.contains("open")) return;
+  menuButton.classList.remove("open");
+  nav.classList.remove("open");
+  document.body.classList.remove("menu-open");
+  menuButton.setAttribute("aria-expanded", "false");
+  menuButton.setAttribute("aria-label", "Open navigation");
+  menuButton.focus();
 });
 
 const ventureStack = document.querySelector(".ecosystem-stack");
