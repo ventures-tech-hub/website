@@ -76,8 +76,8 @@ main > section { overflow: clip; }
   left: -38px;
   top: -12px;
 }
-.nav-links { display: flex; align-items: center; gap: clamp(22px, 3vw, 48px); font-size: 14px; }
-.nav-links a { position: relative; padding: 31px 0; transition: color .25s ease; }
+.nav-links { display: flex; align-items: center; gap: clamp(14px, 1.9vw, 30px); font-size: 14px; }
+.nav-links a { position: relative; padding: 31px 0; white-space: nowrap; transition: color .25s ease; }
 .nav-links a::after {
   content: "";
   position: absolute;
@@ -404,6 +404,7 @@ h1 em, h2 em { color: var(--orange); font-style: normal; }
 
 .purpose > :not(.brand-watermark-text),
 .company-profile > :not(.brand-watermark-text),
+.architecture > :not(.brand-watermark-text),
 .values > :not(.brand-watermark-text),
 .operating-model > :not(.brand-watermark-text),
 .capabilities > :not(.brand-watermark-text),
@@ -412,8 +413,83 @@ h1 em, h2 em { color: var(--orange); font-style: normal; }
 .partner-fit > :not(.brand-watermark-text),
 .partnership-journey > :not(.brand-watermark-text),
 .responsibility > :not(.brand-watermark-text),
+.proof > :not(.brand-watermark-text),
 .faq > :not(.brand-watermark-text),
 .founder-message > :not(.brand-watermark-text) { position: relative; z-index: 1; }
+
+.architecture {
+  min-height: 980px;
+  padding: 130px clamp(24px, 7vw, 110px);
+  display: grid;
+  grid-template-columns: .72fr 1.28fr;
+  align-items: center;
+  gap: 8vw;
+  color: white;
+  background: linear-gradient(145deg, #031b48, #082d72);
+  position: relative;
+  overflow: hidden;
+}
+.architecture::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+  background-size: 65px 65px;
+}
+.architecture-copy h2,
+.proof-heading h2 {
+  margin: 0;
+  color: white;
+  font: 500 clamp(42px, 5vw, 72px)/1.08 "Playfair Display", Georgia, serif;
+  letter-spacing: -.035em;
+}
+.architecture-copy h2 em,
+.proof-heading h2 em { color: var(--orange); font-style: normal; }
+.architecture-copy > p:last-child { max-width: 560px; color: rgba(255,255,255,.92); line-height: 1.8; margin-top: 28px; }
+.architecture-map {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  perspective: 1300px;
+}
+.architecture-core {
+  grid-column: 1/-1;
+  min-height: 180px;
+  padding: 38px;
+  display: grid;
+  align-content: center;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.22);
+  background: rgba(255,255,255,.1);
+  box-shadow: 0 35px 90px rgba(0,0,0,.22);
+}
+.architecture-core span,
+.architecture-map article span,
+.proof-card span {
+  color: var(--orange);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+.architecture-core strong {
+  margin-top: 12px;
+  font: 500 44px/1.1 "Playfair Display", Georgia, serif;
+}
+.architecture-map article {
+  min-height: 230px;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,.16);
+  background: rgba(255,255,255,.075);
+  backdrop-filter: blur(14px);
+  transition: transform .35s ease, background .35s ease;
+}
+.architecture-map article:hover { transform: translateY(-6px); background: rgba(255,255,255,.12); }
+.architecture-map h3,
+.proof-card h3 { margin: 56px 0 12px; font: 500 26px/1.3 "Playfair Display", Georgia, serif; }
+.architecture-map p,
+.proof-card p { margin: 0; color: rgba(255,255,255,.86); font-size: 15px; line-height: 1.7; }
 
 .ecosystem {
   min-height: 780px;
@@ -582,6 +658,23 @@ h1 em, h2 em { color: var(--orange); font-style: normal; }
 .value-card:last-child { border: 0; }
 .value-mark { display: block; margin-bottom: 55px; font: 500 48px "Playfair Display", serif; opacity: .85; }
 
+/* Principles ladder. Scoped to min-width so the ID specificity here can never
+   outrank the stacked mobile rules further down the file. */
+@media (min-width: 1081px) {
+  #principles .value-grid { grid-template-columns: repeat(4, 1fr); }
+  #principles .value-card { border-bottom: 0; }
+  #principles .value-card:nth-child(3n) { border-right: 1px solid var(--line); }
+  #principles .value-card:last-child { border-right: 0; }
+}
+/* Tablet / small laptop: 2x2, matching the neighbouring card sections. Borders are
+   stated in full here so they don't depend on cascade order with the mobile rules. */
+@media (min-width: 541px) and (max-width: 1080px) {
+  #principles .value-grid { grid-template-columns: repeat(2, 1fr); }
+  #principles .value-card { border-right: 1px solid var(--line); border-bottom: 0; }
+  #principles .value-card:nth-child(2n) { border-right: 0; }
+  #principles .value-card:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+}
+
 .investment-lens {
   min-height: 1050px; display:grid; grid-template-columns:.72fr 1.28fr; align-items:start; gap:8vw;
   background:#fff;
@@ -687,6 +780,39 @@ h1 em, h2 em { color: var(--orange); font-style: normal; }
 .faq-list summary span { width:34px; height:34px; flex:none; display:grid; place-items:center; border:1px solid var(--line); border-radius:50%; color:var(--orange); font:400 20px "DM Sans",sans-serif; transition:transform .3s ease,background .3s ease; }
 .faq-list details[open] summary span { transform:rotate(45deg); background:white; }
 .faq-list details > p { max-width:720px; margin:-6px 55px 30px 0; color:var(--muted); font-size:13px; line-height:1.8; }
+
+.proof {
+  min-height: 880px;
+  display: grid;
+  grid-template-columns: .74fr 1.26fr;
+  align-items: center;
+  gap: 7vw;
+  color: white;
+  background: linear-gradient(145deg, #072945, #07391f);
+  overflow: hidden;
+}
+.proof::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 76% 20%, rgba(239,143,0,.16), transparent 32%), radial-gradient(circle at 15% 70%, rgba(8,45,114,.4), transparent 38%);
+}
+.proof-heading > p:last-child { max-width: 600px; color: rgba(255,255,255,.88); line-height: 1.8; margin-top: 28px; }
+.proof-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+.proof-card {
+  min-height: 300px;
+  padding: 34px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,.16);
+  background: rgba(255,255,255,.07);
+  backdrop-filter: blur(12px);
+  transition: transform .35s ease, background .35s ease;
+}
+.proof-card:hover { transform: translateY(-6px); background: rgba(255,255,255,.12); }
 
 .contact {
   min-height: 550px;
@@ -808,12 +934,14 @@ footer {
 .delay-two { transition-delay: .26s; }
 
 @media (max-width: 1080px) {
-  .nav-links { gap: 20px; font-size: 12px; }
+  .nav-links { gap: 14px; font-size: 12px; }
   .brand { width: 230px; }
   .hero { grid-template-columns: 1fr 1fr; padding-left: 50px; padding-right: 40px; }
   .hero-visual { transform: scale(.88); transform-origin: right center; }
   .ecosystem { grid-template-columns: 1fr; padding-bottom: 80px; }
   .ecosystem-copy { max-width: 650px; }
+  .architecture, .proof { grid-template-columns: 1fr; }
+  .architecture-copy, .proof-heading { max-width: 760px; }
   .company-profile, .partner-fit, .responsibility { grid-template-columns: 1fr; }
   .profile-heading, .fit-heading, .responsibility-copy { max-width:760px; }
   .profile-grid { grid-template-columns:repeat(3,1fr); }
@@ -825,19 +953,23 @@ footer {
 }
 @media (max-width: 820px) {
   .site-header { height: 76px; }
-  .brand { width: 285px; transform: scale(.72); transform-origin: left center; margin-right: -80px; }
+  /* Keep the logo above the menu overlay so it stays crisp while the menu is open. */
+  .brand { width: 285px; transform: scale(.72); transform-origin: left center; margin-right: -80px; position: relative; z-index: 2; }
   .menu-toggle { display: grid; place-content: center; gap: 7px; z-index: 2; padding: 8px; min-width: 44px; min-height: 44px; }
   .menu-toggle span { display: block; width: 26px; height: 2px; background: var(--navy); transition: transform .3s ease; }
   .menu-toggle.open span:first-child { transform: translateY(4.5px) rotate(45deg); }
   .menu-toggle.open span:last-child { transform: translateY(-4.5px) rotate(-45deg); }
   .nav-links {
     position: fixed; top: 0; left: 0; width: 100vw; height: 100dvh;
-    display: flex; flex-direction: column; align-items: center; justify-content: center;
-    background: rgba(255,255,255,.97); font-size: 22px;
+    display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+    background: #fff; font-size: 22px;
+    padding: 88px 0 32px; overflow-y: auto; overscroll-behavior: contain;
     transform: translateY(-110dvh); transition: transform .45s cubic-bezier(.2,.8,.2,1);
   }
   .nav-links.open { transform: translateY(0); }
-  .nav-links a { min-height: 48px; padding: 10px 16px; display: flex; align-items: center; }
+  .nav-links a { min-height: 48px; padding: 10px 16px; display: flex; align-items: center; flex: none; }
+  .nav-links a:first-child { margin-top: auto; }
+  .nav-links a:last-child { margin-bottom: auto; }
   .nav-links a::after { bottom: 0; }
   .hero { min-height: auto; grid-template-columns: 1fr; padding: 125px 24px 80px; }
   .hero-copy { max-width: 680px; }
@@ -845,7 +977,7 @@ footer {
   .hero-proof { flex-wrap: wrap; row-gap: 20px; }
   .scroll-cue { display: none; }
   .purpose-stage, .value-grid { grid-template-columns: 1fr; }
-  .company-profile, .operating-model, .investment-lens, .partner-fit, .responsibility, .faq, .roots { grid-template-columns: 1fr; }
+  .company-profile, .architecture, .operating-model, .investment-lens, .partner-fit, .responsibility, .proof, .faq, .roots { grid-template-columns: 1fr; }
   .profile-grid { grid-template-columns:1fr; }
   .profile-card { padding:32px 34px 30px 112px; }
   .profile-card > span { left:32px; top:36px; }
@@ -854,7 +986,7 @@ footer {
   .model-steps { grid-template-columns: repeat(2,1fr); }
   .model-step:nth-child(2) { border-right: 0; }
   .model-step { border-bottom: 1px solid var(--line); }
-  .sector-grid { max-width: 720px; }
+  .sector-grid, .architecture-map, .proof-grid { max-width: 720px; }
   .capability-grid { grid-template-columns:1fr; }
   .lens-heading { position: static; margin-bottom: 60px; }
   .fit-heading { margin-bottom:20px; }
@@ -902,7 +1034,7 @@ footer {
   .profile-note { padding:25px 0; }
   .model-step { border-right: 0; }
   .model-visual { transform: scale(.85); margin:-35px 0; }
-  .sector-lens, .partnership-journey { padding: 90px 24px; }
+  .architecture, .sector-lens, .partnership-journey, .proof { padding: 90px 24px; }
   .sector-card:nth-child(even) { transform: none; }
   .sector-card { min-height: 335px; }
   .capability-card { grid-template-columns:1fr; padding:28px; }
@@ -911,7 +1043,7 @@ footer {
   .journey-heading { margin-bottom:60px; }
   .journey-stop { padding:24px; border:1px solid rgba(255,255,255,.12); border-radius:10px; background:rgba(255,255,255,.04); }
   .journey-stop > div { margin:20px auto 26px; }
-  .fit-columns, .commitment-grid { grid-template-columns:1fr; }
+  .fit-columns, .commitment-grid, .architecture-map, .proof-grid { grid-template-columns:1fr; }
   .fit-panel { min-height:auto; transform:none; }
   .commitment-card { min-height:260px; }
   .commitment-card h3 { margin-top:56px; }
@@ -939,6 +1071,25 @@ footer {
   footer { grid-template-columns: 1fr; gap: 38px; }
   .footer-brand { grid-column: auto; }
   .footer-bottom { flex-direction: column; gap: 8px; }
+  /* Cards hug their content on phones. The tall min-heights and large title
+     offsets exist to align columns on desktop, which no longer applies once
+     everything is a single stack. */
+  .architecture-map article, .proof-card { min-height: 0; padding: 28px 24px; }
+  .architecture-map h3, .proof-card h3 { margin-top: 24px; }
+  .architecture-core { min-height: 0; padding: 30px 24px; }
+  .architecture-core strong { font-size: 34px; }
+  .sector-card { min-height: 0; padding: 28px 24px; }
+  .sector-card h3 { margin-top: 26px; }
+  .model-step { min-height: 0; padding: 32px 22px; }
+  .model-step h3 { margin-top: 22px; }
+  .capability-card { min-height: 0; }
+  .profile-card { min-height: 0; padding: 76px 24px 28px; }
+  .value-card { padding: 34px 24px; }
+  .value-mark { margin-bottom: 20px; }
+  /* Touch targets: footer links and the hero text link were 17-18px tall. */
+  .footer-col { gap: 2px; }
+  .footer-col a { min-height: 44px; display: flex; align-items: center; }
+  .text-link { min-height: 44px; display: inline-flex; align-items: center; }
   .brand-watermark-text { opacity: .125; }
   .brand-watermark-text span { font-size: 92px; }
   .brand-watermark-text small { font-size: 18px; letter-spacing: .48em; }
@@ -952,7 +1103,7 @@ footer {
   .brand { transform:scale(.62); margin-right:-108px; }
   .hero { padding-left:20px; padding-right:20px; }
   h1 { font-size:40px; }
-  .section-shell, .ecosystem, .sector-lens, .partnership-journey, .responsibility { padding-left:20px; padding-right:20px; }
+  .section-shell, .ecosystem, .architecture, .sector-lens, .partnership-journey, .responsibility, .proof { padding-left:20px; padding-right:20px; }
   .floating-note { padding:10px 12px; }
   .note-impact { right:-12px; }
   .founder-plaque { max-width:88%; }
