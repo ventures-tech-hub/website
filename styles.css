@@ -275,4 +275,10 @@ button { font: inherit; }
   .socials svg { width: 26px; height: 26px; }
   .footer-bottom .container { display: block; padding-top: 28px; padding-bottom: 28px; }
   .footer-bottom .tagline { display: none; }
+  /* Keep the Figma hero word rows (5 words, then "A Brighter Tomorrow") on phones narrower than 390px */
+  .hero-words li:last-child { flex-basis: 100%; }
 }
+@media (max-width: 389px) {
+  .hero-words { column-gap: 8px !important; letter-spacing: 0 !important; font-size: 11px !important; }
+}
+.nw { white-space: nowrap; }
