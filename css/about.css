@@ -1,0 +1,197 @@
+/* About page — Figma UI Design: About (desktop 1280 / mobile 390) */
+
+.ab-ic48 { display: block; width: 48px; height: 48px; }
+
+/* ---------- Hero ---------- */
+.ab-hero { height: 548px; }
+.ab-hero-shade { position: absolute; inset: 0; background: rgba(0, 0, 0, .2); }
+.ab-hero-fade {
+  position: absolute; inset: 0;
+  background: linear-gradient(90deg, #FAFDFE 0%, rgba(250, 253, 254, .85) 39.36%, rgba(250, 253, 254, .6) 50.02%, rgba(250, 253, 254, 0) 58.98%);
+}
+.ab-hero-inner { height: 100%; padding-top: 128px; }
+.ab-hero h1 { max-width: 640px; }
+.ab-hero-text { max-width: 600px; margin-top: 24px; }
+.ab-hero-btn { margin-top: 32px; }
+.ab-words { position: absolute; top: 304px; left: calc(var(--gutter) + 1000px); }
+.ab-words li:last-child { padding-bottom: 7px; }
+
+/* ---------- Mission / Vision / Purpose ---------- */
+.ab-mvp { padding-top: 48px; }
+.ab-mvp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.ab-mvp-card { padding: 24px 24px 24px; }
+.ab-mvp-card .eyebrow { margin-top: 24px; }
+.ab-mvp-card h2 { margin-top: 10px; }
+.ab-mvp-card p { margin-top: 8px; }
+
+/* ---------- Our Story ---------- */
+.ab-story { padding-top: 96px; }
+.ab-story-grid { display: grid; grid-template-columns: 504px 1fr; column-gap: 40px; align-items: stretch; }
+.ab-story-text { display: flex; flex-direction: column; align-items: flex-start; }
+.ab-story-text h2 { margin-top: 8px; }
+.ab-story-copy { max-width: 496px; margin-top: 16px; }
+.ab-story-copy p + p { margin-top: 12px; }
+.ab-story-btn { margin-top: auto; }
+.ab-story-media {
+  position: relative;
+  height: 528px;
+  margin-right: calc(-1 * var(--gutter) - max(0px, (100vw - 1280px) / 2));
+  border-radius: 16px 0 0 16px;
+  overflow: hidden;
+}
+.ab-story-media > img { width: 100%; height: 100%; object-fit: cover; }
+.ab-quote {
+  position: absolute;
+  right: calc(var(--gutter) + max(0px, (100vw - 1280px) / 2));
+  bottom: 40px;
+  width: 402px;
+  margin: 0;
+  padding: 32px;
+  background: var(--n-950);
+  border-radius: 12px;
+  color: #fff;
+}
+.ab-quote-ic { display: block; width: 40px; height: 40px; }
+.ab-quote blockquote { margin: 20px -8px 0 0; font-family: var(--font-display); font-size: 20px; line-height: 26px; font-weight: 600; color: #fff; }
+.ab-quote figcaption { margin-top: 18px; font-size: 16px; line-height: 26px; color: #fff; }
+
+/* ---------- Core values ---------- */
+.ab-values { margin-top: 48px; padding: 48px 0; background: #F1F8FD; }
+.ab-values h2 { margin-top: 8px; }
+.ab-values-grid { display: grid; grid-template-columns: repeat(3, 267.33px) 1fr; column-gap: 24px; margin-top: 48px; }
+.ab-value h3 { margin-top: 16px; }
+.ab-value p { margin-top: 6px; font-size: 18px; line-height: 28px; }
+.ab-value:nth-child(3) p { max-width: 241px; }
+
+/* ---------- How we work ---------- */
+.ab-how { position: relative; padding-top: 48px; }
+.ab-how-fade { display: none; }
+.ab-how-grid { display: grid; grid-template-columns: 616px 1fr; column-gap: 48px; }
+.ab-how-media {
+  height: 416px;
+  margin-left: calc(-1 * var(--gutter) - max(0px, (100vw - 1280px) / 2));
+  border-radius: 0 12px 12px 0;
+  overflow: hidden;
+}
+.ab-how-media img { width: 100%; height: 100%; object-fit: cover; }
+.ab-how-text h2 { margin-top: 8px; }
+.ab-how-text > p { margin-top: 12px; }
+.ab-how-list { display: grid; gap: 16px; margin-top: 32px; }
+.ab-how-list li { display: flex; align-items: center; gap: 16px; font-family: var(--font-display); font-size: 20px; line-height: 26px; font-weight: 600; color: var(--n-800); }
+.ab-how-list svg { width: 32px; height: 32px; }
+@media (min-width: 1181px) { .ab-how-list li { white-space: nowrap; } }
+
+/* ---------- Why Loktara ---------- */
+.ab-why { padding: 96px 0 48px; }
+.ab-why-head { display: grid; grid-template-columns: 1fr 554px; column-gap: 40px; }
+.ab-why-head h2 { margin-top: 8px; line-height: 56px; }
+.ab-why-head p { padding-top: 26px; }
+.ab-why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 40px; }
+.ab-why-card { padding: 24px; }
+.ab-why-card h3 { margin-top: 16px; }
+.ab-why-card p { margin-top: 6px; }
+
+/* ---------- CTA band (page-specific spacing / image crop) ---------- */
+.ab-cta > img.desktop-only { object-position: 50% 20%; }
+.ab-cta .cta-inner { gap: 12px; padding: 48px var(--gutter); }
+.ab-cta .cta-inner .btn { margin-top: 12px; }
+.ab-cta .eyebrow { margin-bottom: 0; }
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1180px) {
+  .ab-hero { height: auto; }
+  .ab-hero-inner { padding-top: calc(var(--header-h) + 48px); padding-bottom: 56px; }
+  .ab-hero-fade { background: linear-gradient(90deg, #FAFDFE 0%, rgba(250, 253, 254, .9) 50%, rgba(250, 253, 254, .6) 70%, rgba(250, 253, 254, .2) 100%); }
+  .ab-hero-bottom { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 32px; }
+  .ab-words { position: static; }
+  .ab-story-grid { grid-template-columns: 1fr; row-gap: 40px; }
+  .ab-story-btn { margin-top: 24px; }
+  .ab-story-media { margin-right: calc(-1 * var(--gutter)); border-radius: 16px 0 0 16px; }
+  .ab-quote { right: var(--gutter); }
+  .ab-values-grid { grid-template-columns: repeat(2, 1fr); row-gap: 40px; }
+  .ab-how-grid { grid-template-columns: 1fr; row-gap: 40px; }
+  .ab-how-media { margin-right: var(--gutter); }
+  .ab-why-head { grid-template-columns: 1fr; }
+  .ab-why-head p { padding-top: 16px; }
+  .ab-why-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ---------- Mobile (390 frame) ---------- */
+@media (max-width: 768px) {
+  .ab-ic48 { width: 40px; height: 40px; }
+  .h1.h1 { font-weight: 600; }
+
+  /* Hero */
+  .ab-hero { height: 844px; }
+  .ab-hero .hero-bg { display: none; }
+  .ab-hero-bg-m { position: absolute; top: -32px; left: 50%; width: 489px; max-width: none; height: 876px; transform: translateX(-50%); object-fit: cover; }
+  .ab-hero-fade { background: linear-gradient(180deg, #FAFDFE 0%, rgba(250, 253, 254, .9) 39.13%, rgba(250, 253, 254, .75) 46.08%, rgba(250, 253, 254, 0) 53.28%); }
+  .ab-hero-inner { display: flex; flex-direction: column; height: 100%; padding-top: 112px; padding-bottom: 32px; }
+  .ab-hero .eyebrow.mobile-only { display: block !important; margin-bottom: 10px; }
+  .ab-hero-text { margin-top: 18px; }
+  .ab-hero-bottom { display: block; margin-top: auto; }
+  .ab-hero-btn { display: flex; width: 100%; margin-top: 0; }
+  .ab-words { display: flex; flex-wrap: wrap; column-gap: 12px; row-gap: 12px; margin-top: 40px; font-size: 12px; line-height: 18px; font-weight: 500; letter-spacing: .2px; color: #fff; }
+  .ab-words li:last-child { padding-bottom: 4px; }
+  .ab-words li:last-child::after { width: 55px; }
+
+  /* Mission cards */
+  .ab-mvp { padding-top: 32px; }
+  .ab-mvp-grid { grid-template-columns: 1fr; gap: 20px; }
+  .ab-mvp-card { padding: 16px 16px 16px; }
+  .ab-mvp-card .eyebrow { margin-top: 20px; }
+  .ab-mvp-card h2 { margin-top: 9px; font-size: 24px; line-height: 30px; letter-spacing: -.25px; }
+  .ab-mvp-card p { margin-top: 7px; }
+  .br-d { display: none; }
+
+  /* Story */
+  .ab-story { padding-top: 64px; }
+  .ab-story-grid { row-gap: 20px; }
+  .ab-story-text h2 { margin-top: 10px; }
+  .ab-story-copy { margin-top: 10px; }
+  .ab-story-copy p + p { margin-top: 8px; }
+  .ab-story-btn { display: flex; width: 100%; margin-top: 20px; }
+  .ab-story-media { height: 302px; margin: 0 calc(-1 * var(--gutter)); border-radius: 0; }
+  .ab-quote { right: 8px; bottom: 8px; width: 272px; padding: 20px; }
+  .ab-quote-ic { width: 32px; height: 32px; }
+  .ab-quote blockquote { margin-top: 16px; font-size: 18px; line-height: 24px; }
+  .ab-quote figcaption { margin-top: 12px; font-size: 12px; line-height: 18px; font-weight: 500; letter-spacing: .2px; }
+
+  /* Values */
+  .ab-values { margin-top: 0; padding: 32px 0 60px; }
+  .ab-values h2 { margin-top: 10px; }
+  .ab-values-grid { grid-template-columns: 1fr; row-gap: 64px; margin-top: 48px; }
+  .ab-value { display: flex; align-items: flex-start; gap: 24px; }
+  .ab-value h3 { margin-top: 0; }
+  .ab-value p { margin-top: 6px; font-size: 16px; line-height: 26px; }
+
+  /* How we work */
+  .ab-how { padding-top: 0; }
+  .ab-how-fade { display: block; position: absolute; top: 0; left: 0; right: 0; height: 778px; z-index: 0; pointer-events: none; background: linear-gradient(180deg, rgba(244, 248, 251, 0) 0%, rgba(244, 248, 251, .7) 40%, rgba(244, 248, 251, .95) 56.05%, #F4F8FB 70.27%); }
+  .ab-how-grid { position: relative; row-gap: 32px; padding-bottom: 64px; }
+  .ab-how-media { position: relative; z-index: 1; height: 254px; margin: 0 calc(-1 * var(--gutter)); border-radius: 0; }
+  .ab-how-text { position: relative; z-index: 2; }
+  .ab-how-text h2 { margin-top: 10px; }
+  .ab-how-text > p { margin-top: 10px; margin-right: -6px; }
+  .ab-how-list { margin-top: 24px; gap: 16px; }
+  .ab-how-list li { align-items: flex-start; gap: 12px; font-size: 18px; line-height: 24px; }
+  .ab-how-list svg { width: 24px; height: 24px; margin-top: -2px; }
+  .ab-how-btn.mobile-only { display: flex !important; margin-top: 32px; }
+
+  /* Why */
+  .ab-why { padding: 0 0 32px; }
+  .ab-why-head h2 { margin-top: 10px; line-height: 38px; }
+  .ab-why-head p { padding-top: 10px; }
+  .ab-why-grid { grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
+  .ab-why-card { padding: 20px 16px; }
+  .ab-why-card h3 { max-width: 115px; margin-top: 16px; font-size: 18px; line-height: 24px; }
+  .ab-why-card p { margin-top: 8px; }
+
+  /* CTA */
+  .ab-cta { height: 324px; }
+  .ab-cta > .ab-cta-img-m { position: absolute; inset: auto auto 0 50%; width: 771px; max-width: none; height: 434px; transform: translateX(-53.4%); object-fit: cover; }
+  .ab-cta-fade { position: absolute; inset: 0; background: linear-gradient(180deg, #F0F4F5 0%, #F0F4F5 40.6%, rgba(240, 244, 245, .79) 47.8%, rgba(240, 244, 245, .65) 54%, rgba(240, 244, 245, 0) 63.4%); }
+  .ab-cta .cta-inner { gap: 10px; padding: 62px var(--gutter) 0; }
+  .ab-cta h2 { margin: 0 -12px; white-space: nowrap; }
+  .ab-cta .cta-inner .btn { margin-top: 10px; }
+}
