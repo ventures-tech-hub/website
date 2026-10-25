@@ -193,3 +193,13 @@ svg use { overflow: visible; }
   .faq-plus { width: 18px; height: 18px; stroke-width: 2.6; }
   .faq p { padding: 0 16px 18px; font-size: 14px; line-height: 22px; }
 }
+
+/* Mobile: button straight under the intro so it is on the first screen; shorter hero, photo anchored to the bottom */
+@media (max-width: 768px) {
+  .ap-hero, .ap-hero-inner { min-height: 0; }
+  .ap-hero-bg-m { top: auto; bottom: 0; min-height: 0; height: 640px; width: 100%; left: 0; object-position: 35% bottom; }
+  .ap-hero-copy { flex: none; }
+  .ap-hero-copy p { margin-bottom: 0; }
+  .ap-hero-copy .btn { margin-top: 24px; }
+  .ap-hero .hero-words { margin-top: 170px; }
+}

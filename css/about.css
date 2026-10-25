@@ -195,3 +195,12 @@
   .ab-cta h2 { margin: 0 -12px; white-space: nowrap; }
   .ab-cta .cta-inner .btn { margin-top: 10px; }
 }
+
+/* Mobile: button straight under the intro so it is on the first screen; shorter hero, photo anchored to the bottom */
+@media (max-width: 768px) {
+  .ab-hero { height: auto; }
+  .ab-hero-bg-m { top: auto; bottom: 0; height: 640px; }
+  .ab-hero-inner { height: auto; }
+  .ab-hero-bottom { margin-top: 24px; }
+  .ab-hero-bottom .hero-words { margin-top: 170px; }
+}

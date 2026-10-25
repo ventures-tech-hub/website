@@ -258,3 +258,11 @@
   .eco-cta h2 { margin-top: 9px; }
   .eco-cta p { max-width: 300px; margin-top: 11px; }
 }
+
+/* Mobile: button straight under the intro so it is on the first screen */
+@media (max-width: 768px) {
+  .eco-hero-inner { display: flex; flex-direction: column; }
+  .eco-hero-copy { order: 1; }
+  .eco-hero-btn { order: 2; margin-top: 24px; }
+  .eco-orbit { order: 3; margin-top: 16px; }
+}

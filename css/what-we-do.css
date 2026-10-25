@@ -175,3 +175,12 @@
   .cta-band { background: linear-gradient(180deg, #F0F4F5 0, #F0F4F5 131px, rgba(240, 244, 245, .79) 155px, rgba(240, 244, 245, .65) 175px, rgba(240, 244, 245, 0) 205px), url("../assets/ui/img/a5a2870baf.jpg") 54% 100% / auto 134% no-repeat; }
   .cta-band > img { display: none; }
 }
+
+/* Mobile: button straight under the intro so it is on the first screen; shorter hero, photo anchored to the bottom */
+@media (max-width: 768px) {
+  .wwd-hero { min-height: 0; }
+  .wwd-hero .hero-bg { top: auto; bottom: 0; height: 640px; }
+  .wwd-hero-copy { flex: none; }
+  .wwd-hero-copy .btn { margin-top: 24px; }
+  .wwd-hero .wwd-words { margin-top: 170px; }
+}

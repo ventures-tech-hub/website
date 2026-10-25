@@ -260,3 +260,12 @@
   .news-row .btn { width: 100%; }
   .news-note { margin-top: 20px; }
 }
+
+/* Mobile: button straight under the intro so it is on the first screen; shorter hero, photo anchored to the bottom */
+@media (max-width: 768px) {
+  .ins-hero, .ins-hero-inner { min-height: 0; }
+  .ins-hero .hero-bg { top: auto; bottom: 0; height: 640px; }
+  .ins-hero-copy { flex: none; }
+  .ins-hero .btn { margin-top: 24px; }
+  .ins-hero .hero-words { margin-top: 170px; }
+}
