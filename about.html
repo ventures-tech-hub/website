@@ -39,25 +39,20 @@
 
 <main>
   <!-- ===== Hero ===== -->
-  <section class="hero ab-hero">
-    <img class="hero-bg desktop-only" src="assets/ui/img/2519ef2857.jpg" alt="" />
-    <img class="ab-hero-bg-m mobile-only" src="assets/ui/img/193bd4fc65.jpg" alt="" />
-    <div class="ab-hero-shade"></div>
-    <div class="ab-hero-fade"></div>
-    <div class="container hero-inner ab-hero-inner">
-      <span class="eyebrow mobile-only">About Us</span>
-      <h1 class="display-xl">People First.<br /><span class="c-orange">Purpose</span> <span class="c-green">Always.</span></h1>
-      <p class="body-l ab-hero-text">Loktara Ventures is a <span class="nw">venture-building</span> and business advisory company. We partner with founders and businesses to turn ideas into scalable and meaningful companies through a combination of technology, strategy, operational support and capital.</p>
-      <div class="ab-hero-bottom">
-        <a class="btn btn-primary ab-hero-btn" href="approach.html">Our Approach →</a>
-        <ul class="hero-words ab-words">
-          <li>Ideas</li>
-          <li>People</li>
-          <li>Technology</li>
-          <li>Capital</li>
-          <li>Business</li>
-          <li>A Brighter Tomorrow</li>
-        </ul>
+  <section class="page-hero ab-hero">
+    <picture class="page-hero-media">
+      <source media="(max-width: 768px)" srcset="assets/ui/img/hero-about-m.jpg" />
+      <img src="assets/ui/img/hero-about-d.jpg" alt="" fetchpriority="high" />
+    </picture>
+    <div class="page-hero-fade" aria-hidden="true"></div>
+    <div class="container page-hero-inner">
+      <div class="page-hero-copy">
+        <span class="eyebrow eyebrow-line">About Loktara</span>
+        <h1 class="display-xl">People First.<br /><span class="c-orange">Purpose</span> <span class="c-green">Always.</span></h1>
+        <p class="body-l">Loktara Ventures is a <span class="nw">venture-building</span> and business advisory company. We partner with founders and businesses to turn ideas into scalable and meaningful companies through a combination of technology, strategy, operational support and capital.</p>
+        <div class="page-hero-actions">
+          <a class="btn btn-primary" href="approach.html">Our Approach →</a>
+        </div>
       </div>
     </div>
   </section>
@@ -243,6 +238,7 @@
         <li><a href="about.html">About</a></li>
         <li><a href="what-we-do.html">What We Do</a></li>
         <li><a href="#">Our Ventures</a></li>
+        <li><a href="ecosystem.html">Our Ecosystem</a></li>
         <li><a href="approach.html">Our Approach</a></li>
         <li><a href="insights.html">Insights</a></li>
         <li><a href="#">Contact</a></li>

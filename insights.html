@@ -38,27 +38,21 @@
 
 <main>
   <!-- Hero -->
-  <section class="hero ins-hero">
-    <picture>
-      <source media="(max-width: 768px)" srcset="assets/ui/img/57d69d9588.jpg" />
-      <img class="hero-bg" src="assets/ui/img/9f2c08bdf8.jpg" alt="" />
+  <section class="page-hero ins-hero">
+    <picture class="page-hero-media">
+      <source media="(max-width: 768px)" srcset="assets/ui/img/hero-insights-m.jpg" />
+      <img src="assets/ui/img/hero-insights-d.jpg" alt="" fetchpriority="high" />
     </picture>
-    <div class="hero-fade"></div>
-    <div class="container hero-inner ins-hero-inner">
-      <div class="ins-hero-copy">
-        <span class="eyebrow mobile-only">Insights</span>
+    <div class="page-hero-fade" aria-hidden="true"></div>
+    <div class="container page-hero-inner">
+      <div class="page-hero-copy">
+        <span class="eyebrow eyebrow-line">Insights</span>
         <h1 class="display-xl"><span>Ideas.</span> <span>Perspectives.</span> <span class="c-green"><span class="nw">Real-World</span> Insights.</span></h1>
         <p class="body-l">Thoughts, learnings and practical insights on building businesses, supporting founders and creating <span class="nw">long-term</span> value across industries and markets.</p>
-        <a class="btn btn-primary" href="#all-insights">Explore All Insights →</a>
+        <div class="page-hero-actions">
+          <a class="btn btn-primary" href="#all-insights">Explore All Insights →</a>
+        </div>
       </div>
-      <ul class="hero-words" aria-hidden="true">
-        <li>Ideas</li>
-        <li>People</li>
-        <li>Technology</li>
-        <li>Capital</li>
-        <li>Business</li>
-        <li>A Brighter Tomorrow</li>
-      </ul>
     </div>
   </section>
 
@@ -133,22 +127,25 @@
           <label class="search">
             <svg viewBox="816 1378 24 24" fill="none" aria-hidden="true"><path d="M838 1400L833.66 1395.66" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#475569"/><path d="M836 1390C836 1394.42 832.418 1398 828 1398C823.582 1398 820 1394.42 820 1390C820 1385.58 823.582 1382 828 1382C832.418 1382 836 1385.58 836 1390Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#475569"/></svg>
             <span class="sr-only">Search insights</span>
-            <input type="search" placeholder="Search" />
+            <input type="search" placeholder="Search" autocomplete="off" />
+            <button class="search-clear" type="button" aria-label="Clear search" hidden><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke-width="2"/><path d="m15 9-6 6m0-6 6 6" stroke-width="2" stroke-linecap="round"/></svg></button>
           </label>
-          <label class="sort">
-            <span class="sr-only">Sort insights</span>
-            <select>
-              <option>Sort By</option>
-              <option>Newest</option>
-              <option>Oldest</option>
-            </select>
-            <svg viewBox="1200 1379 24 24" fill="none" aria-hidden="true"><path d="M1206 1388L1212 1394L1218 1388" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#475569"/></svg>
-          </label>
+          <div class="sort">
+            <span class="sr-only" id="sort-label">Sort insights</span>
+            <button class="sort-trigger" type="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="sort-menu" aria-labelledby="sort-label sort-value">
+              <span class="sort-value is-placeholder" id="sort-value">Sort By</span>
+              <svg viewBox="1200 1379 24 24" fill="none" aria-hidden="true"><path d="M1206 1388L1212 1394L1218 1388" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#475569"/></svg>
+            </button>
+            <ul class="sort-menu" id="sort-menu" role="listbox" aria-labelledby="sort-label" tabindex="-1" hidden>
+              <li role="option" data-sort="newest" aria-selected="false">Newest<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+              <li role="option" data-sort="oldest" aria-selected="false">Oldest<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+            </ul>
+          </div>
         </form>
       </div>
 
       <div class="post-grid">
-        <article class="post">
+        <article class="post card-link">
           <div class="post-media"><img src="assets/ui/img/8b4789b89d.jpg" alt="A hand interacting with a digital data dashboard" loading="lazy" /><span class="tag tag-navy">Startups &amp; Founders</span></div>
           <div class="post-body">
             <span class="post-date">Aug 28, 2024</span>
@@ -157,7 +154,7 @@
             <a class="link-arrow" href="#">Read More →</a>
           </div>
         </article>
-        <article class="post">
+        <article class="post card-link">
           <div class="post-media"><img src="assets/ui/img/419463c910.jpg" alt="A city skyline at sunrise" loading="lazy" /><span class="tag tag-green">Markets &amp; Trends</span></div>
           <div class="post-body">
             <span class="post-date">Aug 10, 2024</span>
@@ -166,7 +163,7 @@
             <a class="link-arrow" href="#">Read More →</a>
           </div>
         </article>
-        <article class="post">
+        <article class="post card-link">
           <div class="post-media"><img src="assets/ui/img/366fcbe333.jpg" alt="A hand sketching product ideas in a notebook" loading="lazy" /><span class="tag tag-orange">Technology</span></div>
           <div class="post-body">
             <span class="post-date">Jul 25, 2024</span>
@@ -175,7 +172,7 @@
             <a class="link-arrow" href="#">Read More →</a>
           </div>
         </article>
-        <article class="post">
+        <article class="post card-link">
           <div class="post-media"><img src="assets/ui/img/b0eafcd465.jpg" alt="A team meeting around a boardroom table" loading="lazy" /><span class="tag tag-orange">Capital &amp; Investment</span></div>
           <div class="post-body">
             <span class="post-date">Jul 12, 2024</span>
@@ -184,7 +181,7 @@
             <a class="link-arrow" href="#">Read More →</a>
           </div>
         </article>
-        <article class="post">
+        <article class="post card-link">
           <div class="post-media"><img src="assets/ui/img/58192e09b4.jpg" alt="Stacks of coins growing with a seedling on top" loading="lazy" /><span class="tag tag-navy">Business Growth</span></div>
           <div class="post-body">
             <span class="post-date">Jun 28, 2024</span>
@@ -193,7 +190,7 @@
             <a class="link-arrow" href="#">Read More →</a>
           </div>
         </article>
-        <article class="post desktop-only">
+        <article class="post card-link desktop-only">
           <div class="post-media"><img src="assets/ui/img/872dfcf66d.jpg" alt="A curved glass tower at sunset" loading="lazy" /><span class="tag tag-green">Industry Perspectives</span></div>
           <div class="post-body">
             <span class="post-date">Jun 12, 2024</span>
@@ -202,7 +199,7 @@
             <a class="link-arrow" href="#">Read More →</a>
           </div>
         </article>
-        <article class="post desktop-only">
+        <article class="post card-link desktop-only">
           <div class="post-media"><img src="assets/ui/img/3bea751f03.jpg" alt="A hiker looking out over a mountain range" loading="lazy" /><span class="tag tag-navy">Venture Building</span></div>
           <div class="post-body">
             <span class="post-date">May 30, 2024</span>
@@ -211,7 +208,7 @@
             <a class="link-arrow" href="#">Read More →</a>
           </div>
         </article>
-        <article class="post desktop-only">
+        <article class="post card-link desktop-only">
           <div class="post-media"><img src="assets/ui/img/2cc85e9e2b.jpg" alt="Hands typing code on a laptop" loading="lazy" /><span class="tag tag-green">Technology</span></div>
           <div class="post-body">
             <span class="post-date">May 15, 2024</span>
@@ -220,7 +217,7 @@
             <a class="link-arrow" href="#">Read More →</a>
           </div>
         </article>
-        <article class="post desktop-only">
+        <article class="post card-link desktop-only">
           <div class="post-media"><img src="assets/ui/img/55649e7d43.jpg" alt="A glass office tower rising above green trees" loading="lazy" /><span class="tag tag-orange">Business Growth</span></div>
           <div class="post-body">
             <span class="post-date">Apr 28, 2024</span>
@@ -253,15 +250,17 @@
           <h2 class="h1">Get the Latest Insights <span class="news-br">from <span class="c-green">Loktara.</span></span></h2>
           <p class="body-l">Subscribe to receive our latest thoughts, perspectives and updates directly in your inbox.</p>
         </div>
-        <form class="news-form" action="#" onsubmit="return false">
+        <form class="news-form" action="#" novalidate>
           <div class="news-row">
             <label class="news-input">
               <svg viewBox="672 3081 24 24" fill="none" aria-hidden="true"><path d="M694 3088L685.009 3093.73C684.704 3093.9 684.357 3094 684.005 3094C683.652 3094 683.305 3093.9 683 3093.73L674 3088" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#475569"/><path d="M676 3085H692C693.105 3085 694 3085.9 694 3087V3099C694 3100.1 693.105 3101 692 3101H676C674.895 3101 674 3100.1 674 3099V3087C674 3085.9 674.895 3085 676 3085Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#475569"/></svg>
               <span class="sr-only">Email address</span>
-              <input type="email" placeholder="Enter your email" required />
+              <input type="email" placeholder="Enter your email" required aria-describedby="news-error" />
+              <button class="news-clear" type="button" aria-label="Clear email" hidden><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke-width="2"/><path d="m15 9-6 6m0-6 6 6" stroke-width="2" stroke-linecap="round"/></svg></button>
             </label>
             <button class="btn btn-primary" type="submit">Subscribe →</button>
           </div>
+          <p class="news-error" id="news-error" role="alert" hidden></p>
           <p class="news-note">No spam, Unsubscribe anytime.</p>
         </form>
       </div>
@@ -282,6 +281,7 @@
         <li><a href="about.html">About</a></li>
         <li><a href="what-we-do.html">What We Do</a></li>
         <li><a href="#">Our Ventures</a></li>
+        <li><a href="ecosystem.html">Our Ecosystem</a></li>
         <li><a href="approach.html">Our Approach</a></li>
         <li><a href="insights.html">Insights</a></li>
         <li><a href="#">Contact</a></li>

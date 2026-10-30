@@ -1,4 +1,28 @@
 /* Loktara Ventures — Home (Figma UI Design: Home desktop 1280 / mobile 390) */
+/* ---------- Hero (Figma values) ---------- */
+.home-hero {
+  --hero-h: 680px;
+  --tint: 237 238 241;
+  --hero-pt: 164px;
+  --hero-copy: 593px;
+  --fade-x: linear-gradient(90deg, rgb(237 238 241) 0%, rgb(237 238 241 / 0.95) 32.5%, rgb(237 238 241 / 0.7) 42.1%, rgb(237 238 241 / 0) 49.5%);
+  --fade-y: linear-gradient(180deg, rgb(229 232 235) 0%, rgb(229 232 235 / 0.95) 16.7%, rgb(229 232 235 / 0.9) 26.9%, rgb(229 232 235 / 0) 30.1%);
+}
+.hero-chips { display: flex; flex-wrap: wrap; gap: 12px 16px; width: max-content; max-width: calc(100vw - 2 * var(--gutter)); margin-top: 32px; }
+.hero-chips li { display: flex; align-items: center; gap: 4px; font-family: var(--font-display); font-size: 16px; line-height: 22px; font-weight: 600; color: #1A1A1A; }
+.hero-chips .ico { width: 24px; height: 24px; }
+@media (max-width: 768px) {
+  .home-hero { --tint: 237 238 241; --fade-m: linear-gradient(180deg, rgb(237 238 241) 0%, rgb(237 238 241 / 0.95) 32.5%, rgb(237 238 241 / 0.7) 55.7%, rgb(237 238 241 / 0) 65.9%); }
+  .hero-chips { flex-wrap: nowrap; gap: 20px; width: auto; max-width: none; margin-top: 24px; }
+  .hero-chips li { flex-direction: column; align-items: flex-start; gap: 8px; font-size: 14px; line-height: 20px; }
+  .hero-chips .chip-venture { width: 54px; }
+  .hero-chips .chip-ops { order: 3; }
+  .hero-chips .chip-strategy { order: 4; }
+  .hero-chips .chip-capital { order: 5; }
+  .hero-chips .ico { width: 40px; height: 40px; }
+  .home-hero .page-hero-actions { margin-top: 24px; }
+  .home-hero .page-hero-actions .btn { width: 229px; }
+}
 
 .ico { display: block; flex: none; }
 main section .eyebrow + .h1,
@@ -12,17 +36,8 @@ main section .eyebrow + h2 { margin-top: 8px; }
 .section-head > .link-arrow { margin-bottom: 29px; }
 
 /* ---------- Hero ---------- */
-.home-hero { height: 680px; }
-.home-hero .hero-bg { object-position: 50% 50%; }
-.home-hero .hero-inner { height: 100%; padding-top: 155px; }
-.hero-lead { max-width: 660px; margin-top: 24px; }
-.hero-chips { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 31px; margin-top: 33px; }
-.hero-chips li { display: flex; align-items: center; gap: 8px; font-family: var(--font-display); font-size: 20px; line-height: 26px; font-weight: 600; color: #1A1A1A; }
-.hero-chips .ico { width: 32px; height: 32px; }
-.hero-actions { display: flex; gap: 24px; margin-top: 32px; }
 .btn-story .ico { width: 24px; height: 24px; }
 .btn-story .ico path { stroke: currentColor; }
-.home-hero .hero-words { position: absolute; top: 436px; left: calc(100% - 240px); }
 
 /* ---------- About ---------- */
 .home-about {
@@ -136,7 +151,6 @@ main section .eyebrow + h2 { margin-top: 8px; }
 .insight-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 6px; }
 .insight-row p { max-width: 230px; }
 .insight-arrow { font-size: 16px; line-height: 24px; font-weight: 600; color: var(--orange-700); }
-.insight-card:hover h3 { color: var(--orange-700); }
 
 /* ---------- Values ---------- */
 .home-values { padding: 48px 0 49px; }
@@ -148,10 +162,6 @@ main section .eyebrow + h2 { margin-top: 8px; }
 
 /* ---------- Tablet ---------- */
 @media (max-width: 1180px) {
-  .home-hero { height: auto; min-height: 680px; }
-  .home-hero .hero-inner { padding-bottom: 64px; }
-  .home-hero .hero-words { display: none; }
-  .home-hero .hero-fade { background: linear-gradient(90deg, #FAFDFE 0%, rgba(250, 253, 254, .92) 50%, rgba(250, 253, 254, .75) 72%, rgba(250, 253, 254, 0) 92%); }
   .about-grid { grid-template-columns: 1fr; gap: 32px; }
   .about-copy .body-l { max-width: 680px; }
   .about-cards { margin-top: 0; }
@@ -174,22 +184,10 @@ main section .eyebrow + h2 { margin-top: 8px; }
   .section-head { display: block; }
 
   /* Hero */
-  .home-hero { min-height: 0; }
-  .home-hero .hero-bg { inset: auto; top: -58px; left: -25.1%; width: 150%; height: auto; max-width: none; object-fit: initial; }
-  .home-hero .hero-fade { background: linear-gradient(180deg, #FAFDFE 0%, rgba(250, 253, 254, .9) 40%, rgba(250, 253, 254, .75) 50%, rgba(250, 253, 254, 0) 70.3%); }
-  .home-hero .hero-inner { padding-top: 94px; padding-bottom: 23px; }
-  .hero-lead { margin-top: 23px; }
-  .hero-chips { display: grid; grid-template-columns: 190px 1fr; gap: 20px 0; margin-top: 31px; }
-  .hero-chips li { font-size: 18px; line-height: 24px; }
-  .hero-chips .ico { width: 24px; height: 24px; }
   .chip-ops { order: 3; }
   .chip-strategy { order: 4; }
   .chip-capital { order: 5; }
-  .hero-actions { flex-direction: column; gap: 16px; margin-top: 100px; }
-  .btn-story { color: #fff; border-color: #fff; }
-  .home-hero .hero-words { position: static; display: flex; flex-wrap: wrap; gap: 12px; margin-top: 41px; font-size: 12px; line-height: 18px; font-weight: 500; letter-spacing: .2px; }
-  .home-hero .hero-words li:last-child { flex-basis: 100%; }
-  .home-hero .hero-words li:last-child::after { width: 56px; }
+  .btn-story { background: rgb(255 255 255 / .1); }
 
   /* About */
   .home-about { padding: 33px 0 32px; background: linear-gradient(180deg, rgba(244, 248, 251, 0) 0%, rgba(244, 248, 251, .7) 40%, rgba(244, 248, 251, .95) 56%, #F4F8FB 70%); }

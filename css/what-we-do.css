@@ -1,20 +1,20 @@
 /* What We Do — Figma UI Design (desktop 1280 / mobile 390) */
+/* ---------- Hero (Figma values) ---------- */
+.wwd-hero {
+  --tint: 237 244 250;
+  --hero-pt: 112px;
+  --hero-copy: 583px;
+  --fade-x: linear-gradient(90deg, rgb(237 244 250) 0%, rgb(237 244 250 / 0.9) 34.5%, rgb(237 244 250 / 0.6) 46.8%, rgb(237 244 250 / 0) 52.5%);
+  --fade-y: linear-gradient(180deg, rgb(193 216 234) 0%, rgb(193 216 234 / 0.9) 8.8%, rgb(193 216 234 / 0.6) 19.9%, rgb(193 216 234 / 0) 31.2%);
+}
+.wwd-hero h1 { max-width: 640px; }
+.wwd-hero .to { color: #000D3B; }
+@media (max-width: 768px) {
+  .wwd-hero { --tint: 237 244 250; --fade-m: linear-gradient(180deg, rgb(237 244 250) 0%, rgb(237 244 250) 16.6%, rgb(237 244 250 / 0.9) 34.5%, rgb(237 244 250 / 0.6) 46.8%, rgb(237 244 250 / 0) 52.5%); }
+  .wwd-hero .to { color: inherit; }
+}
 
 /* ---------- Hero ---------- */
-.wwd-hero { min-height: 548px; }
-.wwd-hero .hero-fade { background: linear-gradient(90deg, #FAFDFE 0%, rgba(250, 253, 254, .9) 42.8%, rgba(250, 253, 254, .6) 51%, rgba(250, 253, 254, 0) 56.6%); }
-.wwd-hero-inner {
-  display: grid;
-  grid-template-columns: 1fr 200px;
-  align-items: end;
-  padding-top: 125px;
-  padding-bottom: 56px;
-}
-.wwd-hero-copy h1 { max-width: 660px; }
-.wwd-hero-copy .to { color: #000D3B; }
-.wwd-hero-copy p { max-width: 620px; margin-top: 28px; color: var(--text-primary); }
-.wwd-hero-copy .btn { margin-top: 32px; }
-.wwd-words { white-space: nowrap; }
 .br-m { display: none; }
 
 /* ---------- Shared section head (eyebrow + heading | paragraph) ---------- */
@@ -87,10 +87,6 @@
 
 /* ---------- Tablet ---------- */
 @media (max-width: 1180px) {
-  .wwd-hero-inner { grid-template-columns: 1fr; padding-top: 140px; row-gap: 40px; }
-  .wwd-words { display: flex; flex-wrap: wrap; gap: 12px 16px; }
-  .wwd-hero .hero-fade { background: linear-gradient(90deg, #FAFDFE 0%, rgba(250, 253, 254, .9) 50%, rgba(250, 253, 254, .55) 70%, rgba(250, 253, 254, .2) 100%); }
-  .wwd-hero .wwd-words { color: var(--n-950); }
   .wwd-head, .wwd-head-wide { grid-template-columns: 1fr; gap: 0; }
   .wwd-head > p { margin-top: 16px; max-width: 640px; }
   .wwd-head-wide > p { padding-right: 0; }
@@ -107,19 +103,8 @@
 /* ---------- Mobile (390 frame) ---------- */
 @media (max-width: 768px) {
   /* Hero */
-  .wwd-hero { min-height: 844px; display: flex; }
-  .wwd-hero .hero-bg { left: 50%; width: auto; height: 905px; max-width: none; transform: translateX(-66.65%); }
-  .wwd-hero .hero-fade { background: linear-gradient(180deg, #FAFDFE 0%, rgba(250, 253, 254, .9) 39.1%, rgba(250, 253, 254, .75) 46.1%, rgba(250, 253, 254, 0) 53.3%); }
-  .wwd-hero-inner { display: flex; flex-direction: column; align-items: stretch; flex: 1; padding-top: 112px; padding-bottom: 32px; row-gap: 0; }
-  .wwd-hero-copy { display: flex; flex-direction: column; flex: 1; }
-  .wwd-hero-copy .eyebrow { margin-bottom: 8px; }
-  .wwd-hero-copy .to { color: inherit; }
   .br-d { display: none; }
   .br-m { display: inline; }
-  .wwd-hero-copy p { margin-top: 20px; }
-  .wwd-hero-copy .btn { width: 100%; margin-top: auto; }
-  .wwd-hero .wwd-words { margin-top: 40px; gap: 12px 12px; font-size: 12px; line-height: 18px; font-weight: 500; letter-spacing: 0.2px; color: #fff; }
-  .wwd-words li:last-child { padding-bottom: 4px; }
 
   /* Section heads */
   .wwd-head .h1 { font-weight: 600; }
@@ -176,11 +161,3 @@
   .cta-band > img { display: none; }
 }
 
-/* Mobile: button straight under the intro so it is on the first screen; shorter hero, photo anchored to the bottom */
-@media (max-width: 768px) {
-  .wwd-hero { min-height: 0; }
-  .wwd-hero .hero-bg { top: auto; bottom: 0; height: 640px; }
-  .wwd-hero-copy { flex: none; }
-  .wwd-hero-copy .btn { margin-top: 24px; }
-  .wwd-hero .wwd-words { margin-top: 170px; }
-}

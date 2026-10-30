@@ -163,8 +163,9 @@ button { font: inherit; }
 .nav-links a::after {
   content: "";
   position: absolute;
-  left: 0; bottom: -4px;
+  left: 50%; bottom: -4px;
   width: 24px; height: 2px;
+  transform: translateX(-50%);
   border-radius: 2px;
   background: var(--orange-600);
   opacity: 0;
@@ -193,9 +194,6 @@ button { font: inherit; }
 .hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .hero-fade { position: absolute; inset: 0; background: linear-gradient(90deg, #FAFDFE 0%, rgba(250, 253, 254, .9) 40%, rgba(250, 253, 254, .75) 56%, rgba(250, 253, 254, 0) 70%); }
 .hero-inner { position: relative; z-index: 1; }
-.hero-words { display: grid; gap: 12px; font-size: 16px; line-height: 18px; color: #fff; text-transform: uppercase; }
-.hero-words li:last-child { position: relative; padding-bottom: 12px; }
-.hero-words li:last-child::after { content: ""; position: absolute; left: 0; bottom: 0; width: 56px; height: 2px; background: var(--orange-600); }
 
 /* ---------- CTA band ("A Brighter Tomorrow") ---------- */
 .cta-band { position: relative; overflow: hidden; text-align: center; }
@@ -275,10 +273,74 @@ button { font: inherit; }
   .socials svg { width: 26px; height: 26px; }
   .footer-bottom .container { display: block; padding-top: 28px; padding-bottom: 28px; }
   .footer-bottom .tagline { display: none; }
-  /* Keep the Figma hero word rows (5 words, then "A Brighter Tomorrow") on phones narrower than 390px */
-  .hero-words li:last-child { flex-basis: 100%; }
-}
-@media (max-width: 389px) {
-  .hero-words { column-gap: 8px !important; letter-spacing: 0 !important; font-size: 11px !important; }
 }
 .nw { white-space: nowrap; }
+.card-link { cursor: pointer; }
+
+/* ---------- Numbered step switcher (mobile) ---------- */
+.step-tabs-head { display: none; }
+@media (max-width: 768px) {
+  .step-tabs-head {
+    display: block;
+    position: sticky;
+    top: var(--header-h);
+    z-index: 5;
+    padding: 32px 0 16px;
+    background: #fff;
+  }
+  .step-tabs { display: flex; justify-content: space-between; gap: 8px; margin-top: 20px; }
+  .step-tab {
+    display: grid; place-items: center;
+    width: 40px; height: 40px; padding: 0;
+    border: 1.5px solid var(--tab, var(--orange-600));
+    border-radius: 50%;
+    background: #fff;
+    color: var(--tab, var(--orange-600));
+    font-family: var(--font-display); font-size: 20px; line-height: 1; font-weight: 600;
+    cursor: pointer;
+    transition: background .2s ease, color .2s ease;
+  }
+  .step-tab[aria-selected="true"] { background: var(--tab, var(--orange-600)); color: #fff; }
+  .has-step-tabs > :not(.is-current) { display: none !important; }
+  .has-step-tabs .wwd-num, .has-step-tabs .detail-num, .has-step-tabs > * > .eyebrow { display: none !important; }
+  .has-step-tabs > .is-current { padding-top: 8px; }
+  .has-step-tabs .wwd-row-copy, .has-step-tabs .detail-copy { margin-top: 0; }
+}
+
+/* ---------- Page hero (Figma UI Design: hero frames 1280×548 / 390×844) ---------- */
+.page-hero {
+  --hero-h: 548px;
+  --hero-pt: 118px;
+  --hero-copy: 560px;
+  position: relative;
+  overflow: hidden;
+  min-height: var(--hero-h);
+  background: rgb(var(--tint));
+}
+.page-hero-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: var(--hero-pos, 50% 50%); }
+/* Two Figma fades: a top fade behind the header, then the left fade behind the copy */
+.page-hero-fade { position: absolute; inset: 0; background: var(--fade-x), var(--fade-y, none); }
+.page-hero-inner { position: relative; z-index: 1; padding-top: var(--hero-pt); padding-bottom: 48px; }
+.page-hero-copy { max-width: var(--hero-copy); }
+.page-hero-copy .eyebrow + h1 { margin-top: 12px; }
+.page-hero-copy h1 + p { margin-top: 24px; color: var(--text-primary); }
+.page-hero-actions { display: flex; flex-wrap: wrap; gap: 24px; margin-top: 32px; }
+.eyebrow-line { display: flex; align-items: center; gap: 12px; }
+.eyebrow-line::before { content: ""; flex: none; width: 48px; height: 2px; border-radius: 2px; background: #FF6300; }
+
+@media (max-width: 1180px) {
+  section.page-hero { --hero-pt: calc(var(--header-h) + 48px); }
+  .page-hero-fade { background: linear-gradient(90deg, rgb(var(--tint)) 0%, rgb(var(--tint) / .92) 48%, rgb(var(--tint) / .6) 66%, rgb(var(--tint) / 0) 84%), var(--fade-y, none); }
+}
+@media (max-width: 768px) {
+  section.page-hero { --hero-h: 844px; --hero-pt: 112px; --hero-copy: none; }
+  /* Mobile art is exported at the frame's visible size and sits on the bottom edge, as in the 390×844 frame */
+  .page-hero-media img { inset: auto 0 0 0; height: auto; object-fit: initial; }
+  .page-hero-fade { background: var(--fade-m); }
+  .page-hero-inner { padding-bottom: 32px; }
+  .page-hero-copy .eyebrow + h1 { margin-top: 8px; }
+  .page-hero-copy h1 + p { margin-top: 20px; }
+  .page-hero-actions { flex-direction: column; align-items: flex-start; gap: 16px; margin-top: 20px; }
+  .page-hero-actions .btn { width: 238px; max-width: 100%; }
+  .eyebrow-line::before { width: 40px; }
+}

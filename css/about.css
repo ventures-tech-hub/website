@@ -1,20 +1,19 @@
 /* About page — Figma UI Design: About (desktop 1280 / mobile 390) */
+/* ---------- Hero (Figma values) ---------- */
+.ab-hero {
+  --tint: 250 253 254;
+  --hero-pt: 118px;
+  --hero-copy: 512px;
+  --fade-x: linear-gradient(90deg, rgb(250 253 254) 0%, rgb(250 253 254 / 0.98) 19.4%, rgb(250 253 254 / 0.8) 31.4%, rgb(250 253 254 / 0.6) 39.9%, rgb(250 253 254 / 0) 47.6%);
+  --fade-y: linear-gradient(180deg, rgb(155 201 246) 0%, rgb(155 201 246 / 0.9) 17.9%, rgb(155 201 246 / 0.38) 24.4%, rgb(155 201 246 / 0) 30.7%);
+}
+@media (max-width: 768px) {
+  .ab-hero { --tint: 237 247 253; --fade-m: linear-gradient(180deg, rgb(237 247 253) 0%, rgb(237 247 253) 39%, rgb(237 247 253 / 0.75) 52.9%, rgb(237 247 253 / 0) 60.7%); }
+}
 
 .ab-ic48 { display: block; width: 48px; height: 48px; }
 
 /* ---------- Hero ---------- */
-.ab-hero { height: 548px; }
-.ab-hero-shade { position: absolute; inset: 0; background: rgba(0, 0, 0, .2); }
-.ab-hero-fade {
-  position: absolute; inset: 0;
-  background: linear-gradient(90deg, #FAFDFE 0%, rgba(250, 253, 254, .85) 39.36%, rgba(250, 253, 254, .6) 50.02%, rgba(250, 253, 254, 0) 58.98%);
-}
-.ab-hero-inner { height: 100%; padding-top: 128px; }
-.ab-hero h1 { max-width: 640px; }
-.ab-hero-text { max-width: 600px; margin-top: 24px; }
-.ab-hero-btn { margin-top: 32px; }
-.ab-words { position: absolute; top: 304px; left: calc(var(--gutter) + 1000px); }
-.ab-words li:last-child { padding-bottom: 7px; }
 
 /* ---------- Mission / Vision / Purpose ---------- */
 .ab-mvp { padding-top: 48px; }
@@ -99,11 +98,6 @@
 
 /* ---------- Tablet ---------- */
 @media (max-width: 1180px) {
-  .ab-hero { height: auto; }
-  .ab-hero-inner { padding-top: calc(var(--header-h) + 48px); padding-bottom: 56px; }
-  .ab-hero-fade { background: linear-gradient(90deg, #FAFDFE 0%, rgba(250, 253, 254, .9) 50%, rgba(250, 253, 254, .6) 70%, rgba(250, 253, 254, .2) 100%); }
-  .ab-hero-bottom { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 32px; }
-  .ab-words { position: static; }
   .ab-story-grid { grid-template-columns: 1fr; row-gap: 40px; }
   .ab-story-btn { margin-top: 24px; }
   .ab-story-media { margin-right: calc(-1 * var(--gutter)); border-radius: 16px 0 0 16px; }
@@ -122,18 +116,6 @@
   .h1.h1 { font-weight: 600; }
 
   /* Hero */
-  .ab-hero { height: 844px; }
-  .ab-hero .hero-bg { display: none; }
-  .ab-hero-bg-m { position: absolute; top: -32px; left: 50%; width: 489px; max-width: none; height: 876px; transform: translateX(-50%); object-fit: cover; }
-  .ab-hero-fade { background: linear-gradient(180deg, #FAFDFE 0%, rgba(250, 253, 254, .9) 39.13%, rgba(250, 253, 254, .75) 46.08%, rgba(250, 253, 254, 0) 53.28%); }
-  .ab-hero-inner { display: flex; flex-direction: column; height: 100%; padding-top: 112px; padding-bottom: 32px; }
-  .ab-hero .eyebrow.mobile-only { display: block !important; margin-bottom: 10px; }
-  .ab-hero-text { margin-top: 18px; }
-  .ab-hero-bottom { display: block; margin-top: auto; }
-  .ab-hero-btn { display: flex; width: 100%; margin-top: 0; }
-  .ab-words { display: flex; flex-wrap: wrap; column-gap: 12px; row-gap: 12px; margin-top: 40px; font-size: 12px; line-height: 18px; font-weight: 500; letter-spacing: .2px; color: #fff; }
-  .ab-words li:last-child { padding-bottom: 4px; }
-  .ab-words li:last-child::after { width: 55px; }
 
   /* Mission cards */
   .ab-mvp { padding-top: 32px; }
@@ -196,11 +178,3 @@
   .ab-cta .cta-inner .btn { margin-top: 10px; }
 }
 
-/* Mobile: button straight under the intro so it is on the first screen; shorter hero, photo anchored to the bottom */
-@media (max-width: 768px) {
-  .ab-hero { height: auto; }
-  .ab-hero-bg-m { top: auto; bottom: 0; height: 640px; }
-  .ab-hero-inner { height: auto; }
-  .ab-hero-bottom { margin-top: 24px; }
-  .ab-hero-bottom .hero-words { margin-top: 170px; }
-}

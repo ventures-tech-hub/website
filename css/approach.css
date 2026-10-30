@@ -1,4 +1,15 @@
 /* Our Approach — builds on styles.css (Figma UI Design: approach desktop 1280 / mobile 390) */
+/* ---------- Hero (Figma values) ---------- */
+.ap-hero {
+  --tint: 236 244 247;
+  --hero-pt: 132px;
+  --hero-copy: 542px;
+  --fade-x: linear-gradient(90deg, rgb(236 244 247) 0%, rgb(236 244 247 / 0.85) 38.9%, rgb(236 244 247 / 0.6) 42.2%, rgb(236 244 247 / 0) 46.9%);
+  --fade-y: linear-gradient(180deg, rgb(236 244 247) 0%, rgb(236 244 247 / 0.85) 21.3%, rgb(236 244 247 / 0.6) 31.1%, rgb(236 244 247 / 0) 40%);
+}
+@media (max-width: 768px) {
+  .ap-hero { --tint: 236 244 247; --fade-m: linear-gradient(180deg, rgb(236 244 247) 0%, rgb(236 244 247 / 0.85) 38.9%, rgb(236 244 247 / 0.6) 42.2%, rgb(236 244 247 / 0) 46.9%); }
+}
 
 .icon-sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
 .tone-orange { --tone: var(--orange-600); --tone-bg: #FFF7F0; }
@@ -12,15 +23,6 @@ svg use { overflow: visible; }
 .ap-head > p { margin-top: 12px; }
 
 /* ---------- Hero ---------- */
-.ap-hero { height: 548px; }
-.ap-hero-bg { object-position: 50% 25%; }
-.ap-hero-bg-m { display: none; }
-.ap-hero-fade { background: linear-gradient(90deg, #FAFDFE 0%, rgba(250, 253, 254, .85) 39.4%, rgba(250, 253, 254, .6) 50%, rgba(250, 253, 254, 0) 59%); }
-.ap-hero-inner { height: 100%; display: flex; justify-content: space-between; align-items: flex-end; gap: 40px; padding-top: 146px; padding-bottom: 68px; }
-.ap-hero-copy { max-width: 600px; }
-.ap-hero-copy h1 { margin-bottom: 24px; }
-.ap-hero-copy p { margin-bottom: 32px; }
-.ap-hero .hero-words { flex: none; width: 200px; margin-right: -4px; white-space: nowrap; }
 
 /* ---------- Our process ---------- */
 .ap-process { padding: 48px 0; background: linear-gradient(90deg, #FCFDFD, #FAFDFE); }
@@ -104,7 +106,6 @@ svg use { overflow: visible; }
 /* ---------- Tablet ---------- */
 @media (max-width: 1180px) {
   .ap-head, .ap-diff .ap-head { grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr); }
-  .ap-hero .hero-words { display: none; }
   .steps { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 40px; }
   .step:nth-child(3) .step-arrow { display: none; }
   .detail { grid-template-columns: 48px minmax(0, 1fr); row-gap: 24px; }
@@ -120,20 +121,6 @@ svg use { overflow: visible; }
   .ap-process h2, .ap-diff h2, .ap-goal h2, .ap-faq h2 { font-weight: 600; }
 
   /* Hero */
-  .ap-hero { height: auto; min-height: 844px; }
-  .ap-hero-bg { display: none; }
-  .ap-hero-bg-m { display: block; position: absolute; top: -63px; left: -17.18%; width: 134.1%; max-width: none; height: auto; min-height: calc(100% + 63px); object-fit: cover; object-position: center top; }
-  .ap-hero-fade { background: linear-gradient(180deg, #FAFDFE 0%, rgba(250, 253, 254, .9) 31.6%, rgba(250, 253, 254, .75) 40.7%, rgba(250, 253, 254, 0) 52.5%); }
-  .ap-hero-inner { min-height: 844px; flex-direction: column; align-items: stretch; justify-content: flex-start; gap: 0; padding-top: 112px; padding-bottom: 32px; }
-  .ap-hero-copy { flex: 1; display: flex; flex-direction: column; max-width: none; }
-  .ap-hero-copy h1 { margin: 8px 0 21px; }
-  .ap-hero-copy p { margin-bottom: 40px; }
-  .ap-hero-copy .btn { width: 100%; margin-top: auto; }
-  .ap-hero .hero-words {
-    display: flex; flex-wrap: wrap; column-gap: 12px; row-gap: 12px; width: auto; margin: 44px 0 0;
-    font-size: 12px; line-height: 18px; font-weight: 500; letter-spacing: 0.2px;
-  }
-  .ap-hero .hero-words li:last-child { padding-bottom: 5px; }
 
   /* Process: vertical list */
   .ap-process { padding: 32px 0 32px; }
@@ -185,7 +172,7 @@ svg use { overflow: visible; }
   .ap-goal-copy .btn { width: 100%; margin-top: 31px; }
 
   /* FAQ */
-  .ap-faq { padding: 32px 0 132px; }
+  .ap-faq { padding: 32px 0 48px; }
   .ap-faq-inner { display: flex; flex-direction: column; }
   .faq-list { order: 2; gap: 16px; margin-top: 31px; }
   .ap-faq-more { order: 3; margin-top: 46px; }
@@ -194,12 +181,3 @@ svg use { overflow: visible; }
   .faq p { padding: 0 16px 18px; font-size: 14px; line-height: 22px; }
 }
 
-/* Mobile: button straight under the intro so it is on the first screen; shorter hero, photo anchored to the bottom */
-@media (max-width: 768px) {
-  .ap-hero, .ap-hero-inner { min-height: 0; }
-  .ap-hero-bg-m { top: auto; bottom: 0; min-height: 0; height: 640px; width: 100%; left: 0; object-position: 35% bottom; }
-  .ap-hero-copy { flex: none; }
-  .ap-hero-copy p { margin-bottom: 0; }
-  .ap-hero-copy .btn { margin-top: 24px; }
-  .ap-hero .hero-words { margin-top: 170px; }
-}
