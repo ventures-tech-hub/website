@@ -71,6 +71,7 @@ p { margin: 0; }
 ul, ol { margin: 0; padding: 0; list-style: none; }
 svg { flex: none; }
 button { font: inherit; }
+a, button, summary, .card-link { -webkit-tap-highlight-color: transparent; }
 
 .container { width: 100%; max-width: calc(var(--container) + var(--gutter) * 2); margin: 0 auto; padding: 0 var(--gutter); }
 .mobile-only { display: none !important; }
@@ -115,7 +116,7 @@ button { font: inherit; }
   height: 48px;
   padding: 0 20px;
   border: 1px solid transparent;
-  border-radius: 6px;
+  border-radius: 8px;
   font-family: var(--font-body);
   font-size: 16px;
   line-height: 24px;
@@ -124,16 +125,18 @@ button { font: inherit; }
   cursor: pointer;
   transition: background .2s ease, color .2s ease, border-color .2s ease, transform .2s ease;
 }
-.btn:active { transform: translateY(1px); }
 .btn-primary { background: var(--orange-700); color: #fff; }
-.btn-primary:hover { background: var(--orange-600); }
+.btn-primary:hover { background: var(--orange-500); }
+.btn-primary:active { background: var(--orange-700); }
 .btn-secondary { background: transparent; color: var(--navy-950); border-color: var(--navy-950); }
-.btn-secondary:hover { background: var(--navy-950); color: #fff; }
+.btn-secondary:hover { background: var(--n-100); border-color: var(--navy-800); color: var(--navy-800); }
+.btn-secondary:active { background: #F1F8FD; border-color: var(--navy-950); color: var(--navy-950); }
 .btn-sm { height: 44px; padding: 0 20px; font-size: 14px; line-height: 20px; }
 .btn-block { width: 100%; }
 .btn svg { width: 20px; height: 20px; }
 .link-arrow { display: inline-flex; align-items: center; gap: 6px; font-size: 16px; font-weight: 600; color: var(--orange-700); }
-.link-arrow:hover { color: var(--orange-600); }
+.link-arrow:hover { color: var(--orange-500); }
+.link-arrow:active { color: var(--orange-700); }
 
 /* ---------- Cards ---------- */
 .card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-card); }
@@ -276,6 +279,9 @@ button { font: inherit; }
 }
 .nw { white-space: nowrap; }
 .card-link { cursor: pointer; }
+/* Figma Card component: Hover and Pressed tint the card; the heading colour stays the same */
+.card-link, .insight-card { transition: background-color .2s ease; }
+.card-link:hover, .card-link:active, .insight-card:hover, .insight-card:active { background-color: #FFF7F0; }
 
 /* ---------- Numbered step switcher (mobile) ---------- */
 .step-tabs-head { display: none; }

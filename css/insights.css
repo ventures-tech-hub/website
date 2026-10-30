@@ -113,18 +113,17 @@
 .sort.is-open .sort-trigger svg { transform: rotate(180deg); }
 .sort-menu {
   position: absolute; top: calc(100% + 6px); left: 0; right: 0; z-index: 10;
-  min-width: 100%; padding: 6px;
+  min-width: 100%; padding: 0; overflow: hidden;
   background: #fff; border: 1px solid var(--border); border-radius: var(--radius);
   box-shadow: var(--shadow-dropdown); outline: none;
 }
 .sort-menu li {
   display: flex; align-items: center; justify-content: space-between; gap: 12px;
-  min-height: 40px; padding: 8px 10px; border-radius: 6px;
-  font-size: 16px; line-height: 24px; color: var(--n-950); cursor: pointer;
+  min-height: 44px; padding: 12px 16px;
+  font-size: 14px; line-height: 20px; font-weight: 500; color: var(--n-950); cursor: pointer;
 }
 .sort-menu li:hover, .sort-menu li.is-focused { background: var(--n-50); }
-.sort-menu li svg { width: 20px; height: 20px; stroke: var(--navy-800); visibility: hidden; }
-.sort-menu li[aria-selected="true"] { font-weight: 500; }
+.sort-menu li svg { width: 16px; height: 16px; stroke: var(--navy-800); visibility: hidden; }
 .sort-menu li[aria-selected="true"] svg { visibility: visible; }
 .post-empty { margin-top: 32px; font-size: 16px; line-height: 26px; color: var(--text-muted); }
 
@@ -245,6 +244,15 @@
 
   /* all insights */
   .ins-all { padding-top: 63px; }
+  /* Only the articles scroll: heading, search and sort stay pinned under the header */
+  .all-head {
+    position: sticky;
+    top: var(--header-h);
+    z-index: 6;
+    margin-inline: calc(-1 * var(--gutter));
+    padding: 16px var(--gutter);
+    background: var(--surface-subtle);
+  }
   .all-head { gap: 15px; }
   .all-head .h1 { margin-top: 10px; font-weight: 600; }
   .all-tools .search { flex: 1; min-width: 0; }
@@ -272,3 +280,4 @@
 }
 
 .post[hidden] { display: none; }
+.search-clear[hidden], .news-clear[hidden] { display: none; }
