@@ -12,6 +12,8 @@
 .hero-chips li { display: flex; align-items: center; gap: 4px; font-family: var(--font-display); font-size: 16px; line-height: 22px; font-weight: 600; color: #1A1A1A; }
 .hero-chips .ico { width: 24px; height: 24px; }
 @media (max-width: 768px) {
+  /* Figma 390×844 hero: copy starts 96px down (64px header + 32px) */
+  section.home-hero { --hero-pt: 96px; }
   .home-hero { --tint: 237 238 241; --fade-m: linear-gradient(180deg, rgb(237 238 241) 0%, rgb(237 238 241 / 0.95) 32.5%, rgb(237 238 241 / 0.7) 55.7%, rgb(237 238 241 / 0) 65.9%); }
   .hero-chips { flex-wrap: nowrap; gap: 20px; width: auto; max-width: none; margin-top: 24px; }
   .hero-chips li { flex-direction: column; align-items: flex-start; gap: 8px; font-size: 14px; line-height: 20px; }
@@ -277,24 +279,27 @@ main section .eyebrow + h2 { margin-top: 8px; }
   .home-ventures { padding: 33px 0 48px; }
   .venture-scroller { margin-top: 18px; }
   .venture-track {
-    grid-auto-columns: min(300px, 82%); gap: 16px;
+    /* Figma mobile: one card per screen, the full content width (350 on a 390 frame), swiped sideways */
+    grid-auto-columns: 100%; gap: 16px;
     margin: -8px calc(-1 * var(--gutter)) 0; padding: 8px var(--gutter) 16px; scroll-padding-inline: var(--gutter);
   }
-  .venture-card { height: 540px; }
-  .venture-body { padding: 20px; }
-  .venture-brand { gap: 10px; }
+  .venture-card { height: 562px; }
+  .venture-body { min-width: 0; padding: 20px; }
+  .venture-brand { flex-wrap: wrap; gap: 8px 10px; }
   .venture-brand::after { display: none; }
+  .venture-ny .venture-brand, .venture-pp .venture-brand { min-height: 32px; }
+  /* Each venture has its own 350×562 portrait art in Figma; the copy sits on its light top half */
   .venture-bg img { object-position: 50% 100%; }
-  /* No portrait art for these two in Figma: their artwork sits under the copy, faded in from the card colour */
-  .venture-pp .venture-bg img, .venture-ny .venture-bg img {
-    inset: auto 0 0 0; height: 250px; object-position: 82% 50%;
-    -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 28%); mask-image: linear-gradient(180deg, transparent 0, #000 28%);
-  }
-  .venture-title { max-width: none; margin-top: 16px; }
-  .venture-ny .venture-title { margin-top: 18px; }
-  .venture-desc { max-width: none; margin-top: 8px; }
-  .venture-feats { gap: 14px; margin-top: 18px; }
-  .venture-feats li { gap: 8px; font-size: 11px; }
+  /* Figma mobile card: title 20/26 (24px line step), desc 11/15, then 20px to the features and 20px to the button */
+  .venture-title { max-width: none; margin-top: 18px; }
+  .venture-ny .venture-title { margin-top: 16px; }
+  .venture-kicker { margin-top: 16px; font-size: 8px; line-height: 10px; }
+  .venture-kicker + .venture-title { margin-top: 8px; }
+  .venture-desc { max-width: 255px; margin-top: 8px; }
+  .venture-ny .venture-desc { max-width: 268px; }
+  .venture-pp .venture-desc { max-width: 307px; }
+  .venture-feats { flex-wrap: wrap; gap: 10px 20px; max-width: 100%; margin-top: 20px; }
+  .venture-feats li { min-width: 0; gap: 8px; font-size: 11px; }
   .btn-venture { margin-top: 20px; }
   .venture-nav { display: none; }
   .home-ventures .center-link { margin-top: 32px; }
@@ -322,9 +327,11 @@ main section .eyebrow + h2 { margin-top: 8px; }
   /* Values */
   .home-values { padding: 32px 0 31px; }
   .values-grid { gap: 32px; }
-  .values-list { display: grid; grid-template-columns: 1fr; gap: 28px; }
+  .values-list { display: grid; grid-template-columns: 1fr; gap: 24px; }
   .values-list li { display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 16px; }
   .values-list .ico { width: 40px; height: 40px; }
   .values-list h3 { margin-top: 0; font-size: 18px; line-height: 24px; }
-  .values-list p { margin-top: 1px; }
+  /* Figma: 4px under the heading; Chrome sets Archivo ~1% wider than Figma, so give the line a few px of the gutter
+     to keep "We put people at the center of everything we do." on one line as in the frame */
+  .values-list p { margin-top: 4px; margin-right: -5px; }
 }

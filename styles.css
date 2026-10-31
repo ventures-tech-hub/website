@@ -254,7 +254,8 @@ a, button, summary, .card-link { -webkit-tap-highlight-color: transparent; }
 
 /* ---------- Mobile (Figma mobile frames: 390px) ---------- */
 @media (max-width: 768px) {
-  :root { --gutter: 20px; --header-h: 72px; }
+  /* Figma mobile header: 390×64, 121×32 logo, 32px menu button */
+  :root { --gutter: 20px; --header-h: 64px; }
   .mobile-only { display: revert !important; }
   .btn.mobile-only { display: inline-flex !important; }
   .desktop-only { display: none !important; }
@@ -265,7 +266,9 @@ a, button, summary, .card-link { -webkit-tap-highlight-color: transparent; }
   .body-l { font-size: 14px; line-height: 22px; }
   .body-m { font-size: 14px; line-height: 22px; }
   .btn-block-m { width: 100%; }
-  .cta-band .cta-inner { padding: 72px var(--gutter) 64px; }
+  /* Figma 390×324 band: 62px above and below; 8px eyebrow→title, 12px title→text, 24px text→button */
+  .cta-band .cta-inner { padding: 62px var(--gutter); }
+  .cta-band .cta-inner .eyebrow + * { margin-top: -4px; }
   .cta-band:has(> img[src*="dbd2301b1a"]) {
     min-height: 324px;
     background: linear-gradient(180deg, #F0F4F5 0%, rgba(240, 244, 245, .85) 30%, rgba(240, 244, 245, 0) 60%), url("assets/ui/img/a5a2870baf.jpg") center bottom / cover no-repeat;
@@ -274,10 +277,11 @@ a, button, summary, .card-link { -webkit-tap-highlight-color: transparent; }
   .footer-main { grid-template-columns: 174px 1fr;row-gap: 40px; column-gap: 0; padding-top: 32px; padding-bottom: 40px; }
   .cta-band .display-xl { letter-spacing: 0; }
   .footer-brand img { width: 151px; }
-  .footer-brand p { display: block; margin-top: 16px; font-size: 14px; line-height: 20px; }
+  .footer-brand p { display: block; margin-top: 16px; font-size: 14px; line-height: 22px; }
+  .footer-brand { margin-bottom: -8px; } /* Figma: 32px from the tagline to the link columns, 40px between rows */
   .footer-col h4 { font-size: 18px; line-height: 24px; }
   .socials svg { width: 26px; height: 26px; }
-  .footer-bottom .container { display: block; padding-top: 28px; padding-bottom: 28px; }
+  .footer-bottom .container { display: block; padding-top: 24px; padding-bottom: 24px; font-size: 14px; line-height: 22px; }
   .footer-bottom .tagline { display: none; }
 }
 .nw { white-space: nowrap; }
@@ -340,10 +344,17 @@ a, button, summary, .card-link { -webkit-tap-highlight-color: transparent; }
 /* Wide screens: keep the hero art at its 1280px Figma frame, centred with the content,
    so it isn't zoomed and cropped (which cut off labels like "01 Discover") or pushed to the far right */
 @media (min-width: 1281px) {
+  /* As in Figma, the art runs to the right edge (no right-hand fade). It fills the width up to 1600px
+     (at most 1.25× the frame, so labels aren't cropped); wider than that it stays right-anchored and only its left edge fades */
   .page-hero-media img {
-    left: 50%; right: auto; width: 1280px; transform: translateX(-50%);
-    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%);
-    mask-image: linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%);
+    left: auto; right: 0; width: min(100%, 1600px);
+    object-fit: cover; object-position: 100% 80%;
+  }
+}
+@media (min-width: 1601px) {
+  .page-hero-media img {
+    -webkit-mask-image: linear-gradient(90deg, transparent 0, rgb(0 0 0 / .3) 18%, rgb(0 0 0 / .8) 34%, #000 45%);
+    mask-image: linear-gradient(90deg, transparent 0, rgb(0 0 0 / .3) 18%, rgb(0 0 0 / .8) 34%, #000 45%);
   }
 }
 @media (max-width: 1180px) {
