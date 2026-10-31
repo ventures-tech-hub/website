@@ -106,28 +106,57 @@ main section .eyebrow + h2 { margin-top: 8px; }
 .eco-art svg { display: block; width: 100%; height: 100%; }
 .eco-art-m { display: none; }
 
-/* ---------- Ventures ---------- */
+/* ---------- Ventures (Figma: cards 588×262, horizontal scroller) ---------- */
 .home-ventures { padding: 48px 0; }
-.venture-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 32px; }
-.venture-card { position: relative; height: 262px; overflow: hidden; border-radius: var(--radius-lg); box-shadow: var(--shadow-card); }
-.venture-card > img, .venture-card picture img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.venture-pr picture img { object-position: 50% 40%; }
-.venture-pr::before {
-  content: ""; position: absolute; inset: 0; z-index: 1;
-  background: linear-gradient(90deg, rgba(224, 212, 194, .7) 0%, rgba(224, 212, 194, .5) 29.3%, rgba(224, 212, 194, .4) 40.3%, rgba(224, 212, 194, 0) 55.3%);
+.venture-scroller { position: relative; margin-top: 32px; }
+.venture-track {
+  display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - 24px) / 2); gap: 24px;
+  overflow-x: auto; overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none;
+  /* room for the card shadow, without shifting the cards off the grid */
+  margin: -8px -20px; padding: 8px 20px 20px; scroll-padding-inline: 20px;
 }
-.venture-more { border: 1px solid var(--border); }
-.venture-more > img { left: -11.5%; width: 123%; height: auto; max-width: none; object-fit: initial; }
-.venture-body { position: relative; z-index: 2; padding: 24px; }
-.pr-logo { width: 118px; height: 40px; }
-.venture-ico { display: flex; align-items: center; height: 40px; margin-top: 6px; }
-.venture-more .venture-body { padding-top: 24px; padding-left: 24px; }
-.venture-ico .ico { width: 32px; height: 32px; }
-.venture-more .venture-ico { margin-top: 6px; margin-bottom: -6px; }
-.venture-body h3 { margin-top: 16px; }
-.venture-body p { max-width: 380px; margin-top: 6px; }
-.venture-pr .venture-body p { max-width: 250px; }
-.venture-body .link-arrow { margin-top: 29px; font-size: 14px; line-height: 20px; }
+.venture-track::-webkit-scrollbar { display: none; }
+.venture-track:focus-visible { outline: 2px solid var(--blue-700, #0E3C83); outline-offset: 2px; border-radius: 16px; }
+.venture-card {
+  position: relative; height: 262px; overflow: hidden; scroll-snap-align: start;
+  border: 1px solid var(--border); border-radius: 16px; background: #F8F9FD; box-shadow: var(--shadow-card);
+}
+.venture-bg img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 100% 50%; }
+.venture-body { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: flex-start; height: 100%; padding: 16px; }
+.venture-brand { display: flex; align-items: center; gap: 12px; min-height: 40px; }
+.venture-brand::after { content: ""; order: 1; align-self: flex-end; width: 24px; height: 1px; margin-bottom: 8px; background: var(--border); }
+.venture-badge { order: 2; padding: 4px 8px; border-radius: 4px; background: #F8E9DD; font-size: 10px; line-height: 18px; font-weight: 500; letter-spacing: .2px; color: #141414; white-space: nowrap; }
+.venture-logo { height: 40px; width: auto; }
+.venture-pp .venture-logo, .venture-ny .venture-logo { height: 32px; }
+.venture-pp .venture-badge { background: #E0E6FD; color: #0E3C83; }
+.venture-ny .venture-badge { background: #E1D9FE; color: #1A1AE7; }
+.venture-kicker { margin-top: 12px; font-size: 7px; line-height: 10px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: #94A3B8; }
+.venture-title { max-width: 260px; margin-top: 9px; font-family: var(--font-display); font-size: 20px; line-height: 24px; font-weight: 600; color: #141414; }
+.venture-kicker + .venture-title { margin-top: 2px; }
+.venture-ny .venture-title { margin-top: 26px; }
+.c-pr { color: #DA0659; }
+.c-ny { color: #1A1AE7; }
+.c-pp { background: linear-gradient(90deg, #035AFE, #9737FB); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.venture-desc { max-width: 245px; margin-top: 2px; font-size: 11px; line-height: 15px; color: #475569; }
+.venture-feats { display: flex; gap: 16px; margin: auto 0 0; padding: 0; list-style: none; }
+.venture-feats li { display: flex; align-items: center; gap: 6px; font-family: var(--font-display); font-size: 10px; line-height: 12px; font-weight: 600; letter-spacing: .2px; color: #141414; }
+.venture-feats img { flex: none; width: 18px; height: 18px; }
+.btn-venture {
+  margin-top: 16px; padding: 4px 16px; border-radius: 4px; background: #051E42; color: #fff;
+  font-size: 12px; line-height: 20px; font-weight: 600; text-decoration: none; white-space: nowrap;
+  transition: background-color .2s ease;
+}
+.btn-venture:hover { background: #0E3C83; }
+.btn-venture:active { background: #051E42; }
+.venture-nav { display: flex; justify-content: flex-end; gap: 12px; margin-top: 4px; }
+.venture-arrow {
+  display: grid; place-items: center; width: 40px; height: 40px; padding: 0;
+  border: 1px solid var(--border); border-radius: 50%; background: #fff; color: #141414;
+  font-size: 18px; line-height: 1; cursor: pointer; transition: background-color .2s ease, opacity .2s ease;
+}
+.venture-arrow:hover { background: #FFF7F0; }
+.venture-arrow:disabled { opacity: .35; cursor: default; background: #fff; }
 
 /* ---------- Pathways + Insights cards ---------- */
 .home-paths, .home-insights { padding: 48px 0; }
@@ -246,21 +275,28 @@ main section .eyebrow + h2 { margin-top: 8px; }
 
   /* Ventures */
   .home-ventures { padding: 33px 0 48px; }
-  .venture-grid { grid-template-columns: 1fr; gap: 18px; margin-top: 18px; }
-  .venture-pr { height: 282px; }
-  .venture-pr picture img { top: -81px; left: -77.7%; width: 245%; height: auto; max-width: none; object-fit: initial; }
-  .venture-pr::before { background: linear-gradient(180deg, #E0D4C2 6.4%, rgba(224, 212, 194, .7) 41.2%, rgba(224, 212, 194, .5) 46.6%, rgba(224, 212, 194, 0) 63.4%); }
-  .venture-more { height: 260px; }
-  .venture-more > img { left: 0; width: 100%; height: 100%; object-fit: cover; }
-  .venture-body, .venture-more .venture-body { padding: 16px; }
-  .pr-logo { width: 71px; height: 24px; }
-  .venture-ico { height: 32px; margin-top: 0; }
-  .venture-more .venture-ico { margin: 0; }
-  .venture-body h3 { margin-top: 8px; font-size: 24px; line-height: 30px; letter-spacing: -0.25px; }
-  .venture-more .venture-body h3 { margin-top: 4px; }
-  .venture-body p, .venture-pr .venture-body p { max-width: none; margin-top: 9px; }
-  .venture-body .link-arrow { margin-top: 20px; }
-  .venture-more .venture-body .link-arrow { margin-top: 24px; }
+  .venture-scroller { margin-top: 18px; }
+  .venture-track {
+    grid-auto-columns: min(300px, 82%); gap: 16px;
+    margin: -8px calc(-1 * var(--gutter)) 0; padding: 8px var(--gutter) 16px; scroll-padding-inline: var(--gutter);
+  }
+  .venture-card { height: 540px; }
+  .venture-body { padding: 20px; }
+  .venture-brand { gap: 10px; }
+  .venture-brand::after { display: none; }
+  .venture-bg img { object-position: 50% 100%; }
+  /* No portrait art for these two in Figma: their artwork sits under the copy, faded in from the card colour */
+  .venture-pp .venture-bg img, .venture-ny .venture-bg img {
+    inset: auto 0 0 0; height: 250px; object-position: 82% 50%;
+    -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 28%); mask-image: linear-gradient(180deg, transparent 0, #000 28%);
+  }
+  .venture-title { max-width: none; margin-top: 16px; }
+  .venture-ny .venture-title { margin-top: 18px; }
+  .venture-desc { max-width: none; margin-top: 8px; }
+  .venture-feats { gap: 14px; margin-top: 18px; }
+  .venture-feats li { gap: 8px; font-size: 11px; }
+  .btn-venture { margin-top: 20px; }
+  .venture-nav { display: none; }
   .home-ventures .center-link { margin-top: 32px; }
 
   /* Pathways + Insights */

@@ -231,3 +231,25 @@ if (insightTools) {
     if (!sort.contains(event.target)) setOpen(false);
   });
 }
+
+/* ---------- Ventures: horizontal scroller arrows ---------- */
+document.querySelectorAll(".venture-scroller").forEach((scroller) => {
+  const track = scroller.querySelector(".venture-track");
+  const arrows = scroller.querySelectorAll(".venture-arrow");
+  if (!track || !arrows.length) return;
+  const step = () => {
+    const card = track.querySelector(".venture-card");
+    return card ? card.getBoundingClientRect().width + parseFloat(getComputedStyle(track).columnGap || 0) : track.clientWidth;
+  };
+  const update = () => {
+    const max = track.scrollWidth - track.clientWidth - 2;
+    arrows[0].disabled = track.scrollLeft <= 2;
+    arrows[1].disabled = track.scrollLeft >= max;
+  };
+  arrows.forEach((btn) => btn.addEventListener("click", () => {
+    track.scrollBy({ left: step() * Number(btn.dataset.dir), behavior: "smooth" });
+  }));
+  track.addEventListener("scroll", update, { passive: true });
+  window.addEventListener("resize", update);
+  update();
+});
