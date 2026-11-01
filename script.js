@@ -253,3 +253,47 @@ document.querySelectorAll(".venture-scroller").forEach((scroller) => {
   window.addEventListener("resize", update);
   update();
 });
+
+/* ---------- Legal pages: "On This Page" follows the section in view ---------- */
+document.querySelectorAll(".lg-toc").forEach((toc) => {
+  const links = [...toc.querySelectorAll("a[href^='#']")];
+  const sections = links.map((a) => document.querySelector(a.getAttribute("href"))).filter(Boolean);
+  if (!sections.length) return;
+  const setActive = (i) => links.forEach((a, j) => a.classList.toggle("is-active", i === j));
+  const update = () => {
+    const line = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--header-h")) + 120;
+    let current = 0;
+    sections.forEach((s, i) => { if (s.getBoundingClientRect().top <= line) current = i; });
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) current = sections.length - 1;
+    setActive(current);
+  };
+  window.addEventListener("scroll", update, { passive: true });
+  window.addEventListener("resize", update);
+  update();
+
+  // Tablet/phone: the card is a dropdown — tap the heading to show all sections, pick one to close it
+  const head = toc.querySelector(".lg-toc-head");
+  if (!head) return;
+  const setOpen = (open) => head.setAttribute("aria-expanded", String(open));
+  head.addEventListener("click", () => setOpen(head.getAttribute("aria-expanded") !== "true"));
+  links.forEach((a) => a.addEventListener("click", () => setOpen(false)));
+});
+
+/* ---------- For Founders: testimonial arrows ---------- */
+document.querySelectorAll(".ff-stories").forEach((wrap) => {
+  const track = wrap.querySelector(".ff-quotes");
+  const [prev, next] = wrap.querySelectorAll(".ff-arrow");
+  if (!track || !prev || !next) return;
+  const step = () => {
+    const card = track.firstElementChild;
+    return card ? card.getBoundingClientRect().width + parseFloat(getComputedStyle(track).columnGap || 0) : track.clientWidth;
+  };
+  const update = () => prev.classList.toggle("is-off", track.scrollLeft <= 2);
+  prev.addEventListener("click", () => track.scrollBy({ left: -step(), behavior: "smooth" }));
+  next.addEventListener("click", () => {
+    const atEnd = track.scrollLeft >= track.scrollWidth - track.clientWidth - 2;
+    track.scrollTo({ left: atEnd ? 0 : track.scrollLeft + step(), behavior: "smooth" });
+  });
+  track.addEventListener("scroll", update, { passive: true });
+  update();
+});

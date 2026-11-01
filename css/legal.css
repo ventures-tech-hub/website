@@ -1,0 +1,107 @@
+/* Legal pages — Figma UI Design: Legal (Refund and Cancellation Policy) + Terms of Service, desktop 1280 */
+
+/* ---------- Hero (1280×440, one left fade #FDF5EF) ---------- */
+.lg-hero {
+  --hero-h: 440px;
+  --hero-pt: 130px;
+  --hero-copy: 600px;
+  --tint: 253 245 239;
+  --fade-x: linear-gradient(90deg, rgb(253 245 239) 0%, rgb(253 245 239) 27%, rgb(253 245 239 / 0.85) 41%, rgb(253 245 239 / 0.75) 48%, rgb(253 245 239 / 0) 56%);
+}
+.lg-hero--tos { --hero-pt: 170px; --hero-copy: 572px; }
+.lg-hero .page-hero-inner { padding-bottom: 0; }
+.lg-hero .eyebrow-line::before { width: 40px; }
+
+/* ---------- Body: "On This Page" card + numbered sections ---------- */
+.lg-body { padding: 48px 0; }
+.lg-updated { margin-bottom: 24px; font-size: 16px; line-height: 26px; color: var(--n-400); text-align: right; }
+.lg-layout { display: grid; grid-template-columns: 290px 1fr; column-gap: 32px; align-items: start; }
+
+.lg-toc {
+  position: sticky;
+  top: calc(var(--header-h) + 24px);
+  padding: 20px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow-card);
+}
+.lg-toc-head { display: flex; align-items: center; justify-content: space-between; gap: 20px; width: 100%; padding: 0; border: 0; background: none; text-align: left; cursor: default; }
+.lg-toc-head h2 { font-size: 20px; line-height: 26px; font-weight: 600; color: var(--n-950); }
+.lg-toc-chev { display: none; width: 24px; height: 24px; transition: transform .2s ease; }
+.lg-toc ol { display: grid; gap: 4px; margin-top: 20px; }
+.lg-toc a {
+  display: flex;
+  gap: 8px;
+  padding: 12px 20px;
+  border-left: 4px solid transparent;
+  padding-left: 16px;
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--text-primary);
+  transition: background-color .2s ease, color .2s ease;
+}
+.lg-toc a:hover { background: #FFF7F0; }
+.lg-toc a.is-active { background: #FFF7F0; border-left-color: var(--orange-600); padding-left: 20px; color: var(--orange-700); }
+
+.lg-sections { display: grid; gap: 32px; }
+.lg-sec { display: grid; grid-template-columns: 40px 1fr; column-gap: 24px; scroll-margin-top: calc(var(--header-h) + 24px); }
+.lg-num {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--n-100);
+  font-family: var(--font-display);
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.lg-copy { display: grid; gap: 8px; }
+.lg-copy h2 { font-size: 24px; line-height: 30px; font-weight: 600; letter-spacing: -0.25px; color: var(--n-950); }
+.lg-copy p { font-size: 16px; line-height: 26px; color: var(--text-primary); }
+.lg-copy a.lg-mail { font-weight: 600; color: var(--orange-700); }
+.lg-copy a.lg-mail:hover { color: var(--orange-500); }
+.lg-list { display: grid; gap: 4px; }
+.lg-list li { display: flex; gap: 12px; font-size: 16px; line-height: 26px; color: var(--text-primary); }
+.lg-list li::before { content: ""; flex: none; width: 6px; height: 6px; margin-top: 10px; border-radius: 50%; background: var(--orange-600); }
+
+.lg-contact { display: flex; flex-wrap: wrap; gap: 16px 32px; margin-top: 8px; }
+.lg-contact li { display: flex; align-items: center; gap: 12px; }
+.lg-contact img { width: 24px; height: 24px; }
+.lg-contact a, .lg-contact span { font-size: 14px; line-height: 20px; font-weight: 500; color: var(--n-950); }
+.lg-contact a:hover { color: var(--orange-700); }
+.lg-contact .lg-note { margin-left: 8px; font-size: 14px; line-height: 22px; font-weight: 400; color: var(--n-400); }
+
+/* ---------- Tablet & phone: "On This Page" becomes a dropdown showing the current section ---------- */
+@media (max-width: 1180px) {
+  .br-d { display: none; }
+  .lg-layout { grid-template-columns: 1fr; row-gap: 32px; }
+  .lg-toc { position: static; }
+  .lg-toc-head { cursor: pointer; }
+  .lg-toc-chev { display: block; }
+  .lg-toc-head[aria-expanded="true"] .lg-toc-chev { transform: rotate(180deg); }
+  .lg-toc-head[aria-expanded="false"] + ol li:not(:has(.is-active)) { display: none; }
+}
+
+/* ---------- Phone (Figma Mobile frames, 390 wide) ---------- */
+@media (max-width: 768px) {
+  section.lg-hero {
+    --hero-h: 654px;
+    --hero-pt: 112px;
+    --hero-copy: none;
+    --fade-m: linear-gradient(180deg, rgb(253 245 239) 0%, rgb(253 245 239) 20%, rgb(253 245 239 / 0.85) 34%, rgb(253 245 239 / 0.75) 42%, rgb(253 245 239 / 0) 54%);
+  }
+  .lg-hero .page-hero-copy h1 + p { margin-top: 20px; }
+  .lg-body { padding: 32px 0; }
+  .lg-updated { display: none; }
+  .lg-sections { gap: 32px; }
+  .lg-sec { grid-template-columns: 1fr; row-gap: 16px; }
+  .lg-num { width: 32px; height: 32px; font-size: 18px; line-height: 24px; }
+  .lg-copy h2 { font-size: 20px; line-height: 26px; letter-spacing: 0; }
+  .lg-copy p, .lg-list li { font-size: 14px; line-height: 22px; }
+  .lg-list li::before { margin-top: 8px; }
+  .lg-contact { flex-direction: column; gap: 12px; }
+}
