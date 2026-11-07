@@ -152,6 +152,7 @@ main section .eyebrow + h2 { margin-top: 8px; }
 .btn-venture:hover { background: #0E3C83; }
 .btn-venture:active { background: #051E42; }
 .venture-nav { display: flex; justify-content: flex-end; gap: 12px; margin-top: 4px; }
+.venture-dots { display: none; }
 .venture-arrow {
   display: grid; place-items: center; width: 40px; height: 40px; padding: 0;
   border: 1px solid var(--border); border-radius: 50%; background: #fff; color: #141414;
@@ -302,7 +303,29 @@ main section .eyebrow + h2 { margin-top: 8px; }
   .venture-feats li { min-width: 0; gap: 8px; font-size: 11px; }
   .btn-venture { margin-top: 20px; }
   .venture-nav { display: none; }
-  .home-ventures .center-link { margin-top: 32px; }
+  .venture-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 18px;
+  }
+  .venture-dot {
+    display: block;
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    border: none;
+    border-radius: 999px;
+    background: #CBD5E1;
+    cursor: pointer;
+    transition: width .25s ease, background-color .25s ease;
+  }
+  .venture-dot.is-active {
+    width: 24px;
+    background: #FF6300;
+  }
+  .home-ventures .center-link { margin-top: 24px; }
 
   /* Pathways + Insights */
   .home-paths { padding: 32px 0 48px; }

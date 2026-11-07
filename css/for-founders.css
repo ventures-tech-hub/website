@@ -6,8 +6,9 @@
   --hero-pt: 123px;
   --hero-copy: 542px;
   --tint: 249 248 247;
-  --fade-x: linear-gradient(90deg, rgb(249 248 247) 0%, rgb(249 248 247 / 0.9) 39%, rgb(249 248 247 / 0.7) 42%, rgb(249 248 247 / 0) 47%);
+  --fade-x: linear-gradient(90deg, rgb(249 248 247) 0%, rgb(249 248 247 / 0.98) 32%, rgb(249 248 247 / 0.6) 37%, rgb(249 248 247 / 0) 42%);
   --fade-y: linear-gradient(180deg, rgb(249 248 247) 0%, rgb(249 248 247 / 0.9) 8%, rgb(249 248 247 / 0.7) 10%, rgb(249 248 247 / 0) 14%);
+  --hero-pos: right center;
 }
 .ff-hero .page-hero-inner { padding-bottom: 0; }
 
@@ -127,7 +128,7 @@
 .ff-quote figcaption div > span { display: block; margin-top: 2px; font-size: 14px; line-height: 22px; color: var(--n-400); }
 
 /* ---------- CTA band (1280×240) ---------- */
-.ff-cta { background: url("../assets/ui/img/ff-cta.jpg") center / cover no-repeat; }
+.ff-cta { background: url("../assets/ui/img/ff-cta.jpg?v=10") center / cover no-repeat; }
 .ff-cta-inner { display: grid; justify-items: center; padding: 48px var(--gutter); text-align: center; }
 .ff-cta .eyebrow { color: #fff; }
 .ff-cta h2 { margin-top: 8px; color: #fff; }
@@ -148,8 +149,8 @@
     --hero-pt: 112px;
     --fade-m: linear-gradient(180deg, rgb(249 248 247) 0%, rgb(249 248 247) 33%, rgb(249 248 247 / 0.85) 45%, rgb(249 248 247 / 0.65) 56%, rgb(249 248 247 / 0) 66%);
   }
-  .ff-hero .page-hero-actions .btn { width: 229px; }
-  .ff-hero .btn-secondary { background: rgb(255 255 255 / .1); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
+  .ff-hero .page-hero-actions .btn { width: 238px; }
+  .ff-hero .btn-secondary { background: #fff; border: 1px solid var(--navy-950); color: var(--navy-950); }
 
   /* Section headings: 32/38 SemiBold, 12px to the text */
   .ff-head h2.h1, .ff-partner-copy h2.h1, .ff-stories-head h2.h1 { font-weight: 600; }
@@ -206,9 +207,10 @@
   .ff-quote { gap: 20px; padding: 16px; }
   .ff-quote figcaption img { width: 48px; height: 48px; }
   .ff-quote figcaption strong { font-size: 16px; line-height: 22px; letter-spacing: 0.2px; }
+  .ff-more-btn { margin-top: 24px; }
 
   /* CTA 390×262 */
-  .ff-cta { background-image: url("../assets/ui/img/ff-cta-m.jpg"); }
+  .ff-cta { background-image: url("../assets/ui/img/ff-cta-m.jpg?v=10"); }
   .ff-cta-inner { padding: 32px 38px; }
   .ff-cta h2.h2 { font-size: 32px; line-height: 38px; font-weight: 600; letter-spacing: -0.5px; }
 }

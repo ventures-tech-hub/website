@@ -1,0 +1,712 @@
+/* Loktara Ventures - Contact Page Styles */
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+.ct-hero {
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  background-color: #FAFAFA;
+  overflow: hidden;
+  padding: 64px 0 80px;
+}
+
+.ct-hero-media {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 58%;
+  height: 100%;
+  z-index: 1;
+}
+
+.ct-hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center right;
+  display: block;
+}
+
+.ct-hero-fade {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(
+    90deg,
+    #FFFFFF 0%,
+    #FFFFFF 42%,
+    rgba(255, 255, 255, 0.95) 48%,
+    rgba(255, 255, 255, 0.6) 55%,
+    rgba(255, 255, 255, 0) 72%
+  );
+  pointer-events: none;
+}
+
+.ct-hero-inner {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+}
+
+.ct-hero-copy {
+  max-width: 580px;
+}
+
+.eyebrow-line {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #1A1A1A;
+  margin-bottom: 20px;
+}
+
+.eyebrow-line::before {
+  content: "";
+  display: inline-block;
+  width: 36px;
+  height: 3px;
+  background: #D9531E;
+  border-radius: 2px;
+}
+
+.ct-hero-copy h1 {
+  font-size: 54px;
+  line-height: 1.1;
+  font-weight: 700;
+  color: #111827;
+  letter-spacing: -0.02em;
+  margin-bottom: 22px;
+}
+
+.ct-hero-copy p {
+  font-size: 17px;
+  line-height: 1.6;
+  color: #4B5563;
+  margin-bottom: 32px;
+  max-width: 520px;
+}
+
+.ct-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   Section 2: We're Here to Help (4 Cards)
+   ========================================================================== */
+.ct-help {
+  padding: 80px 0;
+  background-color: #FFFFFF;
+}
+
+.ct-section-head {
+  margin-bottom: 44px;
+}
+
+.ct-section-head .eyebrow {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #6B7280;
+  margin-bottom: 8px;
+}
+
+.ct-section-head h2 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #111827;
+}
+
+.ct-help-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.ct-help-card {
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 16px;
+  padding: 36px 24px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.ct-help-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+  border-color: #D1D5DB;
+}
+
+.ct-help-icon {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.ct-help-icon svg {
+  width: 36px;
+  height: 36px;
+}
+
+.ct-help-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 12px;
+}
+
+.ct-help-card p {
+  font-size: 14px;
+  line-height: 1.55;
+  color: #6B7280;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+.ct-link-orange {
+  display: inline-block;
+  color: #D9531E;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.ct-link-orange:hover {
+  text-decoration: underline;
+  opacity: 0.9;
+}
+
+.ct-card-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: 1px solid #0B3050;
+  color: #0B3050;
+  background: transparent;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.ct-card-btn:hover {
+  background: #0B3050;
+  color: #FFFFFF;
+}
+
+/* ==========================================================================
+   Section 3: Where to Find Us (Locations & Map)
+   ========================================================================== */
+.ct-locations {
+  padding: 80px 0;
+  background-color: #F9FAFB;
+}
+
+.ct-locations-head {
+  margin-bottom: 40px;
+}
+
+.ct-locations-head .eyebrow {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #6B7280;
+  margin-bottom: 8px;
+}
+
+.ct-locations-head h2 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #111827;
+  margin-bottom: 14px;
+}
+
+.ct-locations-head p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #4B5563;
+  max-width: 620px;
+}
+
+.ct-locations-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.ct-locations-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.ct-loc-card {
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+}
+
+.ct-loc-media {
+  width: 100%;
+  height: 140px;
+  overflow: hidden;
+  background: #E5E7EB;
+}
+
+.ct-loc-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.ct-loc-body {
+  padding: 20px 18px 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.ct-loc-title-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.ct-loc-title-row svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.ct-loc-title-row h3 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.3;
+}
+
+.ct-loc-addr {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #4B5563;
+  margin-bottom: 4px;
+}
+
+.ct-loc-sub {
+  font-size: 13px;
+  color: #9CA3AF;
+  margin: 0;
+}
+
+/* Map Card */
+.ct-map-card {
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ct-map-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ==========================================================================
+   Section 4: Form & FAQs Split Grid
+   ========================================================================== */
+.ct-form-faq {
+  padding: 90px 0 100px;
+  background-color: #FFFFFF;
+}
+
+.ct-split-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 56px;
+  align-items: start;
+}
+
+.ct-form-col .eyebrow,
+.ct-faq-col .eyebrow {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #6B7280;
+  margin-bottom: 8px;
+}
+
+.ct-form-col h2,
+.ct-faq-col h2 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #111827;
+  margin-bottom: 32px;
+}
+
+/* Form Styles */
+.ct-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ct-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.ct-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ct-field label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1F2937;
+}
+
+.ct-field label .req {
+  color: #D9531E;
+  margin-left: 2px;
+}
+
+.ct-field label .opt {
+  color: #9CA3AF;
+  font-weight: 400;
+}
+
+.ct-field input,
+.ct-field textarea,
+.ct-field select {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 15px;
+  font-family: inherit;
+  color: #111827;
+  background: #FFFFFF;
+  border: 1px solid #D1D5DB;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+
+.ct-field input::placeholder,
+.ct-field textarea::placeholder {
+  color: #9CA3AF;
+}
+
+.ct-field input:focus,
+.ct-field textarea:focus,
+.ct-field select:focus {
+  border-color: #D9531E;
+  box-shadow: 0 0 0 3px rgba(217, 83, 30, 0.12);
+}
+
+.ct-field textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Phone input group */
+.ct-phone-group {
+  display: flex;
+  border: 1px solid #D1D5DB;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #FFFFFF;
+}
+
+.ct-phone-group:focus-within {
+  border-color: #D9531E;
+  box-shadow: 0 0 0 3px rgba(217, 83, 30, 0.12);
+}
+
+.ct-country-select {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 14px;
+  background: #F9FAFB;
+  border-right: 1px solid #D1D5DB;
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+  user-select: none;
+}
+
+.ct-country-select svg {
+  width: 10px;
+  height: 6px;
+}
+
+.ct-phone-group input {
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  flex: 1;
+}
+
+/* Select wrapper */
+.ct-select-wrapper {
+  position: relative;
+}
+
+.ct-select-wrapper select {
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: 36px;
+  cursor: pointer;
+}
+
+.ct-select-arrow {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 8px;
+  pointer-events: none;
+  color: #6B7280;
+}
+
+.ct-submit-btn {
+  margin-top: 8px;
+  padding: 14px 24px;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 8px;
+  background: #D9531E;
+  color: #FFFFFF;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.15s;
+}
+
+.ct-submit-btn:hover {
+  background: #C04313;
+}
+
+/* FAQs Styles */
+.ct-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.ct-faq-item {
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.ct-faq-item[open] {
+  border-color: #D1D5DB;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+}
+
+.ct-faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 22px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+
+.ct-faq-question::-webkit-details-marker {
+  display: none;
+}
+
+.ct-faq-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #111827;
+  transition: transform 0.25s ease;
+}
+
+.ct-faq-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.ct-faq-item[open] .ct-faq-icon {
+  transform: rotate(45deg);
+}
+
+.ct-faq-answer {
+  padding: 0 22px 20px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #4B5563;
+}
+
+.ct-faq-answer p {
+  margin: 0;
+}
+
+.ct-faq-answer a {
+  color: #D9531E;
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .ct-help-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ct-locations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ct-split-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ct-hero {
+    min-height: auto;
+    padding: 40px 0 0;
+    flex-direction: column;
+    background: #FFFFFF;
+  }
+
+  .ct-hero-media {
+    position: relative;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 780 / 756;
+    margin-top: 32px;
+    z-index: 1;
+  }
+
+  .ct-hero-media img {
+    object-position: center center;
+  }
+
+  .ct-hero-fade {
+    display: none;
+  }
+
+  .ct-hero-copy {
+    max-width: 100%;
+  }
+
+  .ct-hero-copy h1 {
+    font-size: 38px;
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+
+  .ct-hero-copy p {
+    font-size: 16px;
+    line-height: 1.55;
+    margin-bottom: 24px;
+  }
+
+  .ct-hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .ct-hero-actions .btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .ct-help {
+    padding: 60px 0;
+  }
+
+  .ct-help-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .ct-section-head h2,
+  .ct-locations-head h2,
+  .ct-form-col h2,
+  .ct-faq-col h2 {
+    font-size: 32px;
+  }
+
+  .ct-locations {
+    padding: 60px 0;
+  }
+
+  .ct-locations-cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .ct-form-faq {
+    padding: 60px 0 80px;
+  }
+
+  .ct-form-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+

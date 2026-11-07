@@ -232,22 +232,36 @@ if (insightTools) {
   });
 }
 
-/* ---------- Ventures: horizontal scroller arrows ---------- */
+/* ---------- Ventures: horizontal scroller arrows & dots ---------- */
 document.querySelectorAll(".venture-scroller").forEach((scroller) => {
   const track = scroller.querySelector(".venture-track");
   const arrows = scroller.querySelectorAll(".venture-arrow");
-  if (!track || !arrows.length) return;
+  const dots = scroller.querySelectorAll(".venture-dot");
+  if (!track) return;
   const step = () => {
     const card = track.querySelector(".venture-card");
     return card ? card.getBoundingClientRect().width + parseFloat(getComputedStyle(track).columnGap || 0) : track.clientWidth;
   };
   const update = () => {
-    const max = track.scrollWidth - track.clientWidth - 2;
-    arrows[0].disabled = track.scrollLeft <= 2;
-    arrows[1].disabled = track.scrollLeft >= max;
+    const s = step();
+    if (arrows.length) {
+      const max = track.scrollWidth - track.clientWidth - 2;
+      arrows[0].disabled = track.scrollLeft <= 2;
+      arrows[1].disabled = track.scrollLeft >= max;
+    }
+    if (dots.length && s > 0) {
+      const activeIndex = Math.min(dots.length - 1, Math.max(0, Math.round(track.scrollLeft / s)));
+      dots.forEach((dot, idx) => {
+        dot.classList.toggle("is-active", idx === activeIndex);
+      });
+    }
   };
   arrows.forEach((btn) => btn.addEventListener("click", () => {
     track.scrollBy({ left: step() * Number(btn.dataset.dir), behavior: "smooth" });
+  }));
+  dots.forEach((dot, idx) => dot.addEventListener("click", () => {
+    const s = step();
+    track.scrollTo({ left: idx * s, behavior: "smooth" });
   }));
   track.addEventListener("scroll", update, { passive: true });
   window.addEventListener("resize", update);
@@ -279,10 +293,10 @@ document.querySelectorAll(".lg-toc").forEach((toc) => {
   links.forEach((a) => a.addEventListener("click", () => setOpen(false)));
 });
 
-/* ---------- For Founders: testimonial arrows ---------- */
-document.querySelectorAll(".ff-stories").forEach((wrap) => {
-  const track = wrap.querySelector(".ff-quotes");
-  const [prev, next] = wrap.querySelectorAll(".ff-arrow");
+/* ---------- For Founders, For Businesses & For Partners: testimonial arrows ---------- */
+document.querySelectorAll(".ff-stories, .fb-stories, .pt-stories").forEach((wrap) => {
+  const track = wrap.querySelector(".ff-quotes, .fb-quotes, .pt-quotes");
+  const [prev, next] = wrap.querySelectorAll(".ff-arrow, .fb-arrow, .pt-arrow");
   if (!track || !prev || !next) return;
   const step = () => {
     const card = track.firstElementChild;

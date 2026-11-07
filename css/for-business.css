@@ -1,0 +1,207 @@
+/* For Businesses — Loktara Ventures UI Design (desktop 1280 & mobile 390) */
+
+/* ---------- Hero (1280×608: top fade behind the header + left fade, #F9F8F7) ---------- */
+.fb-hero {
+  --hero-h: 608px;
+  --hero-pt: 123px;
+  --hero-copy: 542px;
+  --tint: 249 248 247;
+  --fade-x: linear-gradient(90deg, rgb(249 248 247) 0%, rgb(249 248 247 / 0.98) 32%, rgb(249 248 247 / 0.6) 37%, rgb(249 248 247 / 0) 42%);
+  --fade-y: linear-gradient(180deg, rgb(249 248 247) 0%, rgb(249 248 247 / 0.9) 8%, rgb(249 248 247 / 0.7) 10%, rgb(249 248 247 / 0) 14%);
+  --hero-pos: right center;
+}
+.fb-hero .page-hero-inner { padding-bottom: 0; }
+
+/* ---------- Highlights card (5 items: 1200×216) ---------- */
+.fb-keys { padding: 48px 0; }
+.fb-keys-card {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow-card);
+}
+.fb-key { position: relative; display: flex; flex-direction: column; align-items: center; gap: 16px; padding: 32px 24px; text-align: center; }
+.fb-key + .fb-key::before { content: ""; position: absolute; left: 0; top: 35px; width: 1px; height: 145px; background: var(--border); }
+.fb-key img { width: 48px; height: 48px; }
+.fb-key h3 { font-size: 18px; line-height: 24px; font-weight: 600; color: var(--navy-950); }
+.fb-key p { margin-top: -8px; font-size: 14px; line-height: 22px; color: var(--text-primary); }
+
+/* ---------- How We Work With Businesses (4 steps) ---------- */
+.fb-program { padding: 48px 0; }
+.fb-program-inner { display: grid; grid-template-columns: 519px 609px; justify-content: space-between; align-items: start; }
+.fb-head h2 { margin-top: 8px; }
+.fb-head h2 > span { display: block; }
+.fb-head h2 > span + span { margin-top: 2px; }
+.fb-head > p { margin-top: 16px; }
+.fb-program .btn { margin-top: 24px; }
+.fb-steps { position: relative; display: grid; gap: 32px; }
+.fb-steps::before { content: ""; position: absolute; left: 20px; top: 40px; height: 260px; width: 1px; background: var(--n-400); }
+.fb-step { position: relative; display: grid; grid-template-columns: 40px 48px 1fr; column-gap: 24px; align-items: start; }
+.fb-step-num {
+  display: grid; place-items: center;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: var(--tone);
+  font-family: var(--font-display); font-size: 20px; line-height: 26px; font-weight: 600; color: #fff;
+}
+.fb-step img { width: 48px; height: 48px; }
+.fb-step h3 { font-size: 20px; line-height: 26px; font-weight: 600; color: var(--navy-950); }
+.fb-step p { margin-top: 4px; font-size: 16px; line-height: 26px; color: var(--text-primary); }
+.tone-orange { --tone: var(--orange-600); }
+.tone-navy { --tone: var(--navy-800); }
+.tone-green { --tone: var(--green-700); }
+
+/* ---------- Areas of Support (8 cards) ---------- */
+.fb-bring { padding: 56px 0; background: linear-gradient(90deg, rgb(244 248 251 / 0) 0%, rgb(244 248 251 / 0.7) 40%, rgb(244 248 251 / 0.95) 56%, rgb(244 248 251) 70%); }
+.fb-bring-head { display: grid; grid-template-columns: 580px 1fr; justify-content: space-between; align-items: end; gap: 32px; margin-bottom: 40px; }
+.fb-bring-head h2 { margin-top: 8px; }
+.fb-bring-head h2 > span { display: block; }
+.fb-bring-head h2 > span + span { margin-top: 2px; }
+.fb-bring-desc { max-width: 540px; justify-self: end; font-size: 16px; line-height: 26px; color: var(--text-primary); }
+.fb-bring-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.fb-bring-card { display: flex; flex-direction: column; gap: 12px; min-height: 186px; padding: 20px; border-radius: 12px; }
+.fb-bring-card img { width: 40px; height: 40px; }
+.fb-bring-card h3 { font-size: 18px; line-height: 24px; font-weight: 600; color: var(--navy-950); }
+.fb-bring-card p { margin-top: 6px; font-size: 14px; line-height: 22px; color: var(--text-primary); }
+
+/* ---------- Who We Partner With (4 photo cards) ---------- */
+.fb-partner { padding: 56px 0; }
+.fb-partner-inner { display: grid; grid-template-columns: 434px 728px; justify-content: space-between; align-items: start; gap: 32px; }
+.fb-partner-copy h2 { margin-top: 8px; }
+.fb-partner-copy h2 > span { display: block; }
+.fb-partner-copy h2 > span + span { margin-top: 2px; }
+.fb-partner-copy p { margin-top: 16px; }
+.fb-partner-copy .btn { margin-top: 28px; }
+.fb-partner-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.fb-pw-card { display: flex; flex-direction: column; overflow: hidden; border-radius: 12px; padding: 0; }
+.fb-pw-media { width: 100%; height: 160px; overflow: hidden; }
+.fb-pw-media img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s ease; }
+.fb-pw-card:hover .fb-pw-media img { transform: scale(1.04); }
+.fb-pw-copy { padding: 18px 20px 20px; }
+.fb-pw-copy h3 { font-size: 18px; line-height: 24px; font-weight: 600; color: var(--navy-950); }
+.fb-pw-copy p { margin-top: 6px; font-size: 14px; line-height: 22px; color: var(--text-primary); }
+
+/* ---------- Testimonials (Client Success Stories) ---------- */
+.fb-stories { padding: 48px 0; }
+.fb-stories-head { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.fb-stories-head h2 { margin-top: 8px; }
+.fb-arrows { display: flex; gap: 12px; }
+.fb-arrow {
+  display: grid; place-items: center;
+  width: 36px; height: 36px; padding: 0;
+  border: 1px solid var(--navy-950);
+  border-radius: 32px;
+  background: transparent;
+  font-size: 14px; line-height: 20px; font-weight: 600; color: var(--navy-950);
+  cursor: pointer;
+  transition: background .2s ease, border-color .2s ease, color .2s ease;
+}
+.fb-arrow:hover { background: var(--n-100); }
+.fb-quotes {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - 48px) / 3);
+  column-gap: 24px;
+  margin-top: 32px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+.fb-quotes::-webkit-scrollbar { display: none; }
+.fb-quote { margin: 0; display: flex; flex-direction: column; gap: 24px; padding: 24px; border-radius: 12px; scroll-snap-align: start; }
+.fb-quote blockquote { margin: 0; }
+.fb-quote blockquote img { width: 24px; height: 24px; }
+.fb-quote blockquote p { margin-top: 8px; font-size: 14px; line-height: 22px; color: var(--text-primary); }
+.fb-quote figcaption { display: flex; align-items: center; gap: 16px; margin-top: auto; }
+.fb-quote figcaption img { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; }
+.fb-quote figcaption strong { display: block; font-family: var(--font-display); font-size: 18px; line-height: 24px; font-weight: 600; color: var(--text-primary); }
+.fb-quote figcaption div > span { display: block; margin-top: 2px; font-size: 14px; line-height: 22px; color: var(--n-400); }
+
+/* ---------- CTA band ---------- */
+.fb-cta { background: url("../assets/ui/img/biz-cta-d.jpg?v=10") center / cover no-repeat; }
+.fb-cta-inner { display: grid; justify-items: center; padding: 72px var(--gutter); text-align: center; }
+.fb-cta .eyebrow { color: #fff; }
+.fb-cta h2 { margin-top: 8px; color: #fff; }
+.fb-cta p { margin-top: 12px; color: #fff; opacity: 0.9; }
+.fb-cta .btn { margin-top: 24px; }
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1180px) {
+  .fb-program-inner, .fb-partner-inner, .fb-bring-head { grid-template-columns: 1fr; row-gap: 32px; }
+  .fb-bring-desc { justify-self: start; }
+  .fb-bring-grid { grid-template-columns: repeat(2, 1fr); }
+  .fb-quotes { grid-auto-columns: minmax(300px, calc((100% - 24px) / 2)); }
+}
+
+/* ---------- Phone (Figma Mobile frame, 390 wide) ---------- */
+@media (max-width: 768px) {
+  /* Hero 390×844: art fills the frame, left fade #F9F8F7 */
+  section.fb-hero {
+    --hero-h: 844px;
+    --hero-pt: 112px;
+    --fade-m: linear-gradient(180deg, rgb(249 248 247) 0%, rgb(249 248 247) 33%, rgb(249 248 247 / 0.85) 45%, rgb(249 248 247 / 0.65) 56%, rgb(249 248 247 / 0) 66%);
+  }
+  .fb-hero .page-hero-actions .btn { width: 238px; }
+  .fb-hero .btn-secondary { background: #fff; border: 1px solid var(--navy-950); color: var(--navy-950); }
+
+  /* Section headings: 32/38 SemiBold, 12px to the text */
+  .fb-head h2.h1, .fb-bring-head h2.h1, .fb-partner-copy h2.h1, .fb-stories-head h2.h1 { font-weight: 600; }
+  .fb-head h2 > span + span, .fb-bring-head h2 > span + span, .fb-partner-copy h2 > span + span { margin-top: 1px; }
+  .fb-head > p, .fb-partner-copy p { margin-top: 12px; }
+
+  /* Highlights: one column, dividers between */
+  .fb-keys { padding: 32px 0; }
+  .fb-keys-card { grid-template-columns: 1fr; }
+  .fb-key { padding: 24px 32px; }
+  .fb-key + .fb-key::before { left: 50%; top: 0; width: 212px; height: 1px; transform: translateX(-50%); }
+
+  /* How We Work With Businesses */
+  .fb-program { padding: 32px 0; background: linear-gradient(180deg, rgb(252 253 253 / 0) 0%, rgb(250 253 254 / .7) 100%); }
+  .fb-program-inner { display: flex; flex-direction: column; row-gap: 24px; }
+  .fb-head { display: contents; }
+  .fb-head > .eyebrow { order: 1; }
+  .fb-head > h2 { order: 2; }
+  .fb-head > p { order: 3; margin-top: -12px; }
+  .fb-steps { order: 4; gap: 16px; }
+  .fb-program .btn { order: 5; width: 100%; margin-top: 0; }
+  .fb-program .fb-head > h2 { margin-top: -16px; }
+  .fb-steps::before { display: none; }
+  .fb-step:not(:last-child)::after { content: ""; position: absolute; left: 16px; top: 32px; width: 1px; height: calc(100% - 16px); background: var(--n-400); }
+  .fb-step { grid-template-columns: 32px 40px 1fr; column-gap: 16px; }
+  .fb-step-num { width: 32px; height: 32px; font-size: 18px; line-height: 24px; }
+  .fb-step img { width: 40px; height: 40px; }
+  .fb-step h3 { font-size: 18px; line-height: 24px; }
+  .fb-step p { font-size: 14px; line-height: 22px; }
+
+  /* Areas of Support: stacked cards */
+  .fb-bring { padding: 32px 0; background: none; }
+  .fb-bring-inner { display: grid; grid-template-columns: 1fr; row-gap: 28px; }
+  .fb-bring-head { display: block; margin-bottom: 0; }
+  .fb-bring-desc { margin-top: 12px; }
+  .fb-bring-grid { grid-template-columns: 1fr; gap: 16px; }
+  .fb-bring-card { flex-direction: row; align-items: flex-start; gap: 16px; min-height: auto; padding: 18px; }
+  .fb-bring-card p { margin-top: 4px; }
+
+  /* Who We Partner With: stacked photo cards */
+  .fb-partner { padding: 32px 0; }
+  .fb-partner-inner { grid-template-columns: 1fr; row-gap: 28px; }
+  .fb-partner-grid { grid-template-columns: 1fr; gap: 20px; }
+  .fb-partner-copy .btn { width: 100%; margin-top: 20px; }
+
+  /* Testimonials: stacked cards with Load More */
+  .fb-stories { padding: 32px 0; }
+  .fb-arrows { display: none; }
+  .fb-quotes { grid-auto-flow: row; grid-auto-columns: auto; grid-template-columns: 1fr; row-gap: 24px; overflow: visible; }
+  .fb-quote { gap: 20px; padding: 20px; }
+  .fb-quote figcaption img { width: 48px; height: 48px; }
+  .fb-quote figcaption strong { font-size: 16px; line-height: 22px; letter-spacing: 0.2px; }
+  .fb-more-btn { margin-top: 24px; }
+
+  /* CTA 390×262 */
+  .fb-cta { background-image: url("../assets/ui/img/biz-cta-m.jpg?v=10"); }
+  .fb-cta-inner { padding: 48px 24px; }
+  .fb-cta h2.h2 { font-size: 32px; line-height: 38px; font-weight: 600; letter-spacing: -0.5px; }
+}
+

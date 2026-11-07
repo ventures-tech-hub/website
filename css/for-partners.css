@@ -1,0 +1,201 @@
+/* For Partners — Loktara Ventures UI Design (desktop 1280 & mobile 390) */
+
+/* ---------- Hero (1280×608) ---------- */
+.pt-hero {
+  --hero-h: 608px;
+  --hero-pt: 123px;
+  --hero-copy: 542px;
+  --tint: 249 248 247;
+  --hero-pos: right center;
+  --fade-x: linear-gradient(90deg, rgb(249 248 247) 0%, rgb(249 248 247 / 0.9) 39%, rgb(249 248 247 / 0.7) 42%, rgb(249 248 247 / 0) 47%);
+  --fade-y: linear-gradient(180deg, rgb(249 248 247) 0%, rgb(249 248 247 / 0.9) 8%, rgb(249 248 247 / 0.7) 10%, rgb(249 248 247 / 0) 14%);
+}
+.pt-hero .page-hero-media img {
+  object-fit: cover;
+  object-position: right center !important;
+}
+.pt-hero .page-hero-inner { padding-bottom: 0; }
+
+/* ---------- Highlights card (4 items) ---------- */
+.pt-keys { padding: 48px 0; }
+.pt-keys-card {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow-card);
+}
+.pt-key { position: relative; display: flex; flex-direction: column; align-items: center; gap: 16px; padding: 32px 24px; text-align: center; }
+.pt-key + .pt-key::before { content: ""; position: absolute; left: 0; top: 35px; width: 1px; height: 145px; background: var(--border); }
+.pt-key img { width: 48px; height: 48px; }
+.pt-key h3 { font-size: 18px; line-height: 24px; font-weight: 600; color: var(--navy-950); }
+.pt-key p { margin-top: -8px; font-size: 14px; line-height: 22px; color: var(--text-primary); }
+
+/* ---------- Why Partner With Loktara (6 cards) ---------- */
+.pt-why { padding: 56px 0; }
+.pt-why-inner { display: grid; grid-template-columns: 434px 728px; justify-content: space-between; align-items: start; gap: 32px; }
+.pt-why-head h2 { margin-top: 8px; }
+.pt-why-head h2 > span { display: block; }
+.pt-why-head h2 > span + span { margin-top: 2px; }
+.pt-why-head p { margin-top: 16px; }
+.pt-why-head .btn { margin-top: 28px; }
+.pt-why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.pt-why-card { display: flex; flex-direction: column; gap: 14px; padding: 22px 20px; border-radius: 12px; }
+.pt-why-card img { width: 40px; height: 40px; }
+.pt-why-card h3 { font-size: 18px; line-height: 24px; font-weight: 600; color: var(--navy-950); }
+.pt-why-card p { margin-top: 6px; font-size: 14px; line-height: 22px; color: var(--text-primary); }
+
+/* ---------- Types of Partnerships (4 photo cards) ---------- */
+.pt-types { padding: 56px 0; background: linear-gradient(90deg, rgb(244 248 251 / 0) 0%, rgb(244 248 251 / 0.7) 40%, rgb(244 248 251 / 0.95) 56%, rgb(244 248 251) 70%); }
+.pt-types-head { display: grid; grid-template-columns: 580px 1fr; justify-content: space-between; align-items: end; gap: 32px; margin-bottom: 40px; }
+.pt-types-head h2 { margin-top: 8px; }
+.pt-types-head h2 > span { display: block; }
+.pt-types-head h2 > span + span { margin-top: 2px; }
+.pt-types-desc { max-width: 520px; justify-self: end; font-size: 16px; line-height: 26px; color: var(--text-primary); }
+.pt-types-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.pt-type-card { display: flex; flex-direction: column; overflow: hidden; border-radius: 12px; padding: 0; }
+.pt-type-media { width: 100%; height: 140px; overflow: hidden; }
+.pt-type-media img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s ease; }
+.pt-type-card:hover .pt-type-media img { transform: scale(1.04); }
+.pt-type-body { display: flex; flex-direction: column; flex: 1; padding: 18px 20px 20px; }
+.pt-type-body h3 { font-size: 18px; line-height: 24px; font-weight: 600; color: var(--navy-950); }
+.pt-type-body p { margin-top: 6px; font-size: 14px; line-height: 22px; color: var(--text-primary); margin-bottom: 16px; }
+.pt-type-body .link-arrow { margin-top: auto; font-size: 14px; font-weight: 600; color: var(--orange-600); }
+
+/* ---------- How We Work Together (4 horizontal steps) ---------- */
+.pt-steps-sec { padding: 56px 0; }
+.pt-steps-head { display: grid; grid-template-columns: 580px 1fr; justify-content: space-between; align-items: end; gap: 32px; margin-bottom: 48px; }
+.pt-steps-head h2 { margin-top: 8px; }
+.pt-steps-head h2 > span { display: block; }
+.pt-steps-head h2 > span + span { margin-top: 2px; }
+.pt-steps-desc { max-width: 480px; justify-self: end; font-size: 16px; line-height: 26px; color: var(--text-primary); }
+.pt-steps-flow { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
+.pt-step-item { flex: 1; max-width: 250px; }
+.pt-step-top { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+.pt-step-badge {
+  display: grid; place-items: center;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: var(--tone);
+  font-family: var(--font-display); font-size: 18px; line-height: 24px; font-weight: 600; color: #fff;
+}
+.pt-step-ico { width: 40px; height: 40px; }
+.pt-step-text h3 { font-size: 18px; line-height: 24px; font-weight: 600; color: var(--navy-950); }
+.pt-step-text p { margin-top: 6px; font-size: 14px; line-height: 22px; color: var(--text-primary); }
+.pt-step-sep { display: flex; align-items: center; justify-content: center; width: 48px; height: 40px; opacity: 0.6; }
+.pt-step-sep svg { width: 36px; height: 12px; }
+.tone-orange { --tone: var(--orange-600); }
+.tone-navy { --tone: var(--navy-800); }
+.tone-green { --tone: var(--green-700); }
+
+/* ---------- Partner Stories (Testimonials) ---------- */
+.pt-stories { padding: 48px 0; }
+.pt-stories-head { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.pt-stories-head h2 { margin-top: 8px; }
+.pt-arrows { display: flex; gap: 12px; }
+.pt-arrow {
+  display: grid; place-items: center;
+  width: 36px; height: 36px; padding: 0;
+  border: 1px solid var(--navy-950);
+  border-radius: 32px;
+  background: transparent;
+  font-size: 14px; line-height: 20px; font-weight: 600; color: var(--navy-950);
+  cursor: pointer;
+  transition: background .2s ease, border-color .2s ease, color .2s ease;
+}
+.pt-arrow:hover { background: var(--n-100); }
+.pt-quotes {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - 48px) / 3);
+  column-gap: 24px;
+  margin-top: 32px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+.pt-quotes::-webkit-scrollbar { display: none; }
+.pt-quote { margin: 0; display: flex; flex-direction: column; gap: 24px; padding: 24px; border-radius: 12px; scroll-snap-align: start; }
+.pt-quote blockquote { margin: 0; }
+.pt-quote blockquote img { width: 24px; height: 24px; }
+.pt-quote blockquote p { margin-top: 8px; font-size: 14px; line-height: 22px; color: var(--text-primary); }
+.pt-quote figcaption { display: flex; align-items: center; gap: 16px; margin-top: auto; }
+.pt-quote figcaption img { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; }
+.pt-quote figcaption strong { display: block; font-family: var(--font-display); font-size: 18px; line-height: 24px; font-weight: 600; color: var(--text-primary); }
+.pt-quote figcaption div > span { display: block; margin-top: 2px; font-size: 14px; line-height: 22px; color: var(--n-400); }
+
+/* ---------- CTA band ---------- */
+.pt-cta { background: url("../assets/ui/img/partner-cta-d.jpg?v=10") center / cover no-repeat; }
+.pt-cta-inner { display: grid; justify-items: center; padding: 72px var(--gutter); text-align: center; }
+.pt-cta .eyebrow { color: #fff; }
+.pt-cta h2 { margin-top: 8px; color: #fff; }
+.pt-cta p { margin-top: 12px; color: #fff; opacity: 0.9; }
+.pt-cta .btn { margin-top: 24px; }
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1180px) {
+  .pt-why-inner, .pt-types-head, .pt-steps-head { grid-template-columns: 1fr; row-gap: 32px; }
+  .pt-types-desc, .pt-steps-desc { justify-self: start; }
+  .pt-why-grid { grid-template-columns: repeat(2, 1fr); }
+  .pt-types-grid { grid-template-columns: repeat(2, 1fr); }
+  .pt-quotes { grid-auto-columns: minmax(300px, calc((100% - 24px) / 2)); }
+  .pt-steps-flow { flex-wrap: wrap; }
+  .pt-step-sep { display: none; }
+}
+
+/* ---------- Phone (390 wide) ---------- */
+@media (max-width: 768px) {
+  section.pt-hero {
+    --hero-h: 844px;
+    --hero-pt: 112px;
+    --fade-m: linear-gradient(180deg, rgb(249 248 247) 0%, rgb(249 248 247) 33%, rgb(249 248 247 / 0.85) 45%, rgb(249 248 247 / 0.65) 56%, rgb(249 248 247 / 0) 66%);
+  }
+  .pt-hero .page-hero-actions .btn { width: 238px; }
+  .pt-hero .btn-secondary { background: #fff; border: 1px solid var(--navy-950); color: var(--navy-950); }
+
+  .pt-why-head h2.h1, .pt-types-head h2.h1, .pt-steps-head h2.h1, .pt-stories-head h2.h1 { font-weight: 600; }
+  .pt-why-head h2 > span + span, .pt-types-head h2 > span + span, .pt-steps-head h2 > span + span { margin-top: 1px; }
+
+  /* Highlights: stacked */
+  .pt-keys { padding: 32px 0; }
+  .pt-keys-card { grid-template-columns: 1fr; }
+  .pt-key { padding: 24px 32px; }
+  .pt-key + .pt-key::before { left: 50%; top: 0; width: 212px; height: 1px; transform: translateX(-50%); }
+
+  /* Why Partner */
+  .pt-why { padding: 32px 0; }
+  .pt-why-inner { grid-template-columns: 1fr; row-gap: 28px; }
+  .pt-why-head .btn { width: 100%; margin-top: 20px; }
+  .pt-why-grid { grid-template-columns: 1fr; gap: 16px; }
+  .pt-why-card { flex-direction: row; align-items: flex-start; gap: 16px; padding: 18px; }
+
+  /* Types */
+  .pt-types { padding: 32px 0; background: none; }
+  .pt-types-head { display: block; margin-bottom: 24px; }
+  .pt-types-desc { margin-top: 12px; }
+  .pt-types-grid { grid-template-columns: 1fr; gap: 20px; }
+
+  /* Steps: vertical flow with down arrows */
+  .pt-steps-sec { padding: 32px 0; background: linear-gradient(180deg, rgb(252 253 253 / 0) 0%, rgb(250 253 254 / .7) 100%); }
+  .pt-steps-head { display: block; margin-bottom: 24px; }
+  .pt-steps-desc { margin-top: 12px; }
+  .pt-steps-flow { flex-direction: column; align-items: stretch; gap: 20px; }
+  .pt-step-item { max-width: 100%; display: grid; grid-template-columns: 40px 1fr; column-gap: 16px; align-items: start; }
+  .pt-step-top { flex-direction: column; gap: 8px; margin-bottom: 0; }
+  .pt-step-sep { display: flex; width: 40px; height: 24px; justify-content: center; }
+  .pt-step-sep svg { transform: rotate(90deg); width: 20px; height: 10px; }
+
+  /* Testimonials */
+  .pt-stories { padding: 32px 0; }
+  .pt-arrows { display: none; }
+  .pt-quotes { grid-auto-flow: row; grid-auto-columns: auto; grid-template-columns: 1fr; row-gap: 24px; overflow: visible; }
+  .pt-quote { gap: 20px; padding: 20px; }
+  .pt-quote figcaption img { width: 48px; height: 48px; }
+  .pt-more-btn { margin-top: 24px; }
+
+  /* CTA */
+  .pt-cta { background-image: url("../assets/ui/img/partner-cta-m.jpg?v=10"); }
+  .pt-cta-inner { padding: 48px 24px; }
+  .pt-cta h2.h2 { font-size: 32px; line-height: 38px; font-weight: 600; letter-spacing: -0.5px; }
+}

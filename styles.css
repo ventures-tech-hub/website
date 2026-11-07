@@ -348,7 +348,7 @@ a, button, summary, .card-link { -webkit-tap-highlight-color: transparent; }
      (at most 1.25× the frame, so labels aren't cropped); wider than that it stays right-anchored and only its left edge fades */
   .page-hero-media img {
     left: auto; right: 0; width: min(100%, 1600px);
-    object-fit: cover; object-position: 100% 80%;
+    object-fit: cover; object-position: var(--hero-pos, 100% 50%);
   }
 }
 @media (min-width: 1601px) {
