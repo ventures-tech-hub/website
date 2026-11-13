@@ -6,9 +6,13 @@
   --hero-pt: 123px;
   --hero-copy: 542px;
   --tint: 249 248 247;
-  --fade-x: linear-gradient(90deg, rgb(249 248 247) 0%, rgb(249 248 247 / 0.98) 32%, rgb(249 248 247 / 0.6) 37%, rgb(249 248 247 / 0) 42%);
+  --fade-x: linear-gradient(90deg, rgb(249 248 247) 0%, rgb(249 248 247 / 0.95) 28%, rgb(249 248 247 / 0.5) 34%, rgb(249 248 247 / 0) 39%);
   --fade-y: linear-gradient(180deg, rgb(249 248 247) 0%, rgb(249 248 247 / 0.9) 8%, rgb(249 248 247 / 0.7) 10%, rgb(249 248 247 / 0) 14%);
   --hero-pos: right center;
+}
+.ff-hero .page-hero-media img {
+  object-fit: cover;
+  object-position: right center !important;
 }
 .ff-hero .page-hero-inner { padding-bottom: 0; }
 
