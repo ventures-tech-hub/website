@@ -689,6 +689,8 @@
     height: auto;
     display: block;
     object-position: bottom center;
+    -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 24%);
+    mask-image: linear-gradient(180deg, transparent 0%, #000 24%);
   }
 
   .ct-hero-fade {
