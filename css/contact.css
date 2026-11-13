@@ -683,6 +683,8 @@
   }
 
   .ct-hero-media img {
+    position: relative;
+    inset: auto;
     width: 100%;
     height: auto;
     display: block;
@@ -697,10 +699,10 @@
     background: linear-gradient(
       180deg,
       #FFFFFF 0%,
-      #FFFFFF 38%,
-      rgba(255, 255, 255, 0.88) 48%,
-      rgba(255, 255, 255, 0.45) 58%,
-      rgba(255, 255, 255, 0) 68%
+      #FFFFFF 32%,
+      rgba(255, 255, 255, 0.88) 40%,
+      rgba(255, 255, 255, 0.48) 50%,
+      rgba(255, 255, 255, 0) 60%
     );
     pointer-events: none;
   }
