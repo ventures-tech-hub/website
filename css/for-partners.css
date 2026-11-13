@@ -126,7 +126,7 @@
 .pt-quote figcaption div > span { display: block; margin-top: 2px; font-size: 14px; line-height: 22px; color: var(--n-400); }
 
 /* ---------- CTA band ---------- */
-.pt-cta { background: url("../assets/ui/img/partner-cta-d.jpg?v=10") center / cover no-repeat; }
+.pt-cta { background: url("../assets/ui/img/enhanced/partner-cta-d.jpg?v=10") center / cover no-repeat; }
 .pt-cta-inner { display: grid; justify-items: center; padding: 72px var(--gutter); text-align: center; }
 .pt-cta .eyebrow { color: #fff; }
 .pt-cta h2 { margin-top: 8px; color: #fff; }
@@ -195,7 +195,7 @@
   .pt-more-btn { margin-top: 24px; }
 
   /* CTA */
-  .pt-cta { background-image: url("../assets/ui/img/partner-cta-m.jpg?v=10"); }
+  .pt-cta { background-image: url("../assets/ui/img/enhanced/partner-cta-m.jpg?v=10"); }
   .pt-cta-inner { padding: 48px 24px; }
   .pt-cta h2.h2 { font-size: 32px; line-height: 38px; font-weight: 600; letter-spacing: -0.5px; }
 }

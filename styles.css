@@ -271,7 +271,7 @@ a, button, summary, .card-link { -webkit-tap-highlight-color: transparent; }
   .cta-band .cta-inner .eyebrow + * { margin-top: -4px; }
   .cta-band:has(> img[src*="dbd2301b1a"]) {
     min-height: 324px;
-    background: linear-gradient(180deg, #F0F4F5 0%, rgba(240, 244, 245, .85) 30%, rgba(240, 244, 245, 0) 60%), url("assets/ui/img/a5a2870baf.jpg") center bottom / cover no-repeat;
+    background: linear-gradient(180deg, #F0F4F5 0%, rgba(240, 244, 245, .85) 30%, rgba(240, 244, 245, 0) 60%), url("assets/ui/img/enhanced/a5a2870baf.jpg") center bottom / cover no-repeat;
   }
   .cta-band > img[src*="dbd2301b1a"] { display: none; }
   .footer-main { grid-template-columns: 174px 1fr;row-gap: 40px; column-gap: 0; padding-top: 32px; padding-bottom: 40px; }

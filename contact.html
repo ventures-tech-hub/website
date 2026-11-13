@@ -9,8 +9,22 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Archivo+Narrow:wght@400;500;600;700&family=Arbutus+Slab&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css" />
-<link rel="stylesheet" href="css/contact.css?v=10" />
+<link rel="stylesheet" href="styles.css?v=25" />
+<link rel="stylesheet" href="css/contact.css?v=25" />
+<style>
+  .ct-locations-cards {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 32px !important;
+    align-items: stretch !important;
+  }
+  @media (max-width: 860px) {
+    .ct-locations-cards {
+      grid-template-columns: 1fr !important;
+      gap: 24px !important;
+    }
+  }
+</style>
 </head>
 <body>
 
@@ -21,7 +35,7 @@
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="what-we-do.html">What We Do</a>
-      <a href="index.html#ventures">Our Ventures</a>
+      <a href="our-ventures.html">Our Ventures</a>
       <a href="approach.html">Our Approach</a>
       <a href="for-founders.html">For Founders</a>
       <a href="for-business.html">For Business</a>
@@ -41,8 +55,8 @@
   <!-- ===== Hero ===== -->
   <section class="page-hero ct-hero">
     <picture class="page-hero-media ct-hero-media">
-      <source media="(max-width: 768px)" srcset="assets/ui/img/hero-contact-m.jpg?v=10" />
-      <img src="assets/ui/img/hero-contact-d.jpg?v=10" alt="" fetchpriority="high" />
+      <source media="(max-width: 768px)" srcset="assets/ui/img/enhanced/hero-contact-m.jpg?v=10" />
+      <img src="assets/ui/img/enhanced/hero-contact-d.jpg?v=10" alt="" fetchpriority="high" />
     </picture>
     <div class="page-hero-fade ct-hero-fade" aria-hidden="true"></div>
     <div class="container page-hero-inner ct-hero-inner">
@@ -76,7 +90,7 @@
           </div>
           <h3>Email Us</h3>
           <p>For general inquiries, partnerships or opportunities.</p>
-          <a class="ct-link-orange" href="mailto:hello@loktaraventures.com">hello@loktaraventures.com</a>
+          <a class="ct-link-orange" href="mailto:gagandeep.singh@loktara.com">gagandeep.singh@loktara.com</a>
         </div>
 
         <!-- Card 2: Phone -->
@@ -88,7 +102,13 @@
           </div>
           <h3>Call Us</h3>
           <p>Speak with our team during business hours.</p>
-          <a class="ct-link-orange" href="tel:+919876543210">+91 98765 43210</a>
+          <div class="ct-phone-links">
+            <a class="ct-link-orange" href="tel:+918196851993" aria-label="Call +91 8196851993">+91 8196851993</a>
+            <a class="ct-whatsapp-link" href="https://wa.me/918196851993" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.8a8.4 8.4 0 0 1-12.4 7.4L4 20l.9-4a8.4 8.4 0 1 1 15.6-4.2Z"/><path d="M9 8.5c.2-.5.4-.5.7-.5h.5c.2 0 .4.1.5.4l.8 1.8c.1.2.1.4-.1.6l-.6.7c-.2.2-.2.4-.1.6.5.9 1.3 1.7 2.2 2.2.2.1.4.1.6-.1l.7-.7c.2-.2.4-.2.6-.1l1.7.8c.3.1.4.3.4.5 0 .3-.2 1.1-.7 1.5-.5.5-1.2.7-1.9.6-1-.2-2.3-.8-3.7-2.1-1.2-1.1-2-2.5-2.3-3.5-.3-.9 0-1.8.7-2.7Z"/></svg>
+              WhatsApp
+            </a>
+          </div>
         </div>
 
         <!-- Card 3: Visit Us -->
@@ -101,7 +121,7 @@
           </div>
           <h3>Visit Us</h3>
           <p>Our office is open for meetings by appointment.</p>
-          <a class="btn btn-secondary btn-sm ct-card-btn" href="#locations">View Office Locations →</a>
+          <a class="btn btn-secondary btn-sm ct-card-btn" href="#locations">View India Office →</a>
         </div>
 
         <!-- Card 4: LinkedIn -->
@@ -129,12 +149,12 @@
       </div>
 
       <div class="ct-locations-grid">
-        <!-- Left: Office cards -->
+        <!-- Office cards -->
         <div class="ct-locations-cards">
           <!-- Card 1: India -->
           <div class="card ct-loc-card">
             <div class="ct-loc-media">
-              <img src="assets/ui/img/contact-loc-india.jpg?v=10" alt="Loktara Ventures India Head Office Mohali" loading="lazy" />
+              <img src="assets/ui/img/enhanced/contact-loc-india.jpg?v=10" alt="Loktara Ventures India Head Office Mohali" loading="lazy" />
             </div>
             <div class="ct-loc-body">
               <div class="ct-loc-title-row">
@@ -143,32 +163,16 @@
                 </span>
                 <h3>Head Office – India</h3>
               </div>
-              <p class="ct-loc-addr">Mohali, Punjab, India</p>
+              <p class="ct-loc-addr">Ground Floor, Fateh Tower, C-210B, Phase 8B, Industrial Area, Sector 74, Sahibzada Ajit Singh Nagar, Punjab 140307</p>
               <p class="ct-loc-sub">(By Appointment Only)</p>
+              <a class="btn btn-secondary btn-sm ct-card-btn ct-map-link" href="https://share.google/YONi6pTBvyXOIwYRn" target="_blank" rel="noopener noreferrer">View on Google Maps →</a>
             </div>
           </div>
 
-          <!-- Card 2: North America -->
-          <div class="card ct-loc-card">
-            <div class="ct-loc-media">
-              <img src="assets/ui/img/contact-loc-na.jpg?v=10" alt="Loktara Ventures North America Virtual Office" loading="lazy" />
-            </div>
-            <div class="ct-loc-body">
-              <div class="ct-loc-title-row">
-                <span class="ct-pin-blue">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#003366" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                </span>
-                <h3>North America (Virtual)</h3>
-              </div>
-              <p class="ct-loc-addr">Serving founders and businesses across Canada &amp; USA</p>
-              <p class="ct-loc-sub">(Meetings available online)</p>
-            </div>
+          <!-- Card 2: Working Globally -->
+          <div class="ct-map-card">
+            <img class="ct-map-img" src="assets/ui/img/contact-working-globally.png?v=2" alt="Working Globally - We collaborate with founders and businesses across multiple industries and geographies" loading="lazy" />
           </div>
-        </div>
-
-        <!-- Right: Map card -->
-        <div class="ct-map-card">
-          <img class="ct-map-img" src="assets/ui/img/contact-world-map.png?v=10" alt="Loktara Ventures Global Footprint" loading="lazy" />
         </div>
       </div>
     </div>
@@ -250,7 +254,7 @@
                 </span>
               </summary>
               <div class="ct-faq-answer">
-                <p>You can fill out the contact form on this page selecting "Pitch Startup" or email your pitch deck directly to <a href="mailto:hello@loktaraventures.com">hello@loktaraventures.com</a> with details on your market, traction and team.</p>
+                <p>You can fill out the contact form on this page selecting "Pitch Startup" or email your pitch deck directly to <a href="mailto:gagandeep.singh@loktara.com">gagandeep.singh@loktara.com</a> with details on your market, traction and team.</p>
               </div>
             </details>
 
@@ -324,7 +328,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="what-we-do.html">What To Do</a></li>
-        <li><a href="index.html#ventures">Our Ventures</a></li>
+        <li><a href="our-ventures.html">Our Ventures</a></li>
         <li><a href="approach.html">Our Approach</a></li>
         <li><a href="insights.html">Insights</a></li>
         <li><a class="active" href="contact.html">Contact</a></li>

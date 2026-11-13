@@ -6,11 +6,19 @@
   --hero-pt: 123px;
   --hero-copy: 542px;
   --tint: 249 248 247;
-  --fade-x: linear-gradient(90deg, rgb(249 248 247) 0%, rgb(249 248 247 / 0.98) 32%, rgb(249 248 247 / 0.6) 37%, rgb(249 248 247 / 0) 42%);
+  --fade-x: linear-gradient(90deg, rgb(249 248 247) 0%, rgb(249 248 247 / 0.98) 28%, rgb(249 248 247 / 0.78) 40%, rgb(249 248 247 / 0.35) 51%, rgb(249 248 247 / 0) 63%);
   --fade-y: linear-gradient(180deg, rgb(249 248 247) 0%, rgb(249 248 247 / 0.9) 8%, rgb(249 248 247 / 0.7) 10%, rgb(249 248 247 / 0) 14%);
   --hero-pos: right center;
 }
 .fb-hero .page-hero-inner { padding-bottom: 0; }
+@media (min-width: 769px) {
+  .fb-hero .page-hero-media img {
+    object-fit: contain !important;
+    object-position: right center !important;
+    transform: scale(var(--fb-hero-image-scale, 1.1));
+    transform-origin: right center;
+  }
+}
 
 /* ---------- Highlights card (5 items: 1200×216) ---------- */
 .fb-keys { padding: 48px 0; }
@@ -22,9 +30,9 @@
   border-radius: 16px;
   box-shadow: var(--shadow-card);
 }
-.fb-key { position: relative; display: flex; flex-direction: column; align-items: center; gap: 16px; padding: 32px 24px; text-align: center; }
+.fb-key { position: relative; display: flex; flex-direction: column; align-items: center; gap: 16px; padding: var(--fb-key-padding-y, 32px) 24px; text-align: center; }
 .fb-key + .fb-key::before { content: ""; position: absolute; left: 0; top: 35px; width: 1px; height: 145px; background: var(--border); }
-.fb-key img { width: 48px; height: 48px; }
+.fb-key img { width: var(--fb-key-icon-size, 40px); height: var(--fb-key-icon-size, 40px); }
 .fb-key h3 { font-size: 18px; line-height: 24px; font-weight: 600; color: var(--navy-950); }
 .fb-key p { margin-top: -8px; font-size: 14px; line-height: 22px; color: var(--text-primary); }
 
@@ -120,7 +128,7 @@
 .fb-quote figcaption div > span { display: block; margin-top: 2px; font-size: 14px; line-height: 22px; color: var(--n-400); }
 
 /* ---------- CTA band ---------- */
-.fb-cta { background: url("../assets/ui/img/biz-cta-d.jpg?v=10") center / cover no-repeat; }
+.fb-cta { background: url("../assets/ui/img/enhanced/biz-cta-d.jpg?v=10") center / cover no-repeat; }
 .fb-cta-inner { display: grid; justify-items: center; padding: 72px var(--gutter); text-align: center; }
 .fb-cta .eyebrow { color: #fff; }
 .fb-cta h2 { margin-top: 8px; color: #fff; }
@@ -200,7 +208,7 @@
   .fb-more-btn { margin-top: 24px; }
 
   /* CTA 390×262 */
-  .fb-cta { background-image: url("../assets/ui/img/biz-cta-m.jpg?v=10"); }
+  .fb-cta { background-image: url("../assets/ui/img/enhanced/biz-cta-m.jpg?v=10"); }
   .fb-cta-inner { padding: 48px 24px; }
   .fb-cta h2.h2 { font-size: 32px; line-height: 38px; font-weight: 600; letter-spacing: -0.5px; }
 }

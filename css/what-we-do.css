@@ -157,7 +157,7 @@
   .wwd-aud .link-arrow { margin-top: 11px; font-size: 14px; line-height: 20px; }
 
   /* CTA band uses its own mobile photo in the design */
-  .cta-band { background: linear-gradient(180deg, #F0F4F5 0, #F0F4F5 131px, rgba(240, 244, 245, .79) 155px, rgba(240, 244, 245, .65) 175px, rgba(240, 244, 245, 0) 205px), url("../assets/ui/img/a5a2870baf.jpg") 54% 100% / auto 134% no-repeat; }
+  .cta-band { background: linear-gradient(180deg, #F0F4F5 0, #F0F4F5 131px, rgba(240, 244, 245, .79) 155px, rgba(240, 244, 245, .65) 175px, rgba(240, 244, 245, 0) 205px), url("../assets/ui/img/enhanced/a5a2870baf.jpg") 54% 100% / auto 134% no-repeat; }
   .cta-band > img { display: none; }
 }
 

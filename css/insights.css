@@ -174,7 +174,7 @@
   padding: 48px 40px 48px 80px;
   border-radius: 16px;
   overflow: hidden;
-  background: var(--navy-50) url("../assets/ui/img/4c2b161a00.jpg") 50% 58% / 108% auto no-repeat;
+  background: var(--navy-50) url("../assets/ui/img/enhanced/4c2b161a00.jpg") 50% 58% / 108% auto no-repeat;
 }
 .news-copy, .news-form { position: relative; z-index: 1; }
 .news-copy .h1 { margin-top: 8px; }
@@ -269,7 +269,7 @@
 
   /* newsletter */
   .ins-news { padding: 64px 0 32px; }
-  .news-box { background-image: url("../assets/ui/img/33ea150093.jpg"); display: block; min-height: 0; padding: 28px 24px 25px; }
+  .news-box { background-image: url("../assets/ui/img/enhanced/33ea150093.jpg"); display: block; min-height: 0; padding: 28px 24px 25px; }
   .news-copy .h1 { font-weight: 600; }
   .news-copy .body-l { margin-top: 11px; }
   .news-form { margin-top: 24px; }
