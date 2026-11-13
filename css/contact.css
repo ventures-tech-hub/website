@@ -667,7 +667,7 @@
   /* ---------- Hero Section (390×844 Frame) ---------- */
   section.ct-hero {
     min-height: 844px;
-    padding: 104px 0 0;
+    padding: 0;
     position: relative;
     overflow: hidden;
     background: #FFFFFF;
@@ -710,7 +710,7 @@
   .ct-hero-inner {
     position: relative;
     z-index: 3;
-    padding-bottom: 360px;
+    padding-bottom: 330px;
   }
 
   .ct-hero-copy {
