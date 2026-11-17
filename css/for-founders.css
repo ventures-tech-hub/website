@@ -6,7 +6,8 @@
   --hero-pt: 123px;
   --hero-copy: 542px;
   --tint: 249 248 247;
-  --fade-x: linear-gradient(90deg, rgb(249 248 247) 0%, rgb(249 248 247 / 0.95) 28%, rgb(249 248 247 / 0.5) 34%, rgb(249 248 247 / 0) 39%);
+  /* Keep the copy area opaque over the text artifacts baked into hero-founders-d.jpg. */
+  --fade-x: linear-gradient(90deg, rgb(249 248 247) 0%, rgb(249 248 247/ 0.98) 45%, rgb(249 248 247 / 0.72) 50%, rgb(249 248 247 / 0) 70%);
   --fade-y: linear-gradient(180deg, rgb(249 248 247) 0%, rgb(249 248 247 / 0.9) 8%, rgb(249 248 247 / 0.7) 10%, rgb(249 248 247 / 0) 14%);
   --hero-pos: right center;
 }

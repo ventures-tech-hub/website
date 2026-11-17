@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Share Your Idea — Loktara Ventures</title>
+<meta name="description" content="Tell Loktara Ventures about your idea, founder team and startup journey." />
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Archivo+Narrow:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css?v=30" />
+<link rel="stylesheet" href="css/share-idea.css?v=7" />
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="index.html" aria-label="Loktara Ventures home"><img src="assets/ui/logo.svg" alt="Loktara Ventures" width="151" height="40" /></a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="index.html">Home</a><a href="about.html">About</a><a href="what-we-do.html">What We Do</a><a href="our-ventures.html">Our Ventures</a><a href="approach.html">Our Approach</a><a class="active" href="for-founders.html">For Founders</a><a href="for-business.html">For Business</a><a href="insights.html">Insights</a><a href="contact.html">Contact</a>
+      <a class="btn btn-primary nav-cta-mobile" href="contact.html">Get in Touch →</a>
+    </nav>
+    <a class="btn btn-primary btn-sm header-cta" href="contact.html">Get in Touch →</a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><svg class="i-menu" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><svg class="i-close" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+  </div>
+</header>
+<main class="idea-page">
+  <div class="idea-layout container">
+    <aside class="idea-intro">
+      <div class="idea-intro-copy">
+        <span class="eyebrow eyebrow-line">For Founders</span>
+        <h1 class="display-l">Share Your Idea<br class="mobile-only" />with <span class="c-orange">Loktara</span> <span class="c-green">Ventures</span></h1>
+        <p class="body-m">Tell us about your idea, team and progress. If it aligns with our investment focus, our team will get in touch with you.</p>
+        <ul class="idea-benefits">
+          <li><img src="assets/ui/icons/ff-p-invest.svg" alt="" />Early-Stage Investments</li><li><img src="assets/ui/icons/ff-k-founder.svg" alt="" />Founder Support</li><li><img src="assets/ui/icons/ff-b-strategy.svg" alt="" />Strategic Guidance</li><li><img src="assets/ui/icons/ff-k-support.svg" alt="" />Long-Term Partnership</li>
+        </ul>
+      </div>
+      <div class="idea-art" aria-hidden="true"><img src="assets/ui/img/SYI-M.jpg" alt="" /></div>
+    </aside>
+    <section class="idea-form-card" aria-labelledby="form-title">
+      <header class="idea-form-heading"><img class="idea-icon" src="assets/ui/icons/ff-p-venture.svg" alt="" /><div><h2 id="form-title">Share Your Idea</h2><p>A short form to help us understand your idea and founder team.</p></div></header>
+      <form id="idea-form" class="idea-form">
+        <fieldset data-mobile-step="1"><legend><img src="assets/ui/icons/ff-k-founder.svg" alt="" />Founder Information</legend>
+          <div class="idea-fields three-col">
+            <label><span class="label-text">Full Name <b>*</b></span><input name="name" autocomplete="name" placeholder="Enter your name" required /></label>
+            <label><span class="label-text">Email <b>*</b></span><input name="email" type="email" autocomplete="email" placeholder="Enter your email" required /></label>
+            <label><span class="label-text">Phone Number <b>*</b></span><div class="phone-control"><select name="country-code" aria-label="Country code"><option>US</option><option>IN</option></select><input name="phone" type="tel" autocomplete="tel" placeholder="+1 (555) 000-0000" required /></div></label>
+          </div>
+          <div class="idea-fields two-col">
+            <label><span class="label-text">Co-Founders Names</span><input name="cofounders" placeholder="e.g. Ankit Sharma, Priya Mehta" /></label>
+            <label><span class="label-text">LinkedIn Profile <span>(Optional)</span></span><input name="linkedin" type="url" placeholder="https://linkedin.com/in/" /></label>
+          </div>
+        </fieldset>
+        <fieldset data-mobile-step="1"><legend><img src="assets/ui/icons/ff-p-venture.svg" alt="" />About Your Startup</legend>
+          <div class="idea-fields three-col">
+            <label><span class="label-text">Start/Project Name <b>*</b></span><input name="startup" placeholder="Enter startup name" required /></label>
+            <label><span class="label-text">Stage <b>*</b></span><select name="stage" required><option value="" disabled selected>Select stage</option><option>Idea</option><option>Validation</option><option>MVP</option><option>Early Revenue</option><option>Growth</option></select></label>
+            <label><span class="label-text">Industry/Sector <b>*</b></span><select name="industry" required><option value="" disabled selected>Select industry</option><option>Technology</option><option>Fintech</option><option>Healthcare</option><option>Real Estate</option><option>Consumer</option><option>Education</option><option>Other</option></select></label>
+          </div>
+          <label class="idea-full"><span class="label-text">Short Pitch / One-Liner <b>*</b></span><textarea name="pitch" maxlength="150" rows="2" placeholder="Summarize your idea in one clear line" required></textarea><small class="char-count"><span>0</span>/150</small></label>
+          <div class="idea-fields two-col">
+            <label><span class="label-text">Problem You're Solving <b>*</b></span><textarea name="problem" rows="3" placeholder="What is the problem, and who faces it?" required></textarea></label>
+            <label><span class="label-text">Your Solution <b>*</b></span><textarea name="solution" rows="3" placeholder="How does your product / service solve this problem?" required></textarea></label>
+          </div>
+        </fieldset>
+        <fieldset data-mobile-step="2"><legend><img src="assets/ui/icons/ff-p-growth.svg" alt="" />Progress &amp; Funding</legend>
+          <div class="idea-fields two-col">
+            <label><span class="label-text">Current Status <b>*</b></span><select name="status" required><option value="" disabled selected>Select current status</option><option>Researching</option><option>Building</option><option>Launched</option><option>Generating Revenue</option></select></label>
+            <label><span class="label-text">Traction / Validation <span>(Optional)</span></span><input name="traction" placeholder="e.g., users, revenue, pilots, key milestones" /></label>
+            <label><span class="label-text">Funding Required (INR) <b>*</b></span><select name="funding" required><option value="" disabled selected>Select range</option><option>Under ₹10 lakh</option><option>₹10–50 lakh</option><option>₹50 lakh–₹1 crore</option><option>₹1–5 crore</option><option>₹5 crore+</option></select></label>
+            <label><span class="label-text">How Will You Use the Funds? <b>*</b></span><textarea name="fund-use" rows="2" placeholder="e.g., product development, team, market expansion" required></textarea></label>
+          </div>
+        </fieldset>
+        <fieldset data-mobile-step="2"><legend><img src="assets/ui/icons/ff-p-validate.svg" alt="" />Supporting Material</legend>
+          <label class="idea-full"><span class="label-text">Attach Pitch Deck / Other Documents <span>(Optional)</span></span><input class="file-input" type="file" name="attachment" accept=".pdf,.ppt,.pptx" /><small>PDF, PPT or PPTX · Max 10MB</small></label>
+        </fieldset>
+        <div class="idea-step-controls" aria-label="Form navigation">
+          <button class="btn btn-secondary idea-back" type="button">← Back</button>
+          <span class="idea-step-label" aria-live="polite">Step 1 of 2</span>
+          <button class="btn btn-primary idea-next" type="button">Continue →</button>
+          <button class="btn btn-primary idea-submit" type="submit">Submit Your Idea →</button>
+        </div>
+        <p class="idea-feedback" id="idea-feedback" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="container footer-main">
+    <div class="footer-brand">
+      <a href="index.html" aria-label="Loktara Ventures home"><img src="assets/ui/logo.svg" alt="Loktara Ventures" width="242" height="64" /></a>
+      <p>Building a brighter tomorrow.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="what-we-do.html">What We Do</a></li>
+        <li><a href="our-ventures.html">Our Ventures</a></li>
+        <li><a href="ecosystem.html">Our Ecosystem</a></li>
+        <li><a href="approach.html">Our Approach</a></li>
+        <li><a href="insights.html">Insights</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>For</h4>
+      <ul>
+        <li><a href="for-founders.html">For Founders</a></li>
+        <li><a href="for-business.html">For Businesses</a></li>
+        <li><a href="for-partners.html">Investors &amp; Partners</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="terms-of-service.html">Terms of Use</a></li>
+          <li><a href="legal.html">Refund &amp; Cancellation</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Follow Us</h4>
+      <div class="socials">
+        <a href="https://www.linkedin.com/company/loktara-ventures/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="3" fill="#0076B2"/><path fill="#fff" d="M7 12.4h3.9V25H7V12.4Zm2-6.3a2.3 2.3 0 1 1 0 4.5 2.3 2.3 0 0 1 0-4.5Zm4.3 6.3H17v1.7h.1c.5-1 1.8-2 3.7-2 4 0 4.7 2.6 4.7 6V25h-3.9v-6.1c0-1.5 0-3.3-2-3.3s-2.4 1.6-2.4 3.2V25h-3.9V12.4Z"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <span>© 2026 Loktara Ventures Private Limited. All rights reserved.</span>
+      <span class="tagline">Building a brighter tomorrow.</span>
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+<script>
+const pitchField = document.querySelector('[name="pitch"]');
+pitchField.addEventListener('input', () => document.querySelector('.char-count span').textContent = pitchField.value.length);
+const ideaForm = document.querySelector('#idea-form');
+const stepButtons = ideaForm.querySelector('.idea-step-controls');
+const backButton = ideaForm.querySelector('.idea-back');
+const nextButton = ideaForm.querySelector('.idea-next');
+const submitButton = ideaForm.querySelector('.idea-submit');
+const stepLabel = ideaForm.querySelector('.idea-step-label');
+const mobileForm = window.matchMedia('(max-width: 768px)');
+function syncFormMode() {
+  const mobile = mobileForm.matches;
+  stepButtons.classList.toggle('is-mobile', mobile);
+  backButton.hidden = true;
+  nextButton.hidden = true;
+  stepLabel.hidden = true;
+  submitButton.hidden = false;
+  submitButton.textContent = mobile ? 'Send Message →' : 'Submit Your Idea →';
+  ideaForm.querySelectorAll('fieldset').forEach((field) => { field.hidden = false; });
+}
+mobileForm.addEventListener('change', syncFormMode);
+syncFormMode();
+ideaForm.querySelectorAll('fieldset legend').forEach((legend) => {
+  legend.setAttribute('role', 'button');
+  legend.tabIndex = 0;
+  legend.setAttribute('aria-expanded', 'true');
+  const toggle = () => {
+    if (!mobileForm.matches) return;
+    const field = legend.closest('fieldset');
+    field.classList.toggle('is-collapsed');
+    legend.setAttribute('aria-expanded', String(!field.classList.contains('is-collapsed')));
+  };
+  legend.addEventListener('click', toggle);
+  legend.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggle(); }
+  });
+});
+document.querySelector('#idea-form').addEventListener('submit', (event) => {
+  event.preventDefault();
+  const file = document.querySelector('[name="attachment"]').files[0];
+  const feedback = document.querySelector('#idea-feedback');
+  if (file && file.size > 10 * 1024 * 1024) { feedback.textContent = 'Please choose a file smaller than 10MB.'; feedback.classList.add('is-error'); return; }
+  feedback.textContent = 'Thanks for sharing your idea. The form is ready, but online submissions are not connected yet. Please email your pitch to gagandeep.singh@loktara.com.';
+  feedback.classList.remove('is-error');
+});
+</script>
+</body>
+</html>
