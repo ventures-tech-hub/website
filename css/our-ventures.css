@@ -18,11 +18,14 @@ body.page-ventures {
    1. HERO SECTION (1280 × 548px)
    ========================================================================== */
 .ven-hero {
-  --hero-h: 548px;
+  --hero-h: 600px;
   --hero-pt: 110px;
   --hero-copy: 460px;
   --tint: 250 252 253;
-  --fade-x: linear-gradient(90deg, rgb(250 252 253) 0%, rgb(250 252 253 / 0.95) 26%, rgb(250 252 253 / 0.4) 36%, rgb(250 252 253 / 0) 44%);
+  /* The source artwork contains a faint exported copy of the page UI. Keep the
+     artwork, but make the copy area opaque so the HTML copy is the only one
+     visible. */
+  --fade-x: linear-gradient(90deg, rgb(250 252 253 / 0.98) 0%, rgb(250 252 253 / 0.9) 30%, rgb(250 252 253 / 0.64) 46%, rgb(250 252 253 / 0.24) 59%, rgb(250 252 253 / 0) 70%);
   --fade-y: linear-gradient(180deg, rgb(250 252 253) 0%, rgb(250 252 253 / 0.9) 8%, rgb(250 252 253 / 0) 14%);
   --hero-pos: right center;
   position: relative;
@@ -46,6 +49,9 @@ body.page-ventures {
   background: var(--fade-x), var(--fade-y, none);
   pointer-events: none;
 }
+
+.ven-hero-panel { position: absolute; z-index: 2; right: clamp(34px, 7vw, 92px); bottom: 48px; display: flex; width: 250px; flex-direction: column; gap: 14px; padding: 24px 20px 20px; border-radius: 14px; background: rgb(3 27 57 / .86); color: #fff; font-size: 16px; line-height: 1.15; }
+.ven-hero-panel-last { padding-bottom: 8px; border-bottom: 2px solid #ff6300; width: max-content; }
 
 .ven-hero .page-hero-inner {
   position: relative;
@@ -557,11 +563,22 @@ body.page-ventures {
     --hero-h: 844px;
     --hero-pt: 84px;
     --hero-copy: 100%;
-    --fade-x: none;
+    --fade-x: linear-gradient(180deg, #F9F8F7 0%, #F9F8F7 53%, rgb(249 248 247 / 0.96) 61%, rgb(249 248 247 / 0) 72%);
     --fade-y: none;
-    background: #F9F8F7 url("../assets/ui/img/ventures/hero-ventures-m.jpg?v=2") center top / 100% 100% no-repeat;
+    background: #F9F8F7 url("../assets/ui/img/ventures/hero-ventures-mobile.png") center top / cover no-repeat;
     min-height: 844px;
   }
+
+  /* Hide the buttons and category labels baked into the mobile artwork. The
+     real controls sit above this layer in .page-hero-inner. */
+  .ven-hero .page-hero-fade {
+    z-index: 1;
+  }
+
+  .ven-hero .page-hero-media img { object-position: center center !important; }
+
+  .ven-hero-panel { right: 20px; bottom: 20px; width: calc(100% - 40px); max-width: 350px; flex-direction: row; flex-wrap: wrap; gap: 14px 18px; padding: 16px 12px 13px; font-size: 13px; line-height: 1.15; }
+  .ven-hero-panel-last { flex-basis: 100%; width: max-content; }
 
   .ven-hero .page-hero-inner {
     padding-top: 84px;
@@ -674,8 +691,9 @@ body.page-ventures {
 
   /* CTA Section: 778px high on mobile */
   .ven-cta {
-    background-image: url("../assets/ui/img/ventures/ven-cta-m.jpg?v=2");
-    background-size: 100% 100%;
+    background-image: linear-gradient(180deg, rgb(0 0 0 / .78) 0%, rgb(0 0 0 / .42) 34%, rgb(0 0 0 / .12) 62%, rgb(0 0 0 / 0) 100%), url("../assets/ui/img/ventures/ven-cta-mobile.png");
+    background-size: cover;
+    background-position: center top;
     min-height: 740px;
     align-items: flex-start;
     padding: 56px 0;
@@ -684,6 +702,8 @@ body.page-ventures {
   .ven-cta-inner {
     max-width: 100%;
   }
+
+  .ven-cta .eyebrow-line::before { display: none; }
 
   .ven-cta h2 {
     font-size: 32px;
