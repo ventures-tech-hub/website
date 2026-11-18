@@ -266,6 +266,19 @@ document.querySelectorAll(".venture-scroller").forEach((scroller) => {
   track.addEventListener("scroll", update, { passive: true });
   window.addEventListener("resize", update);
   update();
+
+  track.querySelectorAll(".venture-card[data-href]").forEach((card) => {
+    const openCard = () => { window.location.href = card.dataset.href; };
+    card.addEventListener("click", (event) => {
+      if (event.target.closest("a, button")) return;
+      openCard();
+    });
+    card.addEventListener("keydown", (event) => {
+      if (event.key !== "Enter" && event.key !== " ") return;
+      event.preventDefault();
+      openCard();
+    });
+  });
 });
 
 /* ---------- Legal pages: "On This Page" follows the section in view ---------- */
