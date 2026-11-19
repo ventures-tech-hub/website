@@ -1,0 +1,363 @@
+/* Loktara Ventures — Home (Figma UI Design: Home desktop 1280 / mobile 390) */
+/* ---------- Hero (Figma values) ---------- */
+.home-hero {
+  --hero-h: 680px;
+  --tint: 237 238 241;
+  --hero-pt: 164px;
+  --hero-copy: 593px;
+  --fade-x: linear-gradient(90deg, rgb(237 238 241) 0%, rgb(237 238 241 / 0.95) 32.5%, rgb(237 238 241 / 0.7) 42.1%, rgb(237 238 241 / 0) 49.5%);
+  --fade-y: linear-gradient(180deg, rgb(229 232 235) 0%, rgb(229 232 235 / 0.95) 16.7%, rgb(229 232 235 / 0.9) 26.9%, rgb(229 232 235 / 0) 30.1%);
+}
+.hero-chips { display: flex; flex-wrap: wrap; gap: 12px 16px; width: max-content; max-width: calc(100vw - 2 * var(--gutter)); margin-top: 32px; }
+.hero-chips li { display: flex; align-items: center; gap: 4px; font-family: var(--font-display); font-size: 16px; line-height: 22px; font-weight: 600; color: #1A1A1A; }
+.hero-chips .ico { width: 24px; height: 24px; }
+@media (max-width: 768px) {
+  /* Figma 390×844 hero: copy starts 96px down (64px header + 32px) */
+  section.home-hero { --hero-pt: 96px; }
+  .home-hero { --tint: 237 238 241; --fade-m: linear-gradient(180deg, rgb(237 238 241) 0%, rgb(237 238 241 / 0.95) 32.5%, rgb(237 238 241 / 0.7) 55.7%, rgb(237 238 241 / 0) 65.9%); }
+  .hero-chips { flex-wrap: nowrap; gap: 20px; width: auto; max-width: none; margin-top: 24px; }
+  .hero-chips li { flex-direction: column; align-items: flex-start; gap: 8px; font-size: 14px; line-height: 20px; }
+  .hero-chips .chip-venture { width: 54px; }
+  .hero-chips .chip-ops { order: 3; }
+  .hero-chips .chip-strategy { order: 4; }
+  .hero-chips .chip-capital { order: 5; }
+  .hero-chips .ico { width: 40px; height: 40px; }
+  .home-hero .page-hero-actions { margin-top: 24px; }
+  .home-hero .page-hero-actions .btn { width: 229px; }
+}
+
+.ico { display: block; flex: none; }
+main section .eyebrow + .h1,
+main section .eyebrow + h2 { margin-top: 8px; }
+.link-arrow { line-height: 24px; }
+.center-link { display: none; }
+.nowrap { white-space: nowrap; }
+
+/* Section heads with a right-aligned link */
+.section-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; }
+.section-head > .link-arrow { margin-bottom: 29px; }
+
+/* ---------- Hero ---------- */
+.btn-story .ico { width: 24px; height: 24px; }
+.btn-story .ico path { stroke: currentColor; }
+
+/* ---------- About ---------- */
+.home-about {
+  padding: 48px 0;
+  background: linear-gradient(90deg, rgba(244, 248, 251, 0) 0%, rgba(244, 248, 251, .7) 40%, rgba(244, 248, 251, .95) 56%, #F4F8FB 70%);
+}
+.about-grid { display: grid; grid-template-columns: minmax(0, 1fr) 669px; gap: 40px; align-items: start; }
+.about-copy .body-l { max-width: 491px; margin-top: 16px; }
+.about-btn { margin-top: 24px; }
+.about-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 14px; }
+.about-card { min-height: 255px; padding: 24px; }
+.about-card .ico { width: 48px; height: 48px; }
+.about-card h3 { margin-top: 16px; }
+.about-card p { margin-top: 6px; }
+
+/* ---------- Approach ---------- */
+.home-approach { padding: 48px 0; background: linear-gradient(90deg, #FCFDFD, #FAFDFE); }
+.approach-head { display: grid; grid-template-columns: minmax(0, 1fr) 391px; gap: 40px; }
+.approach-side .link-arrow { margin-top: 17px; }
+.steps { display: grid; grid-template-columns: repeat(5, 208px) minmax(0, 1fr); margin-top: 46px; }
+.step { position: relative; }
+.step-num {
+  display: grid; place-items: center;
+  width: 40px; height: 40px; border-radius: 50%;
+  font-family: var(--font-display); font-size: 20px; line-height: 26px; font-weight: 600; color: #fff;
+}
+.n-orange { background: var(--orange-600); }
+.n-navy { background: var(--navy-800); }
+.n-green { background: var(--green-700); }
+.step-arrow { position: absolute; left: 76px; top: 12.5px; }
+.step-arrow .i-arrow-r { width: 99.1px; height: 16.92px; }
+.step-arrow .i-arrow-d { display: none; }
+.step > .ico { width: 48px; height: 48px; margin-top: 16px; }
+.step h3 { margin-top: 16px; }
+.step p { max-width: 168px; margin-top: 3px; }
+
+/* ---------- What We Bring ---------- */
+.home-bring {
+  padding: 47px 0 47px;
+  background:
+    radial-gradient(330px 300px at 78% -6%, rgba(232, 240, 248, .95), rgba(232, 240, 248, 0)),
+    linear-gradient(90deg, #F7FCFD, #F3F7FB);
+}
+.bring-head { align-items: center; }
+.bring-head > .link-arrow { margin: 14px 0 0; }
+.bring-head .body-l { margin-top: 8px; }
+.bring-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 24px; margin-top: 32px; }
+.bring-card { min-height: 254px; padding: 24px; }
+.bring-card .ico { width: 48px; height: 48px; }
+.bring-card h3 { margin-top: 16px; }
+.bring-card p { margin-top: 7px; }
+
+/* ---------- Ecosystem ---------- */
+.home-eco { position: relative; height: 457px; overflow: hidden; background: #EEF5FB; }
+.eco-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 74%; }
+.home-eco::before {
+  content: ""; position: absolute; inset: 0;
+  background: radial-gradient(520px 260px at 277px 114px, rgba(224, 241, 254, .85), rgba(224, 241, 254, 0));
+}
+.eco-inner { position: relative; z-index: 1; }
+.eco-copy { position: relative; z-index: 1; max-width: 470px; padding-top: 48px; }
+.eco-title { line-height: 56px; }
+.eco-copy .body-l { max-width: 450px; margin-top: 15px; }
+.eco-btn { margin-top: 24px; }
+.eco-art-d { position: absolute; top: 0; left: calc(50% - 114px); width: 754px; height: 457px; }
+.eco-art svg { display: block; width: 100%; height: 100%; }
+.eco-art-m { display: none; }
+
+/* ---------- Ventures (Figma: cards 588×262, horizontal scroller) ---------- */
+.home-ventures { padding: 48px 0; }
+.venture-scroller { position: relative; margin-top: 32px; }
+.venture-track {
+  display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - 24px) / 2); gap: 24px;
+  overflow-x: auto; overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none;
+  /* room for the card shadow, without shifting the cards off the grid */
+  margin: -8px -20px; padding: 8px 20px 20px; scroll-padding-inline: 20px;
+}
+.venture-track::-webkit-scrollbar { display: none; }
+.venture-track:focus-visible { outline: 2px solid var(--blue-700, #0E3C83); outline-offset: 2px; border-radius: 16px; }
+.venture-card {
+  position: relative; height: 262px; overflow: hidden; scroll-snap-align: start;
+  border: 1px solid var(--border); border-radius: 16px; background: #F8F9FD; box-shadow: var(--shadow-card);
+  cursor: pointer;
+  display: block; color: inherit; text-decoration: none;
+}
+.venture-card:focus-visible { outline: 2px solid var(--blue-700, #0E3C83); outline-offset: 3px; }
+.venture-bg img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 100% 50%; }
+.venture-body { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: flex-start; height: 100%; padding: 16px; }
+.venture-brand { display: flex; align-items: center; gap: 12px; min-height: 40px; }
+.venture-brand::after { content: ""; order: 1; align-self: flex-end; width: 24px; height: 1px; margin-bottom: 8px; background: var(--border); }
+.venture-badge { order: 2; padding: 4px 8px; border-radius: 4px; background: #F8E9DD; font-size: 10px; line-height: 18px; font-weight: 500; letter-spacing: .2px; color: #141414; white-space: nowrap; }
+.venture-logo { height: 40px; width: auto; }
+.venture-pp .venture-logo, .venture-ny .venture-logo { height: 32px; }
+.venture-pp .venture-badge { background: #E0E6FD; color: #0E3C83; }
+.venture-ny .venture-badge { background: #E1D9FE; color: #1A1AE7; }
+.venture-kicker { margin-top: 12px; font-size: 7px; line-height: 10px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: #94A3B8; }
+.venture-title { max-width: 260px; margin-top: 9px; font-family: var(--font-display); font-size: 20px; line-height: 24px; font-weight: 600; color: #141414; }
+.venture-kicker + .venture-title { margin-top: 2px; }
+.venture-ny .venture-title { margin-top: 26px; }
+.c-pr { color: #DA0659; }
+.c-ny { color: #1A1AE7; }
+.c-pp { background: linear-gradient(90deg, #035AFE, #9737FB); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.venture-desc { max-width: 245px; margin-top: 2px; font-size: 11px; line-height: 15px; color: #475569; }
+.venture-feats { display: flex; gap: 16px; margin: auto 0 0; padding: 0; list-style: none; }
+.venture-feats li { display: flex; align-items: center; gap: 6px; font-family: var(--font-display); font-size: 10px; line-height: 12px; font-weight: 600; letter-spacing: .2px; color: #141414; }
+.venture-feats img { flex: none; width: 18px; height: 18px; }
+.btn-venture {
+  margin-top: 16px; padding: 4px 16px; border-radius: 4px; background: #051E42; color: #fff;
+  font-size: 12px; line-height: 20px; font-weight: 600; text-decoration: none; white-space: nowrap;
+  transition: background-color .2s ease;
+}
+.btn-venture:hover { background: #0E3C83; }
+.btn-venture:active { background: #051E42; }
+.venture-nav { display: flex; justify-content: flex-end; gap: 12px; margin-top: 4px; }
+.venture-dots { display: none; }
+.venture-arrow {
+  display: grid; place-items: center; width: 40px; height: 40px; padding: 0;
+  border: 1px solid var(--border); border-radius: 50%; background: #fff; color: #141414;
+  font-size: 18px; line-height: 1; cursor: pointer; transition: background-color .2s ease, opacity .2s ease;
+}
+.venture-arrow:hover { background: #FFF7F0; }
+.venture-arrow:disabled { opacity: .35; cursor: default; background: #fff; }
+
+/* ---------- Pathways + Insights cards ---------- */
+.home-paths, .home-insights { padding: 48px 0; }
+.card-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 32px; }
+.path-card, .insight-card { display: block; overflow: hidden; }
+.path-media { position: relative; height: 124px; overflow: hidden; }
+.path-media img, .insight-media img { width: 100%; height: 124px; object-fit: cover; }
+.insight-media { position: relative; height: 124px; overflow: hidden; }
+.path-media::after { content: ""; position: absolute; inset: 0; background: rgba(0, 0, 0, .3); }
+.path-card:nth-child(1) .path-media img { position: absolute; top: 0; right: 0; width: 123%; height: auto; max-width: none; }
+.path-media h3 { position: absolute; z-index: 1; left: 12px; bottom: 12px; display: flex; align-items: center; gap: 12px; color: #fff; }
+.path-media h3 .ico { width: 32px; height: 32px; }
+.path-body { padding: 16px 16px 28px; }
+.path-body .link-arrow { margin-top: 16px; font-size: 14px; line-height: 20px; }
+
+.insight-card { position: relative; }
+.insight-card:nth-child(3) .insight-media img { position: absolute; top: -76px; left: -47%; width: 147%; height: auto; max-width: none; }
+.insight-body { padding: 16px 24px 17px 16px; }
+.insight-body time { display: block; font-weight: 500; color: var(--text-muted); }
+.insight-body h3 { margin-top: 8px; }
+.insight-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 6px; }
+.insight-row p { max-width: 230px; }
+.insight-arrow { font-size: 16px; line-height: 24px; font-weight: 600; color: var(--orange-700); }
+
+/* ---------- Values ---------- */
+.home-values { padding: 48px 0 49px; }
+.values-grid { display: grid; grid-template-columns: 356px minmax(0, 1fr); }
+.values-list { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.values-list .ico { width: 48px; height: 48px; }
+.values-list h3 { margin-top: 16px; }
+.values-list p { margin-top: 6px; }
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1180px) {
+  .about-grid { grid-template-columns: 1fr; gap: 32px; }
+  .about-copy .body-l { max-width: 680px; }
+  .about-cards { margin-top: 0; }
+  .approach-head { grid-template-columns: 1fr; gap: 16px; }
+  .steps { grid-template-columns: repeat(3, 1fr); row-gap: 40px; }
+  .step-arrow { display: none; }
+  .bring-grid { grid-template-columns: repeat(3, 1fr); }
+  .home-eco { height: auto; padding-bottom: 32px; }
+  .eco-art-d { position: relative; left: auto; top: auto; width: 100%; max-width: 754px; height: auto; margin: 24px auto 0; }
+  .eco-art-d svg { height: auto; }
+  .values-grid { grid-template-columns: 1fr; gap: 32px; }
+  .insight-row p { max-width: none; }
+}
+
+/* ---------- Mobile (390 frame) ---------- */
+@media (max-width: 768px) {
+  main .h1 { font-weight: 600; }
+  main section .eyebrow + .h1, main section .eyebrow + h2 { margin-top: 9px; }
+  .center-link { display: flex; justify-content: center; }
+  .section-head { display: block; }
+
+  /* Hero */
+  .chip-ops { order: 3; }
+  .chip-strategy { order: 4; }
+  .chip-capital { order: 5; }
+  .btn-story { background: rgb(255 255 255 / .1); }
+
+  /* About */
+  .home-about { padding: 33px 0 32px; background: linear-gradient(180deg, rgba(244, 248, 251, 0) 0%, rgba(244, 248, 251, .7) 40%, rgba(244, 248, 251, .95) 56%, #F4F8FB 70%); }
+  .about-grid { display: flex; flex-direction: column; gap: 0; }
+  .about-copy { display: contents; }
+  .about-copy .body-l { margin-top: 11px; }
+  .about-cards { order: 3; grid-template-columns: 1fr; gap: 24px; margin-top: 31px; }
+  .about-btn { order: 4; width: 100%; margin-top: 32px; }
+  .about-card { display: flex; gap: 16px; min-height: 108px; padding: 16px 16px 15px; }
+  .about-card .ico { width: 40px; height: 40px; }
+  .about-card h3 { margin-top: 0; font-size: 20px; line-height: 26px; letter-spacing: 0; }
+  .about-card p { margin-top: 0; }
+
+  /* Approach */
+  .home-approach { padding: 33px 0 46px; background: linear-gradient(180deg, #FCFDFD, #FAFDFE); }
+  .approach-head { gap: 0; }
+  .approach-side .body-l { margin-top: 12px; }
+  .steps { display: block; margin-top: 31px; }
+  .step { display: grid; grid-template-columns: 32px 40px minmax(0, 1fr); column-gap: 14px; align-items: start; padding-bottom: 28px; }
+  .step:last-child { padding-bottom: 0; }
+  .step > div { margin-left: 4px; }
+  .step-num { width: 32px; height: 32px; font-size: 18px; line-height: 24px; }
+  .step-arrow { display: flex; align-items: center; justify-content: center; left: 0; top: 32px; bottom: 0; width: 32px; }
+  .step-arrow .i-arrow-r { display: none; }
+  .step-arrow .i-arrow-d { display: block; width: 15px; height: 29px; }
+  .step > .ico { width: 40px; height: 40px; margin-top: 0; }
+  .step h3 { margin-top: 0; font-size: 18px; line-height: 24px; }
+  .step p { max-width: none; margin-top: 1px; }
+  .home-approach .center-link { margin-top: 40px; }
+
+  /* What We Bring */
+  .home-bring { padding: 32px 0 46px; background: linear-gradient(180deg, #F7FCFD, #F3F7FB); }
+  .bring-title { font-size: 20px; line-height: 26px; letter-spacing: 0; }
+  .bring-head .body-l { margin-top: 9px; }
+  .bring-grid { grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 16px; }
+  .bring-card { min-height: 174px; padding: 16px 16px 14px; }
+  .bring-card .ico { width: 40px; height: 40px; }
+  .bring-card h3 { margin-top: 10px; font-size: 18px; line-height: 24px; }
+  .bring-card p { margin-top: 2px; }
+  .b-tech { order: -1; }
+  .home-bring .center-link { margin-top: 28px; }
+
+  /* Ecosystem */
+  .home-eco { height: auto; padding: 33px 0 32px; }
+  .eco-bg { object-position: 50% 50%; }
+  .home-eco::before { display: none; }
+  .eco-copy { display: flex; flex-direction: column; max-width: none; padding-top: 0; }
+  .eco-title { line-height: 38px; }
+  .eco-copy .body-l { margin-top: 12px; }
+  .eco-art-d { display: none; }
+  .eco-art-m { display: block; order: 4; margin: 27px calc(var(--gutter) * -1) 0; }
+  .eco-art-m svg { height: auto; aspect-ratio: 390 / 420; }
+  .eco-btn { order: 5; width: 100%; margin-top: 40px; }
+  .eco-inner { display: flex; flex-direction: column; }
+  .eco-copy { display: contents; }
+
+  /* Ventures */
+  .home-ventures { padding: 33px 0 48px; }
+  .venture-scroller { margin-top: 18px; }
+  .venture-track {
+    /* Figma mobile: one card per screen, the full content width (350 on a 390 frame), swiped sideways */
+    grid-auto-columns: 100%; gap: 16px;
+    margin: -8px calc(-1 * var(--gutter)) 0; padding: 8px var(--gutter) 16px; scroll-padding-inline: var(--gutter);
+  }
+  .venture-card { height: 562px; }
+  .venture-body { min-width: 0; padding: 20px; }
+  .venture-brand { flex-wrap: wrap; gap: 8px 10px; }
+  .venture-brand::after { display: none; }
+  .venture-ny .venture-brand, .venture-pp .venture-brand { min-height: 32px; }
+  /* Each venture has its own 350×562 portrait art in Figma; the copy sits on its light top half */
+  .venture-bg img { object-position: 50% 100%; }
+  /* Figma mobile card: title 20/26 (24px line step), desc 11/15, then 20px to the features and 20px to the button */
+  .venture-title { max-width: none; margin-top: 18px; }
+  .venture-ny .venture-title { margin-top: 16px; }
+  .venture-kicker { margin-top: 16px; font-size: 8px; line-height: 10px; }
+  .venture-kicker + .venture-title { margin-top: 8px; }
+  .venture-desc { max-width: 255px; margin-top: 8px; }
+  .venture-ny .venture-desc { max-width: 268px; }
+  .venture-pp .venture-desc { max-width: 307px; }
+  .venture-feats { flex-wrap: wrap; gap: 10px 20px; max-width: 100%; margin-top: 20px; }
+  .venture-feats li { min-width: 0; gap: 8px; font-size: 11px; }
+  .btn-venture { margin-top: 20px; }
+  .venture-nav { display: none; }
+  .venture-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 18px;
+  }
+  .venture-dot {
+    display: block;
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    border: none;
+    border-radius: 999px;
+    background: #CBD5E1;
+    cursor: pointer;
+    transition: width .25s ease, background-color .25s ease;
+  }
+  .venture-dot.is-active {
+    width: 24px;
+    background: #FF6300;
+  }
+  .home-ventures .center-link { margin-top: 24px; }
+
+  /* Pathways + Insights */
+  .home-paths { padding: 32px 0 48px; }
+  .home-insights { padding: 32px 0 48px; }
+  .card-grid-3 { grid-template-columns: 1fr; gap: 14px; margin-top: 17px; }
+  .path-media { height: 60px; }
+  .path-media img { height: 60px; }
+  .path-card:nth-child(1) .path-media img { position: static; width: 100%; height: 60px; object-position: 50% 0; }
+  .path-card:nth-child(2) .path-media img { object-position: 50% 7%; }
+  .path-media h3 { left: 12px; bottom: 11px; gap: 12px; font-size: 18px; line-height: 24px; }
+  .path-media h3 .ico { width: 24px; height: 24px; }
+  .path-body { padding: 12px 16px 18px; }
+  .path-body .link-arrow { margin-top: 9px; }
+  .home-paths .center-link { margin-top: 32px; }
+  .insight-media, .insight-media img { height: 62px; }
+  .insight-card:nth-child(3) .insight-media img { top: -94px; height: auto; }
+  .insight-body { padding: 12px 25px 12px 16px; }
+  .insight-body h3 { margin-top: 4px; font-size: 18px; line-height: 24px; }
+  .insight-row { margin-top: 2px; }
+  .home-insights .center-link { margin-top: 32px; }
+
+  /* Values */
+  .home-values { padding: 32px 0 31px; }
+  .values-grid { gap: 32px; }
+  .values-list { display: grid; grid-template-columns: 1fr; gap: 24px; }
+  .values-list li { display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 16px; }
+  .values-list .ico { width: 40px; height: 40px; }
+  .values-list h3 { margin-top: 0; font-size: 18px; line-height: 24px; }
+  /* Figma: 4px under the heading; Chrome sets Archivo ~1% wider than Figma, so give the line a few px of the gutter
+     to keep "We put people at the center of everything we do." on one line as in the frame */
+  .values-list p { margin-top: 4px; margin-right: -5px; }
+}

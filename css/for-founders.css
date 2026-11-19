@@ -1,0 +1,228 @@
+/* For Founders — Figma UI Design: For Founders (desktop 1280) */
+
+/* ---------- Hero (1280×608: top fade behind the header + left fade, #F9F8F7) ---------- */
+.ff-hero {
+  --hero-h: 608px;
+  --hero-pt: 123px;
+  --hero-copy: 542px;
+  --tint: 249 248 247;
+  /* Keep the copy area opaque over the text artifacts baked into hero-founders-d.jpg. */
+  --fade-x: linear-gradient(90deg, rgb(249 248 247) 0%, rgb(249 248 247/ 0.98) 45%, rgb(249 248 247 / 0.72) 50%, rgb(249 248 247 / 0) 70%);
+  --fade-y: linear-gradient(180deg, rgb(249 248 247) 0%, rgb(249 248 247 / 0.9) 8%, rgb(249 248 247 / 0.7) 10%, rgb(249 248 247 / 0) 14%);
+  --hero-pos: right center;
+}
+.ff-hero .page-hero-media img {
+  object-fit: cover;
+  object-position: right center !important;
+}
+.ff-hero .page-hero-inner { padding-bottom: 0; }
+
+/* ---------- Highlights card (1200×216) ---------- */
+.ff-keys { padding: 48px 0; }
+.ff-keys-card {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow-card);
+}
+.ff-key { position: relative; display: flex; flex-direction: column; align-items: center; gap: 16px; padding: 32px 48px; text-align: center; }
+.ff-key + .ff-key::before { content: ""; position: absolute; left: 0; top: 35px; width: 1px; height: 145px; background: var(--border); }
+.ff-key img { width: 48px; height: 48px; }
+.ff-key h3 { font-size: 20px; line-height: 26px; font-weight: 600; }
+.ff-key p { margin-top: -8px; font-size: 16px; line-height: 26px; color: var(--text-primary); }
+
+/* ---------- Founder program ---------- */
+.ff-program { padding: 48px 0; }
+.ff-program-inner { display: grid; grid-template-columns: 519px 609px; justify-content: space-between; align-items: start; }
+.ff-head h2 { margin-top: 8px; }
+.ff-head h2 > span { display: block; }
+.ff-head h2 > span + span { margin-top: 2px; }
+.ff-head > p { margin-top: 16px; }
+.ff-program .btn { margin-top: 24px; }
+.ff-steps { position: relative; display: grid; gap: 32px; }
+.ff-steps::before { content: ""; position: absolute; left: 20px; top: 40px; height: 330px; width: 1px; background: var(--n-400); }
+.ff-step { position: relative; display: grid; grid-template-columns: 40px 48px 1fr; column-gap: 24px; align-items: start; }
+.ff-step-num {
+  display: grid; place-items: center;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: var(--tone);
+  font-family: var(--font-display); font-size: 20px; line-height: 26px; font-weight: 600; color: #fff;
+}
+.ff-step img { width: 48px; height: 48px; }
+.ff-step h3 { font-size: 20px; line-height: 26px; font-weight: 600; }
+.ff-step p { margin-top: 4px; font-size: 16px; line-height: 26px; color: var(--text-primary); }
+.tone-orange { --tone: var(--orange-600); }
+.tone-navy { --tone: var(--navy-800); }
+.tone-green { --tone: var(--green-700); }
+
+/* ---------- What we bring ---------- */
+.ff-bring { padding: 48px 0; background: linear-gradient(90deg, rgb(244 248 251 / 0) 0%, rgb(244 248 251 / 0.7) 40%, rgb(244 248 251 / 0.95) 56%, rgb(244 248 251) 70%); }
+.ff-bring-inner { display: grid; grid-template-columns: 434px 728px; justify-content: space-between; align-items: start; }
+.ff-bring-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.ff-bring-card { display: flex; flex-direction: column; gap: 12px; height: 186px; padding: 16px; border-radius: 12px; }
+.ff-bring-card img { width: 40px; height: 40px; }
+.ff-bring-card h3 { font-size: 20px; line-height: 26px; font-weight: 600; }
+.ff-bring-card p { margin-top: 8px; font-size: 14px; line-height: 22px; color: var(--text-primary); }
+
+/* ---------- A partner who builds with you (image bleeds to the left edge) ---------- */
+.ff-partner { padding: 48px 0; }
+.ff-partner-inner { display: grid; grid-template-columns: 576px 576px; justify-content: space-between; align-items: start; }
+.ff-partner-media {
+  position: relative;
+  height: 348px;
+  margin-left: calc(-1 * var(--gutter) - max(0px, (100vw - 1280px) / 2));
+  border-radius: 0 12px 12px 0;
+  overflow: hidden;
+}
+.ff-partner-media img { width: 100%; height: 100%; object-fit: cover; }
+.ff-partner-media ul {
+  position: absolute;
+  left: calc(var(--gutter) + max(0px, (100vw - 1280px) / 2));
+  bottom: 28px;
+  display: grid;
+  gap: 4px;
+  font-size: 16px; line-height: 26px; color: #fff;
+}
+.ff-partner-media ul::after { content: ""; width: 57px; height: 2px; background: var(--orange-600); }
+.ff-partner-copy h2 > span { display: block; }
+.ff-partner-copy h2 > span + span { margin-top: 2px; }
+.ff-partner-copy h2 { margin-top: 8px; }
+.ff-checks { display: grid; gap: 12px; margin-top: 24px; }
+.ff-checks li { display: flex; align-items: center; gap: 12px; font-size: 18px; line-height: 28px; color: var(--text-primary); }
+.ff-checks img { width: 24px; height: 24px; }
+
+/* ---------- Testimonials ---------- */
+.ff-stories { padding: 48px 0; }
+.ff-stories-head { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.ff-stories-head h2 { margin-top: 8px; }
+.ff-stories-head p { margin-top: 16px; }
+.ff-arrows { display: flex; gap: 12px; }
+.ff-arrow {
+  display: grid; place-items: center;
+  width: 36px; height: 36px; padding: 0;
+  border: 1px solid var(--navy-950);
+  border-radius: 32px;
+  background: transparent;
+  font-size: 14px; line-height: 20px; font-weight: 600; color: var(--navy-950);
+  cursor: pointer;
+  transition: background .2s ease, border-color .2s ease, color .2s ease;
+}
+.ff-arrow:hover { background: var(--n-100); }
+.ff-arrow.is-off { border-color: var(--border); color: var(--n-600); }
+.ff-quotes {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - 48px) / 3);
+  column-gap: 24px;
+  margin-top: 32px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+.ff-quotes::-webkit-scrollbar { display: none; }
+.ff-quote { margin: 0; display: flex; flex-direction: column; gap: 24px; padding: 20px; border-radius: 12px; scroll-snap-align: start; }
+.ff-quote blockquote { margin: 0; }
+.ff-quote blockquote img { width: 24px; height: 24px; }
+.ff-quote blockquote p { margin-top: 8px; font-size: 14px; line-height: 22px; color: var(--text-primary); }
+.ff-quote figcaption { display: flex; align-items: center; gap: 16px; }
+.ff-quote figcaption img { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; }
+.ff-quote figcaption strong { display: block; font-family: var(--font-display); font-size: 18px; line-height: 24px; font-weight: 600; color: var(--text-primary); }
+.ff-quote figcaption div > span { display: block; margin-top: 2px; font-size: 14px; line-height: 22px; color: var(--n-400); }
+
+/* ---------- CTA band (1280×240) ---------- */
+/* Sourced directly from Figma reference to keep the crop exact at every viewport. */
+.ff-cta {
+  position: relative;
+  width: 100%;
+  height: clamp(220px, 18.75vw, 360px);
+  background: url("../assets/ui/img/enhanced/ff-cta-reference-d.png?v=30") center / 100% 100% no-repeat;
+  display: block;
+}
+.ff-cta-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1180px) {
+  .ff-program-inner, .ff-bring-inner, .ff-partner-inner { grid-template-columns: 1fr; row-gap: 40px; }
+  .ff-partner-media { margin-left: calc(-1 * var(--gutter)); }
+  .ff-quotes { grid-auto-columns: minmax(300px, calc((100% - 24px) / 2)); }
+}
+
+/* ---------- Phone (Figma Mobile frame, 390 wide) ---------- */
+@media (max-width: 768px) {
+  /* Hero 390×844: art fills the frame, left fade #F9F8F7 */
+  section.ff-hero {
+    --hero-h: 844px;
+    --hero-pt: 112px;
+    --fade-m: linear-gradient(180deg, rgb(249 248 247) 0%, rgb(249 248 247) 33%, rgb(249 248 247 / 0.85) 45%, rgb(249 248 247 / 0.65) 56%, rgb(249 248 247 / 0) 66%);
+  }
+  .ff-hero .page-hero-actions .btn { width: 238px; }
+  .ff-hero .btn-secondary { background: #fff; border: 1px solid var(--navy-950); color: var(--navy-950); }
+
+  /* Section headings: 32/38 SemiBold, 12px to the text */
+  .ff-head h2.h1, .ff-partner-copy h2.h1, .ff-stories-head h2.h1 { font-weight: 600; }
+  .ff-head h2 > span + span { margin-top: 1px; }
+  .ff-partner-copy h2 > span + span { margin-top: 0; }
+  .ff-head > p, .ff-stories-head p { margin-top: 12px; }
+
+  /* Highlights: one column, dividers between */
+  .ff-keys { padding: 32px 0; }
+  .ff-keys-card { grid-template-columns: 1fr; }
+  .ff-key { padding: 24px 32px; }
+  .ff-key + .ff-key::before { left: 50%; top: 0; width: 212px; height: 1px; transform: translateX(-50%); }
+
+  /* Founder program */
+  .ff-program { padding: 32px 0; background: linear-gradient(180deg, rgb(252 253 253 / 0) 0%, rgb(250 253 254 / .7) 100%); }
+  .ff-program-inner { display: flex; flex-direction: column; row-gap: 24px; }
+  .ff-head { display: contents; }
+  .ff-head > .eyebrow { order: 1; }
+  .ff-head > h2 { order: 2; }
+  .ff-head > p { order: 3; margin-top: -12px; }
+  .ff-steps { order: 4; gap: 16px; }
+  .ff-program .btn { order: 5; width: 100%; margin-top: 0; }
+  .ff-program .ff-head > h2 { margin-top: -16px; }
+  .ff-steps::before { display: none; }
+  .ff-step:not(:last-child)::after { content: ""; position: absolute; left: 16px; top: 32px; width: 1px; height: calc(100% - 16px); background: var(--n-400); }
+  .ff-step { grid-template-columns: 32px 40px 1fr; column-gap: 16px; }
+  .ff-step-num { width: 32px; height: 32px; font-size: 18px; line-height: 24px; }
+  .ff-step img { width: 40px; height: 40px; }
+  .ff-step h3 { font-size: 18px; line-height: 24px; }
+  .ff-step p { font-size: 14px; line-height: 22px; }
+
+  /* What we bring: heading, then full-width cards */
+  .ff-bring { padding: 32px 0; background: none; }
+  .ff-bring-inner { display: grid; grid-template-columns: 1fr; row-gap: 32px; }
+  .ff-bring .ff-head { display: block; }
+  .ff-bring .ff-head > p { margin-top: 12px; }
+  .ff-bring-grid { grid-template-columns: 1fr; gap: 24px; }
+  .ff-bring-card { flex-direction: row; align-items: flex-start; gap: 16px; height: auto; }
+  .ff-bring-card p { margin-top: 4px; }
+
+  /* Partner: full-width image, copy below */
+  .ff-partner { padding: 0 0 32px; }
+  .ff-partner-inner { padding: 0; row-gap: 32px; }
+  .ff-partner-media { height: 350px; margin: 0; border-radius: 0; }
+  .ff-partner-media ul { left: 20px; bottom: 22px; font-size: 14px; line-height: 22px; }
+  .ff-partner-copy { padding: 0 20px; }
+  .ff-checks { gap: 8px; margin-top: 20px; }
+  .ff-checks li { font-size: 16px; line-height: 26px; }
+
+  /* Testimonials: stacked cards */
+  .ff-stories { padding: 32px 0; }
+  .ff-arrows { display: none; }
+  .ff-quotes { grid-auto-flow: row; grid-auto-columns: auto; grid-template-columns: 1fr; row-gap: 24px; overflow: visible; }
+  .ff-quote { gap: 20px; padding: 16px; }
+  .ff-quote figcaption img { width: 48px; height: 48px; }
+  .ff-quote figcaption strong { font-size: 16px; line-height: 22px; letter-spacing: 0.2px; }
+  .ff-more-btn { margin-top: 24px; }
+
+  /* CTA 390×262 */
+  .ff-cta { height: clamp(240px, 67.18vw, 290px); background-image: url("../assets/ui/img/enhanced/ff-cta-reference-m.png?v=30"); background-size: 100% 100%; background-position: center; }
+}

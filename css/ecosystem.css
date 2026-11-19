@@ -1,0 +1,283 @@
+/* Ecosystem page (Figma UI Design: Ecosystem desktop 1280 / mobile 390). Builds on styles.css */
+
+.eco main { display: block; }
+
+/* ---------- Hero ---------- */
+.eco-hero { height: 548px; }
+.eco-hero-bg { position: absolute; max-width: none; }
+.eco-hero-bg.desktop-bg { top: 0; left: -17.06%; width: 120.34%; height: auto; }
+.eco-hero-bg.mobile-bg { display: none; }
+.eco-hero-fade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #FAFDFE 0%, rgba(250, 253, 254, .9) 41.84%, rgba(250, 253, 254, .6) 48.52%, rgba(250, 253, 254, 0) 78.3%);
+}
+.eco-hero-inner { height: 100%; padding-top: 127px; }
+.eco-hero-copy { position: relative; z-index: 2; max-width: 580px; }
+.eco-hero-copy h1 { white-space: nowrap; }
+.eco-hero-copy p { margin-top: 25px; }
+.eco-hero-btn { position: relative; z-index: 2; margin-top: 32px; }
+
+/* Orbit diagram: a 654x457 board positioned like the Figma frame (x 624, y 70) */
+.eco-orbit { position: absolute; z-index: 1; left: calc(var(--gutter) + 584px); top: 70px; width: 654px; height: 457px; }
+.eco-orbit > img { position: absolute; inset: 0; width: 100%; height: 100%; }
+.eco-orbit .orbit-m { display: none; }
+.chips { position: absolute; inset: 0; }
+.chip {
+  --c: 62px;          /* icon circle */
+  --p: 46px;          /* pill height */
+  position: absolute;
+  left: var(--dx);
+  top: var(--dy);
+  display: flex;
+  align-items: center;
+  height: var(--c);
+}
+.chip::before {
+  content: "";
+  position: absolute;
+  left: calc(var(--c) / 2);
+  right: 0;
+  top: calc((var(--c) - var(--p)) / 2);
+  height: var(--p);
+  border-radius: 0 999px 999px 0;
+  background: rgba(255, 255, 255, .75);
+  -webkit-mask: radial-gradient(circle calc(var(--c) / 2) at 0 50%, transparent 98%, #000 100%);
+  mask: radial-gradient(circle calc(var(--c) / 2) at 0 50%, transparent 98%, #000 100%);
+}
+.chip-ic {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: var(--c);
+  height: var(--c);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .75);
+}
+.chip-ic svg { width: 28px; height: 28px; }
+.chip-lb {
+  position: relative;
+  margin-left: calc(var(--dl) - var(--c));
+  padding-right: 16px;
+  font-family: var(--font-display);
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 600;
+  color: var(--n-950);
+  white-space: nowrap;
+}
+.m-br { display: none; }
+
+/* ---------- Shared section bits ---------- */
+.eco-section { position: relative; }
+.eco-section .eyebrow + h2 { margin-top: 8px; }
+.eco-head { display: grid; grid-template-columns: 1fr 518px; gap: 40px; align-items: center; }
+.eco-head p { max-width: 518px; }
+
+/* ---------- What is the ecosystem ---------- */
+.eco-network {
+  padding: 48px 0;
+  background: linear-gradient(90deg, rgba(244, 248, 251, 0) 0%, rgba(244, 248, 251, .7) 40%, rgba(244, 248, 251, .95) 56.05%, #F4F8FB 70.27%);
+}
+.network-grid { display: grid; grid-template-columns: 1fr 728px; gap: 32px; align-items: start; }
+.network-copy p { margin-top: 17px; max-width: 432px; }
+.network-btn { margin-top: 24px; padding: 0 19px; }
+.eco-cards { display: grid; grid-template-columns: repeat(4, 170px); gap: 16px; }
+.eco-card {
+  min-height: 190px;
+  padding: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+.eco-card .ic { display: block; width: 40px; height: 40px; }
+.eco-card h3 { margin-top: 12px; }
+.eco-card p { margin-top: 8px; }
+
+/* ---------- How it works ---------- */
+.eco-works { padding: 48px 0 74px; }
+.steps { display: grid; grid-template-columns: repeat(6, 170px); column-gap: 36px; margin-top: 50px; }
+.step { position: relative; }
+.step > .ic { display: block; width: 48px; height: 48px; }
+.step-arrow { position: absolute; left: 80px; top: 13px; width: 96px; height: 16px; }
+.step-arrow-d { display: none; }
+.step h3 { margin-top: 16px; }
+.step p { margin-top: 4px; }
+
+/* ---------- Ecosystem in action ---------- */
+.eco-roles { padding: 48px 0; }
+.role-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 34px; }
+.role-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+.role-card > img { width: 100%; height: 140px; object-fit: cover; }
+.role-body { display: flex; flex-direction: column; align-items: flex-start; flex: 1; padding: 15px 16px 29px; }
+.role-body p { margin-top: 8px; }
+.role-body .link-arrow { margin-top: auto; padding-top: 19px; color: var(--orange-700); }
+
+/* ---------- Global reach ---------- */
+.eco-reach { padding: 48px 0 49px; }
+.sectors { display: grid; grid-template-columns: repeat(8, 1fr); gap: 16px; margin-top: 48px; }
+.sector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 120px;
+  padding-top: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--n-950);
+}
+.sector .ic { width: 48px; height: 48px; }
+.sector span { margin-top: 14px; }
+
+/* ---------- Stats band ---------- */
+.eco-stats { position: relative; overflow: hidden; height: 208px; }
+.eco-stats > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 29.5%; }
+.stats { position: relative; display: flex; justify-content: center; align-items: center; gap: 128px; height: 100%; }
+.stats li { position: relative; display: flex; flex-direction: column; align-items: center; text-align: center; }
+.stats li + li::before { content: ""; position: absolute; left: -64px; top: 0; bottom: 0; width: 1px; background: var(--n-400); }
+.stats strong { font-family: var(--font-display); font-size: 40px; line-height: 46px; font-weight: 700; letter-spacing: .75px; color: var(--n-950); white-space: nowrap; }
+.stats > li > span { margin-top: 7px; font-size: 16px; line-height: 26px; color: var(--text-primary); }
+
+/* ---------- CTA band ---------- */
+.eco-cta > img { object-position: 50% 30%; }
+.eco-cta::after { content: ""; position: absolute; inset: 0; background: linear-gradient(103.4deg, rgba(20, 20, 20, .5) 55.37%, rgba(20, 20, 20, 0) 100%); }
+.eco-cta .cta-inner { z-index: 2; gap: 0; padding: 48px var(--gutter); }
+.eco-cta .eyebrow { color: #fff; }
+.eco-cta h2 { margin-top: 10px; color: #fff; }
+.eco-cta p { margin-top: 14px; color: #fff; }
+.eco-cta .cta-inner .btn { margin-top: 24px; }
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1180px) {
+  .eco-hero { height: auto; padding-bottom: 48px; }
+  .eco-hero-bg.desktop-bg { left: 0; width: 100%; height: 100%; object-fit: cover; object-position: 60% 0; }
+  .eco-hero-fade { background: linear-gradient(180deg, #FAFDFE 0%, rgba(250, 253, 254, .9) 35%, rgba(250, 253, 254, .4) 60%, rgba(250, 253, 254, 0) 80%); }
+  .eco-hero-inner { display: flex; flex-direction: column; align-items: flex-start; padding-top: 128px; }
+  .eco-orbit { position: relative; left: auto; top: auto; align-self: center; margin-top: 24px; }
+  .eco-hero-btn { order: 3; margin-top: 24px; }
+  .eco-head { grid-template-columns: 1fr; gap: 16px; }
+  .network-grid { grid-template-columns: 1fr; gap: 32px; }
+  .network-copy p { max-width: 640px; }
+  .eco-cards { grid-template-columns: repeat(4, 1fr); }
+  .steps { grid-template-columns: repeat(3, 1fr); row-gap: 40px; column-gap: 32px; }
+  .step-arrow { display: none; }
+  .role-grid { grid-template-columns: repeat(2, 1fr); }
+  .sectors { grid-template-columns: repeat(4, 1fr); }
+  .stats { gap: 40px; }
+  .stats li + li::before { left: -20px; }
+  .stats strong { font-size: 32px; line-height: 38px; }
+}
+
+/* ---------- Mobile (390 frame) ---------- */
+@media (max-width: 768px) {
+  .eco-hero { padding-bottom: 32px; }
+  .eco-hero-bg.desktop-bg { display: none; }
+  .eco-hero-bg.mobile-bg { display: block; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .eco-hero-fade { background: linear-gradient(180deg, #FAFDFE 0%, rgba(250, 253, 254, .9) 45.15%, rgba(250, 253, 254, .75) 49.17%, rgba(250, 253, 254, 0) 60%); }
+  .eco-hero-inner { align-items: stretch; padding-top: 112px; }
+  .eco-hero-copy .eyebrow { display: block !important; }
+  .eco-hero-copy h1 { margin-top: 9px; white-space: normal; }
+  .eco-hero-copy p { margin-top: 19px; }
+  .eco-orbit { width: 390px; height: 348px; margin: 8px 0 0 calc(50% - 195px); align-self: auto; }
+  .eco-orbit .orbit-d { display: none; }
+  .eco-orbit .orbit-m { display: block; }
+  .chip { --c: 48px; --p: 31px; left: var(--mx); top: var(--my); width: var(--mr); }
+  .chip-2l { --p: 40px; }
+  .chip-ic svg { width: 19.6px; height: 19.6px; }
+  .chip-ic svg * { stroke-width: 2.86px; }
+  .chip-lb { margin-left: calc(var(--ml) - var(--c)); padding-right: 0; font-size: 18px; line-height: 18px; }
+  .m-br { display: inline; }
+  .eco-hero-btn { width: 100%; margin-top: 0; }
+
+  .eco-section .eyebrow + h2 { margin-top: 9px; font-weight: 600; }
+  .network-copy p { margin-right: -6px; }
+  .eco-head { gap: 11px; }
+  .eco-head p, .network-copy p { margin-top: 0; }
+  .network-copy p { margin-top: 11px; }
+
+  .eco-network { padding: 32px 0; background: none; }
+  .network-grid { display: flex; flex-direction: column; gap: 0; }
+  .network-copy { display: contents; }
+  .network-copy .eyebrow { order: 1; }
+  .network-copy h2 { order: 2; }
+  .network-copy p { order: 3; }
+  .eco-cards { order: 4; grid-template-columns: 1fr 1fr; gap: 18px 17px; margin-top: 32px; }
+  /* Only the cards move: swipe sideways, heading and button stay in place */
+  .eco-cards, .role-grid {
+    grid-auto-flow: column;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: var(--gutter);
+    scrollbar-width: none;
+    margin-inline: calc(-1 * var(--gutter));
+    padding: 4px var(--gutter) 12px;
+  }
+  .eco-cards::-webkit-scrollbar, .role-grid::-webkit-scrollbar { display: none; }
+  .eco-cards { align-self: stretch; grid-template-columns: none; grid-template-rows: auto auto; grid-auto-columns: 44%; }
+  .eco-card, .role-card { scroll-snap-align: start; }
+  .network-btn { order: 5; width: 100%; margin-top: 40px; }
+  .eco-card { min-height: 174px; padding: 16px; }
+  .eco-card h3 { margin-top: 9px; font-size: 18px; line-height: 24px; }
+  .eco-card p { margin-top: 3px; }
+
+  .eco-works { padding: 32px 0 46px; }
+  .steps { display: block; margin-top: 34px; }
+  .step { display: grid; grid-template-columns: 40px 1fr; column-gap: 16px; align-items: start; padding-bottom: 47px; }
+  .step:last-child { padding-bottom: 0; }
+  .step > .ic { width: 40px; height: 40px; grid-row: 1; }
+  .step > div { grid-column: 2; grid-row: 1; margin-top: -4px; }
+  .step h3 { margin-top: 0; font-size: 18px; line-height: 24px; }
+  .step p { margin-top: 1px; font-size: 14px; line-height: 22px; }
+  .step-arrow-d { display: block; position: absolute; left: 4px; top: 50px; width: 24px; height: 30px; }
+
+  .eco-roles { padding: 32px 0; }
+  .role-grid { grid-template-columns: none; grid-auto-columns: 78%; gap: 14px; margin-top: 32px; }
+  .role-card > img { height: 106px; }
+  .role-body { padding: 13px 16px 20px; }
+  .role-body h3 { font-size: 18px; line-height: 24px; }
+  .role-body p { margin-top: 3px; font-size: 14px; line-height: 22px; }
+  .role-body .link-arrow { padding-top: 12px; font-size: 14px; line-height: 20px; }
+
+  .eco-reach { padding: 32px 0 37px; }
+  .sectors { grid-template-columns: 1fr 1fr; gap: 18px 17px; margin-top: 32px; }
+  .sector { height: 110px; padding-top: 16px; }
+  .sector .ic { width: 40px; height: 40px; }
+  .sector span { margin-top: 10px; }
+
+  .eco-stats { height: 414px; }
+  .eco-stats > img { left: -180.47%; top: 0; width: 460.9%; height: 129.3%; max-width: none; object-fit: fill; }
+  .stats { display: grid; grid-template-columns: 1fr 1fr; column-gap: 20px; row-gap: 81px; align-content: center; }
+  .stats li + li::before { display: none; }
+  .stats li:nth-child(even)::before { content: ""; display: block; position: absolute; left: -10px; top: 0; bottom: 0; width: 1px; background: var(--n-400); }
+  .stats strong { font-size: 24px; line-height: 30px; font-weight: 600; letter-spacing: -.25px; white-space: nowrap; }
+  .stats strong span { font-size: inherit; line-height: inherit; font-weight: inherit; margin: 0; }
+  .stats > li > span { margin-top: 6px; font-size: 14px; line-height: 22px; }
+
+  .eco-cta::after { background: linear-gradient(91.3deg, rgba(20, 20, 20, .5) 255px, rgba(20, 20, 20, 0) 461px); }
+  .eco-cta > img { object-position: 50% 50%; }
+  .eco-cta .cta-inner { padding: 48px 40px; }
+  .eco-cta h2 { margin-top: 9px; }
+  .eco-cta p { max-width: 300px; margin-top: 11px; }
+}
+
+/* Mobile: button straight under the intro so it is on the first screen */
+@media (max-width: 768px) {
+  .eco-hero-inner { display: flex; flex-direction: column; }
+  .eco-hero-copy { order: 1; }
+  .eco-hero-btn { order: 2; margin-top: 24px; }
+  .eco-orbit { order: 3; margin-top: 16px; }
+}

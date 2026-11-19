@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Our Ventures — Loktara Ventures</title>
+<meta name="description" content="Explore the companies, ideas and initiatives we are building and supporting to create long-term value across industries and communities." />
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Narrow:wght@400;500;600;700&family=Arbutus+Slab&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css?v=20" />
+<link rel="stylesheet" href="css/our-ventures.css?v=2" />
+</head>
+<body class="page-ventures">
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="index.html" aria-label="Loktara Ventures home"><img src="assets/ui/logo.svg" alt="Loktara Ventures" width="151" height="40" /></a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="what-we-do.html">What We Do</a>
+      <a class="active" href="our-ventures.html">Our Ventures</a>
+      <a href="approach.html">Our Approach</a>
+      <a href="for-founders.html">For Founders</a>
+      <a href="for-business.html">For Business</a>
+      <a href="insights.html">Insights</a>
+      <a href="contact.html">Contact</a>
+      <a class="btn btn-primary nav-cta-mobile" href="contact.html">Get in Touch →</a>
+    </nav>
+    <a class="btn btn-primary btn-sm header-cta" href="contact.html">Get in Touch →</a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">
+      <svg class="i-menu" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <svg class="i-close" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+  <!-- ===== HERO SECTION (548px Desktop / 844px Mobile) ===== -->
+  <section class="page-hero ven-hero">
+    <picture class="page-hero-media">
+      <source media="(max-width: 768px)" srcset="assets/ui/img/ventures/hero-ventures-mobile.png" />
+      <img src="assets/ui/img/ventures/hero-ventures-clean.png" alt="Loktara Ventures rooftop terrace" fetchpriority="high" />
+    </picture>
+    <div class="page-hero-fade" aria-hidden="true"></div>
+    <div class="container page-hero-inner">
+      <div class="ven-hero-copy">
+        <span class="eyebrow eyebrow-line">OUR VENTURES</span>
+        <h1 class="display-xl">Ideas Today.<br /><span class="c-green">Impact</span> <span class="c-orange">Tomorrow.</span></h1>
+        <p class="body-l">Explore the companies, ideas and initiatives we are building and supporting to create <span class="nw">long-term</span> value across industries and communities.</p>
+        <div class="ven-hero-actions">
+          <a class="btn btn-primary" href="#ventures-grid">Explore Our Ventures →</a>
+          <a class="btn btn-secondary" href="approach.html">Our Approach</a>
+        </div>
+      </div>
+    </div>
+    <div class="ven-hero-panel" aria-label="Loktara Ventures focus areas"><span>PEOPLE</span><span>IDEAS</span><span>TECHNOLOGY</span><span>CAPITAL</span><span>BUSINESS</span><span class="ven-hero-panel-last">A BRIGHTER TOMORROW</span></div>
+  </section>
+
+  <!-- ===== CATEGORY TABS (7 Cards, 120px height) ===== -->
+  <section class="ven-tabs-section">
+    <div class="container">
+      <div class="ven-tabs-grid" role="tablist" aria-label="Filter Ventures">
+        <button class="ven-tab-btn active" data-filter="all" role="tab" aria-selected="true">
+          <span class="ven-tab-icon"><img src="assets/ui/icons/ventures/tab-all.svg" alt="" width="36" height="36" /></span>
+          <span class="ven-tab-label">All Ventures</span>
+        </button>
+        <button class="ven-tab-btn" data-filter="technology" role="tab" aria-selected="false">
+          <span class="ven-tab-icon"><img src="assets/ui/icons/ventures/tab-tech.svg" alt="" width="36" height="36" /></span>
+          <span class="ven-tab-label">Technology</span>
+        </button>
+        <button class="ven-tab-btn" data-filter="consumer" role="tab" aria-selected="false">
+          <span class="ven-tab-icon"><img src="assets/ui/icons/ventures/tab-consumer.svg" alt="" width="36" height="36" /></span>
+          <span class="ven-tab-label">Consumer</span>
+        </button>
+        <button class="ven-tab-btn" data-filter="real-estate" role="tab" aria-selected="false">
+          <span class="ven-tab-icon"><img src="assets/ui/icons/ventures/tab-realestate.svg" alt="" width="36" height="36" /></span>
+          <span class="ven-tab-label">Real Estate</span>
+        </button>
+        <button class="ven-tab-btn" data-filter="fintech" role="tab" aria-selected="false">
+          <span class="ven-tab-icon"><img src="assets/ui/icons/ventures/tab-fintech.svg" alt="" width="36" height="36" /></span>
+          <span class="ven-tab-label">Fintech</span>
+        </button>
+        <button class="ven-tab-btn" data-filter="healthcare" role="tab" aria-selected="false">
+          <span class="ven-tab-icon"><img src="assets/ui/icons/ventures/tab-health.svg" alt="" width="36" height="36" /></span>
+          <span class="ven-tab-label">Healthcare</span>
+        </button>
+        <button class="ven-tab-btn" data-filter="other" role="tab" aria-selected="false">
+          <span class="ven-tab-icon"><img src="assets/ui/icons/ventures/tab-other.svg" alt="" width="36" height="36" /></span>
+          <span class="ven-tab-label">Other</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HEADING: TYPES OF PARTNERSHIPS ===== -->
+  <section class="ven-head-section">
+    <div class="container">
+      <div class="ven-head-grid">
+        <div class="ven-head-left">
+          <span class="eyebrow eyebrow-line">TYPES OF PARTNERSHIPS</span>
+          <h2>Building Across<br /><span class="c-green">Opportunities.</span></h2>
+        </div>
+        <div class="ven-head-right">
+          <p>We invest in and build businesses that solve real problems, create meaningful value and have the potential to scale. Here are some of the ventures we are currently working on or have invested in.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VENTURES GRID (6 Cards) ===== -->
+  <section class="ven-grid-section" id="ventures-grid">
+    <div class="container">
+      <div class="ven-grid">
+        <!-- Card 1: Collab.io -->
+        <article class="ven-card" data-category="technology">
+          <div class="ven-card-media">
+            <span class="ven-badge badge-tech">Technology</span>
+            <img src="assets/ui/img/ventures/ven-card-1.jpg" alt="Collab.io collaboration platform" loading="lazy" />
+          </div>
+          <div class="ven-card-body">
+            <h3 class="ven-card-title">Collab.io</h3>
+            <p class="ven-card-desc">A next-generation collaboration platform designed to help teams work smarter and faster.</p>
+            <a class="ven-card-link" href="#">Learn More →</a>
+          </div>
+        </article>
+
+        <!-- Card 2: Coming Soon (Real Estate) -->
+        <article class="ven-card" data-category="real-estate">
+          <div class="ven-card-media">
+            <span class="ven-badge badge-realestate">Real Estate</span>
+            <img src="assets/ui/img/ventures/ven-card-2.jpg" alt="Loktara Properties land and real estate portfolio" loading="lazy" />
+          </div>
+          <div class="ven-card-body">
+            <h3 class="ven-card-title">Coming Soon</h3>
+            <p class="ven-card-desc">Our real estate venture is on its way. Stay tuned for more details.</p>
+          </div>
+        </article>
+
+        <!-- Card 3: Coming Soon (Fintech) -->
+        <article class="ven-card" data-category="fintech">
+          <div class="ven-card-media">
+            <span class="ven-badge badge-fintech">Fintech</span>
+            <img src="assets/ui/img/ventures/ven-card-3.jpg" alt="Innovative financial solutions" loading="lazy" />
+          </div>
+          <div class="ven-card-body">
+            <h3 class="ven-card-title">Coming Soon</h3>
+            <p class="ven-card-desc">Exploring innovative financial solutions to improve access, efficiency and growth opportunities.</p>
+          </div>
+        </article>
+
+        <!-- Card 4: Coming Soon (Healthcare) -->
+        <article class="ven-card" data-category="healthcare">
+          <div class="ven-card-media">
+            <span class="ven-badge badge-healthcare">Healthcare</span>
+            <img src="assets/ui/img/ventures/ven-card-4.jpg" alt="Healthcare accessible solutions" loading="lazy" />
+          </div>
+          <div class="ven-card-body">
+            <h3 class="ven-card-title">Coming Soon</h3>
+            <p class="ven-card-desc">Supporting solutions that make healthcare more accessible, affordable and impactful.</p>
+          </div>
+        </article>
+
+        <!-- Card 5: Coming Soon (Consumer) -->
+        <article class="ven-card" data-category="consumer">
+          <div class="ven-card-media">
+            <span class="ven-badge badge-consumer">Consumer</span>
+            <img src="assets/ui/img/ventures/ven-card-5.jpg" alt="Consumer-focused businesses" loading="lazy" />
+          </div>
+          <div class="ven-card-body">
+            <h3 class="ven-card-title">Coming Soon</h3>
+            <p class="ven-card-desc">Building consumer-focused businesses that enhance everyday life.</p>
+          </div>
+        </article>
+
+        <!-- Card 6: Coming Soon (Other) -->
+        <article class="ven-card" data-category="other">
+          <div class="ven-card-media">
+            <span class="ven-badge badge-other">Other</span>
+            <img src="assets/ui/img/ventures/ven-card-6.jpg" alt="New diversified opportunities" loading="lazy" />
+          </div>
+          <div class="ven-card-body">
+            <h3 class="ven-card-title">Coming Soon</h3>
+            <p class="ven-card-desc">We’re exploring new ideas and markets. More details are coming soon.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== IMPACT SECTION ===== -->
+  <section class="ven-impact-section">
+    <div class="container">
+      <div class="ven-impact-card">
+        <div class="ven-impact-left">
+          <span class="eyebrow eyebrow-line">OUR IMPACT</span>
+          <h2>Creating Value<br /><span class="c-green">Across Industries.</span></h2>
+          <p>From technology and real estate to healthcare and consumer services, our ventures are focused on solving real problems and creating lasting impact.</p>
+        </div>
+        <div class="ven-stats-grid">
+          <div class="ven-stat-item">
+            <div class="ven-stat-icon">
+              <img src="assets/ui/icons/ventures/stat-building.svg" alt="" width="40" height="40" />
+            </div>
+            <span class="ven-stat-num">5+</span>
+            <span class="ven-stat-label">Active Ventures</span>
+          </div>
+          <div class="ven-stat-item">
+            <div class="ven-stat-icon">
+              <img src="assets/ui/icons/ventures/stat-rocket.svg" alt="" width="40" height="40" />
+            </div>
+            <span class="ven-stat-num">3+</span>
+            <span class="ven-stat-label">New Initiatives</span>
+          </div>
+          <div class="ven-stat-item">
+            <div class="ven-stat-icon">
+              <img src="assets/ui/icons/ventures/stat-people.svg" alt="" width="40" height="40" />
+            </div>
+            <span class="ven-stat-num">10+</span>
+            <span class="ven-stat-label">Partners &amp; Advisors</span>
+          </div>
+          <div class="ven-stat-item">
+            <div class="ven-stat-icon">
+              <img src="assets/ui/icons/ventures/stat-diamonds.svg" alt="" width="40" height="40" />
+            </div>
+            <span class="ven-stat-num">Multiple</span>
+            <span class="ven-stat-label">Industries</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA SECTION ===== -->
+  <section class="ven-cta">
+    <div class="container">
+      <div class="ven-cta-inner">
+        <span class="eyebrow eyebrow-line">LET'S BUILD MORE</span>
+        <h2>Be Part of<br /><span class="c-green">What's Next.</span></h2>
+        <p>We are always looking for new opportunities, partners and founders to build innovative businesses and create a brighter tomorrow.</p>
+        <a class="btn btn-primary" href="contact.html">Get In Touch →</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-main">
+    <div class="footer-brand">
+      <a href="index.html" aria-label="Loktara Ventures home"><img src="assets/ui/logo.svg" alt="Loktara Ventures" width="242" height="64" /></a>
+      <p>Building a brighter tomorrow.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="what-we-do.html">What We Do</a></li>
+        <li><a class="active" href="our-ventures.html">Our Ventures</a></li>
+        <li><a href="approach.html">Our Approach</a></li>
+        <li><a href="insights.html">Insights</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>For</h4>
+      <ul>
+        <li><a href="for-founders.html">For Founders</a></li>
+        <li><a href="for-business.html">For Businesses</a></li>
+        <li><a href="for-partners.html">Investors &amp; Partners</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="terms-of-service.html">Terms of Use</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Follow Us</h4>
+      <div class="socials">
+        <a href="https://www.linkedin.com/company/loktara-ventures/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="3" fill="#0076B2"/><path fill="#fff" d="M7 12.4h3.9V25H7V12.4Zm2-6.3a2.3 2.3 0 1 1 0 4.5 2.3 2.3 0 0 1 0-4.5Zm4.3 6.3H17v1.7h.1c.5-1 1.8-2 3.7-2 4 0 4.7 2.6 4.7 6V25h-3.9v-6.1c0-1.5 0-3.3-2-3.3s-2.4 1.6-2.4 3.2V25h-3.9V12.4Z"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <span>© 2026 Loktara Ventures Private Limited. All rights reserved.</span>
+      <span class="tagline">Building a brighter tomorrow.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  // Interactive filtering for category tabs
+  document.addEventListener('DOMContentLoaded', function() {
+    const tabButtons = document.querySelectorAll('.ven-tab-btn');
+    const cards = document.querySelectorAll('.ven-card');
+
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', function() {
+        tabButtons.forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        this.classList.add('active');
+        this.setAttribute('aria-selected', 'true');
+
+        const filter = this.getAttribute('data-filter');
+        cards.forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-category') === filter) {
+            card.classList.remove('is-hidden');
+          } else {
+            card.classList.add('is-hidden');
+          }
+        });
+      });
+    });
+  });
+</script>
+</body>
+</html>

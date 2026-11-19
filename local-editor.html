@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Loktara Local Design Editor</title>
+  <style>
+    :root { color-scheme: light; font-family: Archivo, Arial, sans-serif; color: #051E42; background: #F8FAFC; }
+    body { margin: 0; display: grid; grid-template-columns: 320px 1fr; min-height: 100vh; }
+    aside { padding: 28px; background: #fff; border-right: 1px solid #E2E8F0; }
+    h1 { margin: 0; font: 700 28px/1.1 "Arial Narrow", Arial, sans-serif; }
+    p { color: #475569; font-size: 14px; line-height: 1.5; }
+    label { display: grid; gap: 10px; margin-top: 24px; font-weight: 700; font-size: 14px; }
+    output { color: #D94F12; font-variant-numeric: tabular-nums; }
+    input { width: 100%; accent-color: #F15C17; }
+    .status { margin-top: 28px; padding: 12px; border-radius: 8px; background: #F0FDF4; color: #227B1A; font-size: 13px; }
+    main { min-width: 0; padding: 24px; }
+    iframe { width: 100%; height: calc(100vh - 48px); border: 1px solid #CBD5E1; border-radius: 12px; background: #fff; }
+    @media (max-width: 760px) { body { grid-template-columns: 1fr; } aside { border-right: 0; border-bottom: 1px solid #E2E8F0; } main { padding: 12px; } iframe { height: 75vh; } }
+  </style>
+</head>
+<body>
+  <aside>
+    <h1>Business page controls</h1>
+    <p>Changes save directly to <code>css/local-design-overrides.css</code>. Keep this page local; it is a development tool, not a production CMS.</p>
+    <label>Hero image zoom <output id="heroValue">1.10×</output><input id="heroImageScale" type="range" min="0.9" max="1.3" step="0.01" value="1.1" /></label>
+    <label>Feature icon size <output id="iconValue">40px</output><input id="iconSize" type="range" min="32" max="56" step="1" value="40" /></label>
+    <label>Feature card top/bottom padding <output id="paddingValue">32px</output><input id="cardPadding" type="range" min="20" max="48" step="1" value="32" /></label>
+    <div class="status" id="status">Saved locally</div>
+  </aside>
+  <main><iframe id="preview" src="for-business.html" title="For Business live preview"></iframe></main>
+  <script>
+    const controls = [...document.querySelectorAll('input')];
+    const preview = document.querySelector('#preview');
+    const status = document.querySelector('#status');
+    let saveTimer;
+
+    function settings() { return Object.fromEntries(controls.map(input => [input.id, Number(input.value)])); }
+    function showValues() {
+      const current = settings();
+      document.querySelector('#heroValue').value = `${current.heroImageScale.toFixed(2)}×`;
+      document.querySelector('#iconValue').value = `${current.iconSize}px`;
+      document.querySelector('#paddingValue').value = `${current.cardPadding}px`;
+    }
+    function applyPreview() {
+      const root = preview.contentDocument?.documentElement;
+      if (!root) return;
+      const current = settings();
+      root.style.setProperty('--fb-hero-image-scale', current.heroImageScale);
+      root.style.setProperty('--fb-key-icon-size', `${current.iconSize}px`);
+      root.style.setProperty('--fb-key-padding-y', `${current.cardPadding}px`);
+    }
+    async function save() {
+      status.textContent = 'Saving…';
+      try {
+        const response = await fetch('/api/design-settings', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(settings()) });
+        if (!response.ok) throw new Error('Save failed');
+        status.textContent = 'Saved locally';
+      } catch { status.textContent = 'Save failed — keep the local server running'; }
+    }
+    controls.forEach(input => input.addEventListener('input', () => {
+      showValues(); applyPreview(); clearTimeout(saveTimer); saveTimer = setTimeout(save, 250);
+    }));
+    preview.addEventListener('load', applyPreview);
+    async function loadSavedSettings() {
+      try {
+        const saved = await fetch('/api/design-settings').then(response => response.json());
+        controls.forEach(input => { input.value = saved[input.id]; });
+      } finally {
+        showValues(); applyPreview();
+      }
+    }
+    loadSavedSettings();
+  </script>
+</body>
+</html>
