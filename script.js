@@ -270,7 +270,11 @@ document.querySelectorAll(".venture-scroller").forEach((scroller) => {
   track.querySelectorAll(".venture-card[data-href]").forEach((card) => {
     const openCard = () => { window.location.href = card.dataset.href; };
     card.addEventListener("click", (event) => {
-      if (event.target.closest("a, button")) return;
+      const link = event.target.closest("a");
+      const href = link && link.getAttribute("href");
+      if (link && href && href !== "#") return;
+      if (event.target.closest("button")) return;
+      event.preventDefault();
       openCard();
     });
     card.addEventListener("keydown", (event) => {
