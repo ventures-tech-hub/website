@@ -328,3 +328,16 @@ document.querySelectorAll(".ff-stories, .fb-stories, .pt-stories").forEach((wrap
   track.addEventListener("scroll", update, { passive: true });
   update();
 });
+
+
+/* ---------- Home: Watch Our Story dialog ---------- */
+const storyDialog = document.getElementById("story-dialog");
+if (storyDialog) {
+  const openButton = document.querySelector('[aria-controls="story-dialog"]');
+  const closeButton = storyDialog.querySelector(".story-dialog-close");
+  openButton?.addEventListener("click", () => storyDialog.showModal());
+  closeButton?.addEventListener("click", () => storyDialog.close());
+  storyDialog.addEventListener("click", (event) => {
+    if (event.target === storyDialog) storyDialog.close();
+  });
+}

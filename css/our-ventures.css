@@ -14,6 +14,17 @@ body.page-ventures {
   padding-right: 20px;
 }
 
+/* Keep the shared header's full navigation width; the narrower content grid
+   below is for page sections, not the desktop navigation row. */
+.page-ventures .site-header .container {
+  max-width: calc(var(--container) + var(--gutter) * 2);
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+}
+
+.page-ventures .nav-links { gap: clamp(12px, 1.5vw, 20px); }
+.page-ventures .header-inner { gap: 16px; }
+
 /* ==========================================================================
    1. HERO SECTION (1280 × 548px)
    ========================================================================== */
@@ -50,7 +61,7 @@ body.page-ventures {
   pointer-events: none;
 }
 
-.ven-hero-panel { position: absolute; z-index: 2; right: clamp(34px, 7vw, 92px); bottom: 48px; display: flex; width: 250px; flex-direction: column; gap: 14px; padding: 24px 20px 20px; border-radius: 14px; background: rgb(3 27 57 / .86); color: #fff; font-size: 16px; line-height: 1.15; }
+.ven-hero-panel { position: absolute; z-index: 2; right: clamp(34px, 7vw, 92px); bottom: 48px; display: flex; width: 250px; flex-direction: column; gap: 14px; padding: 24px 20px 20px; border-radius: 14px; background: rgb(3 27 57 / .86); color: #fff; font-family: var(--font-body); font-size: 16px; font-weight: 400; line-height: 26px; letter-spacing: 0; }
 .ven-hero-panel-last { padding-bottom: 8px; border-bottom: 2px solid #ff6300; width: max-content; }
 
 .ven-hero .page-hero-inner {
@@ -68,8 +79,9 @@ body.page-ventures {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 13px;
-  font-weight: 700;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   color: #0F172A;
@@ -77,18 +89,22 @@ body.page-ventures {
 }
 
 .ven-hero-copy h1.display-xl {
-  font-size: 52px;
-  line-height: 1.1;
+  font-family: var(--font-display);
+  font-size: 64px;
+  line-height: 68px;
   font-weight: 700;
   color: #0F172A;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.75px;
   margin: 0;
 }
 
 .ven-hero-copy p.body-l {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #475569;
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0;
+  color: #1E293B;
   margin-top: 16px;
   margin-bottom: 28px;
 }
@@ -402,8 +418,10 @@ body.page-ventures {
 
 .ven-impact-left .eyebrow {
   display: inline-block;
-  font-size: 13px;
-  font-weight: 700;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   color: #0F172A;
@@ -411,11 +429,13 @@ body.page-ventures {
 }
 
 .ven-impact-left h2 {
+  font-family: var(--font-display);
   font-size: 40px;
-  line-height: 1.15;
+  line-height: 46px;
   font-weight: 700;
   color: #0F172A;
-  letter-spacing: -0.5px;
+  letter-spacing: 0.75px;
+  text-align: center;
   margin: 0 0 14px;
 }
 
@@ -455,19 +475,23 @@ body.page-ventures {
 }
 
 .ven-stat-num {
-  font-size: 44px;
-  font-weight: 800;
-  line-height: 1;
+  font-family: var(--font-display);
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 46px;
+  letter-spacing: 0.75px;
   color: #0F172A;
   margin-bottom: 8px;
-  font-family: var(--font-heading, inherit);
 }
 
 .ven-stat-label {
-  font-size: 14px;
-  font-weight: 500;
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 400;
   color: #475569;
-  line-height: 1.35;
+  line-height: 26px;
+  letter-spacing: 0;
+  text-align: center;
 }
 
 /* ==========================================================================
@@ -489,26 +513,32 @@ body.page-ventures {
 
 .ven-cta .eyebrow {
   display: inline-block;
+  font-family: var(--font-body);
   color: #ffffff;
-  font-size: 13px;
-  font-weight: 700;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   margin-bottom: 12px;
 }
 
 .ven-cta h2 {
-  font-size: 44px;
-  line-height: 1.15;
+  font-family: var(--font-display);
+  font-size: 48px;
+  line-height: 54px;
   font-weight: 700;
   color: #ffffff;
-  letter-spacing: -0.5px;
+  letter-spacing: -1px;
   margin: 0 0 14px;
 }
 
 .ven-cta p {
-  font-size: 16px;
-  line-height: 1.6;
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0;
   color: rgba(255, 255, 255, 0.9);
   margin: 0 0 24px;
 }
@@ -577,7 +607,7 @@ body.page-ventures {
 
   .ven-hero .page-hero-media img { object-position: center center !important; }
 
-  .ven-hero-panel { right: 20px; bottom: 20px; width: calc(100% - 40px); max-width: 350px; flex-direction: row; flex-wrap: wrap; gap: 14px 18px; padding: 16px 12px 13px; font-size: 13px; line-height: 1.15; }
+  .ven-hero-panel { right: 20px; bottom: 20px; width: calc(100% - 40px); max-width: 350px; flex-direction: row; flex-wrap: wrap; gap: 14px 18px; padding: 16px 12px 13px; font-size: 14px; line-height: 22px; }
   .ven-hero-panel-last { flex-basis: 100%; width: max-content; }
 
   .ven-hero .page-hero-inner {
@@ -585,13 +615,14 @@ body.page-ventures {
   }
 
   .ven-hero-copy h1.display-xl {
-    font-size: 38px;
-    line-height: 1.15;
+    font-size: 40px;
+    line-height: 46px;
   }
 
   .ven-hero-copy p.body-l {
-    font-size: 15px;
-    line-height: 1.55;
+    font-size: 14px;
+    line-height: 22px;
+    color: #1E293B;
     margin-top: 14px;
     margin-bottom: 24px;
   }
@@ -676,8 +707,8 @@ body.page-ventures {
   }
 
   .ven-impact-left h2 {
-    font-size: 30px;
-    line-height: 1.2;
+    font-size: 28px;
+    line-height: 34px;
   }
 
   .ven-stats-grid {
@@ -686,7 +717,8 @@ body.page-ventures {
   }
 
   .ven-stat-num {
-    font-size: 36px;
+    font-size: 28px;
+    line-height: 34px;
   }
 
   /* CTA Section: 778px high on mobile */
@@ -707,7 +739,13 @@ body.page-ventures {
 
   .ven-cta h2 {
     font-size: 32px;
-    line-height: 1.2;
+    line-height: 38px;
+    letter-spacing: -0.5px;
+  }
+
+  .ven-cta p {
+    font-size: 14px;
+    line-height: 22px;
   }
 
   .ven-cta .btn {

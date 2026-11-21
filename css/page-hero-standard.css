@@ -1,0 +1,14 @@
+/* Consistent banner height and heading offset for all non-home pages. */
+.page-hero:not(.home-hero) {
+  --hero-h: 548px;
+  --hero-pt: 118px;
+  min-height: var(--hero-h);
+}
+
+@media (max-width: 768px) {
+  .page-hero:not(.home-hero) {
+    --hero-h: 844px;
+    --hero-pt: 112px;
+    min-height: var(--hero-h);
+  }
+}
