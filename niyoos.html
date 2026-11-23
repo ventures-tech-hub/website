@@ -8,54 +8,56 @@
 <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Narrow:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css?v=20" /><link rel="stylesheet" href="css/niyoos.css?v=1" />
+<link rel="stylesheet" href="styles.css?v=32" /><link rel="stylesheet" href="css/niyoos.css?v=11" />
 </head>
 <body class="page-niyoos">
-<header class="site-header"><div class="container header-inner">
-  <a class="logo" href="index.html" aria-label="Loktara Ventures home"><img src="assets/ui/logo.svg" alt="Loktara Ventures" width="151" height="40" /></a>
-  <nav class="nav-links" aria-label="Primary navigation"><a href="index.html">Home</a><a href="about.html">About</a><a href="what-we-do.html">What We Do</a><a class="active" href="our-ventures.html">Our Ventures</a><a href="approach.html">Our Approach</a><a href="for-founders.html">For Founders</a><a href="for-business.html">For Business</a><a href="insights.html">Insights</a><a href="contact.html">Contact</a><a class="btn btn-primary nav-cta-mobile" href="contact.html#contact-form">Get in Touch →</a></nav>
-  <a class="btn btn-primary btn-sm header-cta" href="contact.html#contact-form">Get in Touch →</a>
-  <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><svg class="i-menu" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><svg class="i-close" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
-</div></header>
+<div data-site-header></div>
 <main>
   <section class="ny-hero" id="top">
     <div class="container ny-hero-inner">
       <a class="ny-back" href="our-ventures.html" aria-label="Back to Our Ventures"><span class="ny-back-arrow" aria-hidden="true">←</span><span>Our Ventures</span></a>
       <div class="ny-hero-grid">
         <div class="ny-hero-copy">
-          <div class="ny-brand"><img src="assets/ui/icons/ven-logo-niyoos-light.png" alt="NIYOOS — Govern, Secure, Observe, Control"/><span>LOKTARA VENTURES COMPANY</span></div>
-          <h1>Govern AI Agents.<br/>Control <span>Every</span><br/>Outcome.</h1>
-          <p>NIYOOS is an enterprise-grade governance platform that gives organizations complete visibility, control and confidence over every AI agent in their ecosystem.</p>
-          <div class="ny-actions"><a class="ny-btn ny-btn-primary" href="#features">Explore Platform →</a><a class="ny-btn ny-btn-outline" href="contact.html">Schedule a Demo</a></div>
+          <div class="ny-brand">
+            <div class="ny-brand-logo" aria-label="NIYOOS — Govern. Secure. Scale.">
+              <img class="ny-brand-mark" src="assets/ui/icons/niyoos-mark.svg" alt="" />
+              <span class="ny-wordmark">NIY<span class="ny-wordmark-infinity">∞</span>OS<small>Govern. Secure. Scale.</small></span>
+            </div>
+            <span class="ny-company-tag">LOKTARA VENTURES COMPANY</span>
+          </div>
+          <h1>Govern AI Agents.<br/>Control <span>Every</span><br/><span>Outcome.</span></h1>
+          <p>NIYOOS is an AI governance and control platform that gives organizations real-time visibility, enforces policies, controls spend, detects risks, and delivers complete audit trails across every AI agent and action.</p>
+          <div class="ny-actions"><a class="ny-btn ny-btn-primary" href="#features">Explore NIYOOS →</a><a class="ny-btn ny-btn-outline" href="https://niyoos.com" target="_blank" rel="noopener noreferrer">Visit Website <span aria-hidden="true">↗</span></a></div>
         </div>
         <aside class="ny-dash" aria-label="NIYOOS agent control preview">
           <div class="ny-dash-side">
-            <div class="ny-dash-brand"><b></b><span>NIYOOS</span></div>
+            <div class="ny-dash-brand"><b aria-hidden="true"><svg viewBox="0 0 48 52"><path d="M24 2 44 13.5v24L24 49 4 37.5v-24L24 2Z"/><path d="M15 33V22l9-5 9 5v11M15 33v5m9-21v23m9-15v8"/></svg></b><span>NIYOOS<small>Govern. Secure. Scale.</small></span></div>
             <ul>
-              <li class="is-on">Overview</li>
-              <li>Agents</li>
-              <li>Policies</li>
-              <li>Audit</li>
-              <li>Alerts</li>
+              <li class="is-on"><i>◉</i>Overview</li>
+              <li><i>♙</i>Agents</li>
+              <li><i>◷</i>Activity</li>
+              <li><i>◇</i>Policies</li>
+              <li><i>▤</i>Budgets</li>
+              <li><i>♢</i>Alerts</li>
+              <li><i>▣</i>Audit Trail</li>
+              <li><i>⌘</i>Integrations</li>
+              <li><i>⚙</i>Settings</li>
             </ul>
           </div>
           <div class="ny-dash-main">
-            <header><strong>Agent Control</strong><span>Live · 128 agents</span></header>
+            <header class="ny-dash-top"><div><strong>Overview</strong><small>Real-time view of your AI agents and governance posture</small></div><div class="ny-account"><span class="ny-avatar">A</span><span>Acme Corp<small>Admin</small></span><b>⌄</b></div></header>
+            <div class="ny-dash-filters"><span>◷ Last 7 days　⌄</span><span>☷ Filters　⌄</span></div>
             <div class="ny-stats">
-              <article><small>Active</small><b>84</b><em>+12%</em></article>
-              <article><small>Guarded</small><b>96%</b><em>policy</em></article>
-              <article><small>Alerts</small><b>7</b><em>open</em></article>
-              <article class="ny-ring"><small>Health</small><b>98%</b></article>
+              <article><small>Total Agents</small><b>128</b><em>↑ 12% vs last 7 days</em></article>
+              <article><small>Total Actions</small><b>24.8K</b><em>↑ 18% vs last 7 days</em></article>
+              <article><small>Total Spend</small><b>$49,362</b><em>↓ 8% vs last 7 days</em></article>
+              <article><small>Policy Compliance</small><b>98%</b><em>↑ 4% vs last 7 days</em><i class="ny-compliance-ring"></i></article>
             </div>
             <div class="ny-dash-split">
-              <div class="ny-chart" aria-hidden="true"><span>Activity</span><svg viewBox="0 0 220 84" preserveAspectRatio="none"><defs><linearGradient id="nyFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a78bfa" stop-opacity=".55"/><stop offset="1" stop-color="#a78bfa" stop-opacity="0"/></linearGradient></defs><path d="M0 62 C20 60 28 48 46 50 C66 52 74 28 96 30 C118 32 128 18 150 22 C172 26 186 40 220 16 V84 H0 Z" fill="url(#nyFill)"/><path d="M0 62 C20 60 28 48 46 50 C66 52 74 28 96 30 C118 32 128 18 150 22 C172 26 186 40 220 16" fill="none" stroke="#c4b5fd" stroke-width="2.4"/></svg></div>
-              <div class="ny-donut" aria-hidden="true"><i></i><div><b>98%</b><span>in policy</span></div></div>
+              <div class="ny-chart"><header><strong>Agent Activity</strong><span>Actions　⌄</span></header><div class="ny-chart-plot" aria-hidden="true"><div class="ny-y-labels"><span>8K</span><span>6K</span><span>4K</span><span>2K</span><span>0</span></div><svg viewBox="0 0 440 150" preserveAspectRatio="none"><defs><linearGradient id="nyFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8b5cf6" stop-opacity=".42"/><stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/></linearGradient></defs><path d="M0 115 C28 108 35 90 62 96 S97 62 125 72 S164 42 190 55 S219 86 246 62 S277 56 302 65 S337 35 360 45 S400 66 440 23 V150 H0Z" fill="url(#nyFill)"/><path d="M0 115 C28 108 35 90 62 96 S97 62 125 72 S164 42 190 55 S219 86 246 62 S277 56 302 65 S337 35 360 45 S400 66 440 23" fill="none" stroke="#a78bfa" stroke-width="3"/></svg></div><div class="ny-chart-days"><span>May 10</span><span>May 11</span><span>May 12</span><span>May 13</span><span>May 14</span><span>May 15</span><span>May 16</span></div></div>
+              <div class="ny-spend"><header><strong>Spend Overview</strong><span>⋯</span></header><div class="ny-spend-body"><div class="ny-spend-donut"><b>$49,362<small>Total spend</small></b></div><ul><li><i></i>OpenAI <b>$18,360 (37%)</b></li><li><i></i>Anthropic <b>$12,420 (25%)</b></li><li><i></i>AWS Bedrock <b>$10,214 (21%)</b></li><li><i></i>Others <b>$8,368 (17%)</b></li></ul></div></div>
             </div>
-            <ul class="ny-feed">
-              <li><i class="ok"></i><span>Research agent completed a governed task</span><em>2m</em></li>
-              <li><i class="ok"></i><span>Policy approved for data-access agent</span><em>6m</em></li>
-              <li><i class="warn"></i><span>Loop detected and paused on content agent</span><em>11m</em></li>
-            </ul>
+            <div class="ny-dash-bottom"><section class="ny-feed"><header><strong>Recent Alerts</strong><a href="#features">View all</a></header><ul><li><i class="warn">!</i><span>Unusual tool usage by Support Agent</span><em>2m ago</em></li><li><i class="warn">!</i><span>Potential loop detected in Research Agent</span><em>15m ago</em></li><li><i>◉</i><span>Spend limit nearing for Marketing Agent</span><em>32m ago</em></li></ul></section><section class="ny-policy"><header><strong>Policy Status</strong></header><ul><li>Data Access Policy <b>Enforced</b></li><li>Tool Usage Policy <b>Enforced</b></li><li>Spend Control Policy <b>Enforced</b></li><li>PII Protection Policy <b>Enforced</b></li></ul></section></div>
           </div>
         </aside>
       </div>
@@ -66,19 +68,44 @@
     <div class="container ny-about-grid">
       <div>
         <h2>About <span>NIYOOS</span></h2>
-        <p>NIYOOS is the enterprise governance platform for AI agents. It gives organizations one place to monitor activity, enforce policy, and keep every agent aligned with business goals.</p>
-        <p>From real-time monitoring to audit-ready logs, NIYOOS gives teams complete control over AI — without slowing the work down.</p>
+        <p>NIYOOS helps enterprises govern autonomous AI agents with confidence. It provides a unified layer of control across LLMs, tools, data and workflows—so your agents act within policy, spend responsibly, and stay aligned with business goals.</p>
+        <p>From real-time monitoring to audit-ready logs, NIYOOS gives your teams the visibility and controls they need to build and scale AI safely.</p>
       </div>
       <figure class="ny-about-visual">
-        <img src="assets/ui/img/enhanced/hero-about-d.jpg" alt="A professional checking updates on a phone" />
+        <img src="assets/ui/img/enhanced/niyoos-sec-2.png" alt="A professional checking updates on a phone" />
         <div class="ny-control-card">
           <strong>One Platform.<br/><span>Total Control.</span></strong>
           <ul>
-            <li>Govern every agent</li>
-            <li>Secure access</li>
-            <li>Enforce policy</li>
-            <li>Observe outcomes</li>
-            <li>Audit everything</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <path d="M17.4051 25.2617C16.4695 25.3519 15.5274 25.3519 14.5918 25.2617" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#9B67F2"/>
+              <path d="M17.4051 6.7382C16.4696 6.64761 15.5275 6.64716 14.5918 6.73687" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#9B67F2"/>
+              <path d="M22.7617 8.36523C23.5891 8.81049 24.3718 9.33423 25.0991 9.92923" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#9B67F2"/>
+              <path d="M25.0991 22.0703C24.3719 22.6658 23.5892 23.19 22.7617 23.6356" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#9B67F2"/>
+              <path d="M3.35227 17.7364C3.13114 17.3223 2.93002 16.8978 2.7496 16.4644C2.63815 16.1646 2.63815 15.8348 2.7496 15.5351C2.92911 15.1013 3.12934 14.6763 3.3496 14.2617" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#9B67F2"/>
+              <path d="M28.6465 14.2617C28.8681 14.6762 29.0697 15.1012 29.2505 15.5351C29.3619 15.8348 29.3619 16.1646 29.2505 16.4644C29.0696 16.8978 28.8681 17.3223 28.6465 17.7364" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#9B67F2"/>
+              <path d="M6.89648 9.93057C7.62364 9.33511 8.40635 8.81092 9.23382 8.36523" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#9B67F2"/>
+              <path d="M9.23382 23.6356C8.40635 23.19 7.62364 22.6658 6.89648 22.0703" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#9B67F2"/>
+              <path d="M20 16C20 18.2091 18.2091 20 16 20C13.7909 20 12 18.2091 12 16C12 13.7909 13.7909 12 16 12C18.2091 12 20 13.7909 20 16Z" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#9B67F2"/>
+              </svg>Monitor Every Agent</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <path d="M29.3327 15.9993C29.3327 23.3631 23.3631 29.3327 15.9993 29.3327C8.63555 29.3327 2.66602 23.3631 2.66602 15.9993C2.66602 8.63555 8.63555 2.66602 15.9993 2.66602C23.3631 2.66602 29.3327 8.63555 29.3327 15.9993Z" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#9B67F2"/>
+              <path d="M21.3327 10.666H13.3327C12.6254 10.666 11.9472 10.947 11.4471 11.4471C10.947 11.9472 10.666 12.6254 10.666 13.3327C10.666 14.0399 10.947 14.7182 11.4471 15.2183C11.9472 15.7184 12.6254 15.9993 13.3327 15.9993H18.666C19.3733 15.9993 20.0515 16.2803 20.5516 16.7804C21.0517 17.2805 21.3327 17.9588 21.3327 18.666C21.3327 19.3733 21.0517 20.0515 20.5516 20.5516C20.0515 21.0517 19.3733 21.3327 18.666 21.3327H10.666" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#9B67F2"/>
+              <path d="M16 24V8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#9B67F2"/>
+              </svg>Control Spend</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <path d="M7.99935 21.3327C14.666 21.3327 17.3327 10.666 23.9993 10.666C25.4138 10.666 26.7704 11.2279 27.7706 12.2281C28.7708 13.2283 29.3327 14.5849 29.3327 15.9993C29.3327 17.4138 28.7708 18.7704 27.7706 19.7706C26.7704 20.7708 25.4138 21.3327 23.9993 21.3327C17.3327 21.3327 14.666 10.666 7.99935 10.666C6.58486 10.666 5.22831 11.2279 4.22811 12.2281C3.22792 13.2283 2.66602 14.5849 2.66602 15.9993C2.66602 17.4138 3.22792 18.7704 4.22811 19.7706C5.22831 20.7708 6.58486 21.3327 7.99935 21.3327Z" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#9B67F2"/>
+              </svg>Detect Risks Early</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <path d="M25.3333 14.6667C25.3333 20.5577 20.5577 25.3333 14.6667 25.3333C8.77563 25.3333 4 20.5577 4 14.6667C4 8.77563 8.77563 4 14.6667 4C20.5577 4 25.3333 8.77563 25.3333 14.6667Z" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#9B67F2"/>
+              <path d="M28.0009 27.999L22.2676 22.2656" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#9B67F2"/>
+              <path d="M14.666 9.33398V14.6673" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#9B67F2"/>
+              <path d="M14.666 20H14.6793" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#9B67F2"/>
+              </svg>Enforce Policies</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <path d="M26.6663 17.3333C26.6663 23.9999 21.9997 27.3333 16.453 29.2666C16.1626 29.365 15.8471 29.3603 15.5597 29.2533C9.99967 27.3333 5.33301 23.9999 5.33301 17.3333V7.99995C5.33301 7.64633 5.47348 7.30719 5.72353 7.05714C5.97358 6.80709 6.31272 6.66662 6.66634 6.66662C9.33301 6.66662 12.6663 5.06662 14.9863 3.03995C15.2688 2.79861 15.6281 2.66602 15.9997 2.66602C16.3712 2.66602 16.7305 2.79861 17.013 3.03995C19.3463 5.07995 22.6663 6.66662 25.333 6.66662C25.6866 6.66662 26.0258 6.80709 26.2758 7.05714C26.5259 7.30719 26.6663 7.64633 26.6663 7.99995V17.3333Z" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#9B67F2"/>
+              <path d="M16 10.666V15.9993" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#9B67F2"/>
+              <path d="M16 21.334H16.0133" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#9B67F2"/>
+              </svg>Audit Everything</li>
           </ul>
         </div>
       </figure>
@@ -89,24 +116,73 @@
     <div class="container ny-two">
       <article>
         <h2>The <span>Challenge</span></h2>
-        <p>AI agents are powerful. Without control, they are a risk.</p>
+        <p>AI agents create value—but also introduce risk at scale.</p>
         <ul class="ny-list">
-          <li>Limited visibility into agent actions and decisions.</li>
-          <li>Uncontrolled agents create security, risk and compliance gaps.</li>
-          <li>Hard to keep every agent aligned with policy and goals.</li>
-          <li>Lack of audit trails and accountability.</li>
-          <li>Teams struggle to scale AI without adding operational risk.</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <path d="M17.4051 25.2617C16.4695 25.3519 15.5274 25.3519 14.5918 25.2617" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#9B67F2"/>
+            <path d="M17.4051 6.7382C16.4696 6.64761 15.5275 6.64716 14.5918 6.73687" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#9B67F2"/>
+            <path d="M22.7617 8.36523C23.5891 8.81049 24.3718 9.33423 25.0991 9.92923" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#9B67F2"/>
+            <path d="M25.0991 22.0703C24.3719 22.6658 23.5892 23.19 22.7617 23.6356" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#9B67F2"/>
+            <path d="M3.35227 17.7364C3.13114 17.3223 2.93002 16.8978 2.7496 16.4644C2.63815 16.1646 2.63815 15.8348 2.7496 15.5351C2.92911 15.1013 3.12934 14.6763 3.3496 14.2617" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#9B67F2"/>
+            <path d="M28.6465 14.2617C28.8681 14.6762 29.0697 15.1012 29.2505 15.5351C29.3619 15.8348 29.3619 16.1646 29.2505 16.4644C29.0696 16.8978 28.8681 17.3223 28.6465 17.7364" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#9B67F2"/>
+            <path d="M6.89648 9.93057C7.62364 9.33511 8.40635 8.81092 9.23382 8.36523" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#9B67F2"/>
+            <path d="M9.23382 23.6356C8.40635 23.19 7.62364 22.6658 6.89648 22.0703" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#9B67F2"/>
+            <path d="M20 16C20 18.2091 18.2091 20 16 20C13.7909 20 12 18.2091 12 16C12 13.7909 13.7909 12 16 12C18.2091 12 20 13.7909 20 16Z" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#9B67F2"/>
+            </svg>Limited visibility into agent actions and decisions.</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <path d="M29.3327 15.9993C29.3327 23.3631 23.3631 29.3327 15.9993 29.3327C8.63555 29.3327 2.66602 23.3631 2.66602 15.9993C2.66602 8.63555 8.63555 2.66602 15.9993 2.66602C23.3631 2.66602 29.3327 8.63555 29.3327 15.9993Z" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#9B67F2"/>
+            <path d="M21.3327 10.666H13.3327C12.6254 10.666 11.9472 10.947 11.4471 11.4471C10.947 11.9472 10.666 12.6254 10.666 13.3327C10.666 14.0399 10.947 14.7182 11.4471 15.2183C11.9472 15.7184 12.6254 15.9993 13.3327 15.9993H18.666C19.3733 15.9993 20.0515 16.2803 20.5516 16.7804C21.0517 17.2805 21.3327 17.9588 21.3327 18.666C21.3327 19.3733 21.0517 20.0515 20.5516 20.5516C20.0515 21.0517 19.3733 21.3327 18.666 21.3327H10.666" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#9B67F2"/>
+            <path d="M16 24V8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#9B67F2"/>
+            </svg>Uncontrolled spend across models, tools and workflows.</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <path d="M7.99935 21.3327C14.666 21.3327 17.3327 10.666 23.9993 10.666C25.4138 10.666 26.7704 11.2279 27.7706 12.2281C28.7708 13.2283 29.3327 14.5849 29.3327 15.9993C29.3327 17.4138 28.7708 18.7704 27.7706 19.7706C26.7704 20.7708 25.4138 21.3327 23.9993 21.3327C17.3327 21.3327 14.666 10.666 7.99935 10.666C6.58486 10.666 5.22831 11.2279 4.22811 12.2281C3.22792 13.2283 2.66602 14.5849 2.66602 15.9993C2.66602 17.4138 3.22792 18.7704 4.22811 19.7706C5.22831 20.7708 6.58486 21.3327 7.99935 21.3327Z" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#9B67F2"/>
+            </svg>Hidden loops, risky behavior and policy violations.</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <path d="M25.3333 14.6667C25.3333 20.5577 20.5577 25.3333 14.6667 25.3333C8.77563 25.3333 4 20.5577 4 14.6667C4 8.77563 8.77563 4 14.6667 4C20.5577 4 25.3333 8.77563 25.3333 14.6667Z" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#9B67F2"/>
+            <path d="M28.0009 27.999L22.2676 22.2656" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#9B67F2"/>
+            <path d="M14.666 9.33398V14.6673" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#9B67F2"/>
+            <path d="M14.666 20H14.6793" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#9B67F2"/>
+            </svg>Lack of audit trails and explainability.</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <path d="M26.6663 17.3333C26.6663 23.9999 21.9997 27.3333 16.453 29.2666C16.1626 29.365 15.8471 29.3603 15.5597 29.2533C9.99967 27.3333 5.33301 23.9999 5.33301 17.3333V7.99995C5.33301 7.64633 5.47348 7.30719 5.72353 7.05714C5.97358 6.80709 6.31272 6.66662 6.66634 6.66662C9.33301 6.66662 12.6663 5.06662 14.9863 3.03995C15.2688 2.79861 15.6281 2.66602 15.9997 2.66602C16.3712 2.66602 16.7305 2.79861 17.013 3.03995C19.3463 5.07995 22.6663 6.66662 25.333 6.66662C25.6866 6.66662 26.0258 6.80709 26.2758 7.05714C26.5259 7.30719 26.6663 7.64633 26.6663 7.99995V17.3333Z" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#9B67F2"/>
+            <path d="M16 10.666V15.9993" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#9B67F2"/>
+            <path d="M16 21.334H16.0133" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#9B67F2"/>
+            </svg>Complex compliance and data protection requirements.</li>
         </ul>
       </article>
       <article>
         <h2>Our <span>Solution</span></h2>
-        <p>NIYOOS is a unified governance and control layer for every AI agent.</p>
+        <p>NIYOOS brings all AI governance and control together in one platform.</p>
         <ul class="ny-list ny-list-check">
-          <li>Real-time monitoring of every agent, action and tool.</li>
-          <li>Assign roles and set guardrails for teams, agents and projects.</li>
-          <li>Loop and anomaly detection to prevent risky behavior.</li>
-          <li>Complete audit trails for every agent and decision.</li>
-          <li>Policy enforcement across agents, tools, data and vendors.</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <path d="M2.74936 16.4645C2.63824 16.1651 2.63824 15.8358 2.74936 15.5365C3.83162 12.9123 5.66871 10.6685 8.02772 9.08968C10.3867 7.51082 13.1614 6.66797 16 6.66797C18.8386 6.66797 21.6133 7.51082 23.9723 9.08968C26.3313 10.6685 28.1684 12.9123 29.2507 15.5365C29.3618 15.8358 29.3618 16.1651 29.2507 16.4645C28.1684 19.0887 26.3313 21.3324 23.9723 22.9113C21.6133 24.4901 18.8386 25.333 16 25.333C13.1614 25.333 10.3867 24.4901 8.02772 22.9113C5.66871 21.3324 3.83162 19.0887 2.74936 16.4645Z" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#5A22B8"/>
+            <path d="M20 16C20 18.2091 18.2091 20 16 20C13.7909 20 12 18.2091 12 16C12 13.7909 13.7909 12 16 12C18.2091 12 20 13.7909 20 16Z" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#5A22B8"/>
+            </svg>Real-time monitoring of every agent, action and tool.</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <path d="M4 14.666H9C9.41399 14.666 9.82229 14.7624 10.1926 14.9475C10.5629 15.1327 10.8849 15.4015 11.1333 15.7327L11.7333 16.5327C12.2301 17.1951 12.8743 17.7327 13.6149 18.103C14.3554 18.4732 15.172 18.666 16 18.666C16.828 18.666 17.6446 18.4732 18.3851 18.103C19.1257 17.7327 19.7699 17.1951 20.2667 16.5327L20.8667 15.7327C21.1151 15.4015 21.4372 15.1327 21.8074 14.9475C22.1777 14.7624 22.586 14.666 23 14.666H28" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#5A22B8"/>
+            <path d="M4 9.33398H28" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#5A22B8"/>
+            <path d="M6.66667 4H25.3333C26.8061 4 28 5.19391 28 6.66667V25.3333C28 26.8061 26.8061 28 25.3333 28H6.66667C5.19391 28 4 26.8061 4 25.3333V6.66667C4 5.19391 5.19391 4 6.66667 4Z" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#5A22B8"/>
+            </svg>Budget controls and spend limits across agents and projects.</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <path d="M25.427 6.57437C23.3508 4.49599 20.6464 3.16146 17.7338 2.7781C14.8212 2.39474 11.8636 2.98401 9.32031 4.45437" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#5A22B8"/>
+            <path d="M5.33398 8H5.34732" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#5A22B8"/>
+            <path d="M3.0525 12.8261C2.55262 14.8622 2.53994 16.9875 3.01547 19.0294C3.491 21.0713 4.44134 22.9723 5.78934 24.578C7.13735 26.1838 8.84501 27.449 10.7737 28.271C12.7024 29.093 14.7977 29.4486 16.8896 29.3089C18.9815 29.1692 21.011 28.5382 22.8133 27.4671C24.6155 26.396 26.1398 24.9149 27.2624 23.1442C28.3849 21.3735 29.0741 19.3631 29.2739 17.2761C29.4738 15.1891 29.1786 13.0844 28.4125 11.1328" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#5A22B8"/>
+            <path d="M21.6537 10.3459C20.8864 9.57413 19.9697 8.96702 18.9596 8.56174C17.9496 8.15645 16.8675 7.96152 15.7795 7.98885C14.6916 8.01619 13.6206 8.26522 12.6322 8.72072C11.6438 9.17621 10.7587 9.82859 10.0311 10.6379C9.30354 11.4473 8.74873 12.3966 8.40066 13.4277C8.05259 14.4589 7.91857 15.5502 8.0068 16.6349C8.09504 17.7196 8.40367 18.775 8.91381 19.7363C9.42396 20.6977 10.1249 21.5448 10.9737 22.2259" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#5A22B8"/>
+            <path d="M16 24H16.0133" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#5A22B8"/>
+            <path d="M23.9873 15.5469C24.0599 16.8154 23.8292 18.0829 23.3145 19.2445C22.7998 20.4062 22.0157 21.4285 21.0273 22.2269" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#5A22B8"/>
+            <path d="M18.6673 16.0007C18.6673 17.4734 17.4734 18.6673 16.0007 18.6673C14.5279 18.6673 13.334 17.4734 13.334 16.0007C13.334 14.5279 14.5279 13.334 16.0007 13.334C17.4734 13.334 18.6673 14.5279 18.6673 16.0007Z" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#5A22B8"/>
+            <path d="M17.8809 14.1209L25.4275 6.57422" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#5A22B8"/>
+            </svg>Loop and anomaly detection to prevent risky behavior.</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <path d="M27.9996 27.9996L22.2129 22.2129" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#5A22B8"/>
+            <path d="M25.3333 14.6667C25.3333 20.5577 20.5577 25.3333 14.6667 25.3333C8.77563 25.3333 4 20.5577 4 14.6667C4 8.77563 8.77563 4 14.6667 4C20.5577 4 25.3333 8.77563 25.3333 14.6667Z" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#5A22B8"/>
+            </svg>Complete audit trails for every action and decision.</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <path d="M17.3327 21.334H10.666" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#5A22B8"/>
+            <path d="M18.666 10.666H10.666" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#5A22B8"/>
+            <path d="M21.3327 16H10.666" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#5A22B8"/>
+            <path d="M5.33398 3.99956C5.33398 3.64594 5.47446 3.3068 5.72451 3.05675C5.97456 2.80671 6.3137 2.66623 6.66732 2.66623C6.99748 2.66441 7.32129 2.75693 7.60065 2.9329L8.84465 3.7329C9.12337 3.911 9.44722 4.00564 9.77798 4.00564C10.1087 4.00564 10.4326 3.911 10.7113 3.7329L11.9567 2.9329C12.2354 2.75479 12.5592 2.66016 12.89 2.66016C13.2207 2.66016 13.5446 2.75479 13.8233 2.9329L15.0673 3.7329C15.346 3.911 15.6699 4.00564 16.0007 4.00564C16.3314 4.00564 16.6553 3.911 16.934 3.7329L18.178 2.9329C18.4567 2.75479 18.7806 2.66016 19.1113 2.66016C19.4421 2.66016 19.7659 2.75479 20.0447 2.9329L21.29 3.7329C21.5687 3.911 21.8926 4.00564 22.2233 4.00564C22.5541 4.00564 22.8779 3.911 23.1567 3.7329L24.4007 2.9329C24.68 2.75693 25.0038 2.66441 25.334 2.66623C25.6876 2.66623 26.0267 2.80671 26.2768 3.05675C26.5268 3.3068 26.6673 3.64594 26.6673 3.99956V27.9996C26.6673 28.3532 26.5268 28.6923 26.2768 28.9424C26.0267 29.1924 25.6876 29.3329 25.334 29.3329C25.0038 29.3347 24.68 29.2422 24.4007 29.0662L23.1567 28.2662C22.8779 28.0881 22.5541 27.9935 22.2233 27.9935C21.8926 27.9935 21.5687 28.0881 21.29 28.2662L20.0447 29.0662C19.7659 29.2443 19.4421 29.339 19.1113 29.339C18.7806 29.339 18.4567 29.2443 18.178 29.0662L16.934 28.2662C16.6553 28.0881 16.3314 27.9935 16.0007 27.9935C15.6699 27.9935 15.346 28.0881 15.0673 28.2662L13.8233 29.0662C13.5446 29.2443 13.2207 29.339 12.89 29.339C12.5592 29.339 12.2354 29.2443 11.9567 29.0662L10.7113 28.2662C10.4326 28.0881 10.1087 27.9935 9.77798 27.9935C9.44722 27.9935 9.12337 28.0881 8.84465 28.2662L7.60065 29.0662C7.32129 29.2422 6.99748 29.3347 6.66732 29.3329C6.3137 29.3329 5.97456 29.1924 5.72451 28.9424C5.47446 28.6923 5.33398 28.3532 5.33398 27.9996V3.99956Z" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#5A22B8"/>
+            </svg>Policy enforcement across agents, tools, data and models.</li>
         </ul>
       </article>
     </div>
@@ -114,13 +190,13 @@
 
   <section class="ny-features" id="features">
     <div class="container">
-      <div class="ny-feature-head"><h2>Key <span>Features</span></h2><p>Govern, control and grow every AI agent from one layer.</p></div>
+      <div class="ny-feature-head"><h2>Key <span>Features</span></h2><p>Powerful controls to govern and scale your AI agents.</p></div>
       <div class="ny-feature-grid">
-        <article class="ny-feature-card"><img src="assets/ui/img/enhanced/partner-type-2.jpg" alt="Team reviewing agent activity together" loading="lazy"/><h3>Agent Monitoring</h3><p>Track every agent’s activity, tools and decisions in real time.</p></article>
-        <article class="ny-feature-card"><img src="assets/ui/img/enhanced/180326d670.jpg" alt="Policy controls on a laptop" loading="lazy"/><h3>Guardrails &amp; Policies</h3><p>Set boundaries so agents stay inside approved actions and data.</p></article>
-        <article class="ny-feature-card"><img src="assets/ui/img/enhanced/hero-business-m.jpg" alt="Signals being watched across a live operation" loading="lazy"/><h3>Loop Detection</h3><p>Catch runaway loops and repeated actions before they become incidents.</p></article>
-        <article class="ny-feature-card"><img src="assets/ui/img/enhanced/1b9590375d.jpg" alt="Records ready for review" loading="lazy"/><h3>Audit Trails</h3><p>Immutable records of what agents did, when, and why.</p></article>
-        <article class="ny-feature-card"><img src="assets/ui/img/enhanced/ven-pp-d.jpg" alt="A control view of people, tools and workflows" loading="lazy"/><h3>Policy Enforcement</h3><p>Apply business rules across agents, tools and workflows.</p></article>
+        <article class="ny-feature-card"><div class="ny-feature-image"><img src="assets/ui/img/enhanced/n-s4-1.png" alt="Team reviewing agent activity together" loading="lazy"/></div><h3>Agent Monitoring</h3><p>Track every agent's activity, status, tools, and performance in real time.</p></article>
+        <article class="ny-feature-card"><div class="ny-feature-image"><img src="assets/ui/img/enhanced/n-s4-2.png" alt="Policy controls on a laptop" loading="lazy"/></div><h3>Spend &amp; Budget Controls</h3><p>Set budgets, enforce limits, and optimize spend across models, tools and workflows.</p></article>
+        <article class="ny-feature-card"><div class="ny-feature-image"><img src="assets/ui/img/enhanced/n-s4-3.png" alt="Signals being watched across a live operation" loading="lazy"/></div><h3>Loop Detection</h3><p>Detect infinite loops and unusual patterns before they impact operations or costs.</p></article>
+        <article class="ny-feature-card"><div class="ny-feature-image"><img src="assets/ui/img/enhanced/n-s4-4.png" alt="Records ready for review" loading="lazy"/></div><h3>Audit Trails</h3><p>Immutable logs of every action, input, output, and decision for complete accountability.</p></article>
+        <article class="ny-feature-card"><div class="ny-feature-image"><img src="assets/ui/img/enhanced/n-s4-5.png" alt="A control view of people, tools and workflows" loading="lazy"/></div><h3>Policy Enforcement</h3><p>Define and enforce policies across agents, tools, data and environments.</p></article>
       </div>
     </div>
   </section>
@@ -128,14 +204,37 @@
   <section class="ny-how" id="how">
     <div class="container">
       <h2>How It Works</h2>
-      <p>Six steps to govern and scale every AI agent with confidence.</p>
+        <p>Six steps to govern and scale your AI agents with confidence.</p>
       <ol class="ny-steps">
-        <li><b>01</b><i aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16.5 20 20.5"/></svg></i><div><h3>Discover</h3><p>Map every agent, tool and workflow in your stack.</p></div></li>
-        <li><b>02</b><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 12h8M12 8v8"/><circle cx="12" cy="12" r="8"/></svg></i><div><h3>Connect</h3><p>Bring agents, data and tools into one control plane.</p></div></li>
-        <li><b>03</b><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 5 6v6c0 4.2 2.8 7.2 7 8.5 4.2-1.3 7-4.3 7-8.5V6l-7-3Z"/></svg></i><div><h3>Govern</h3><p>Set roles, policies and guardrails for each agent.</p></div></li>
-        <li><b>04</b><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M2.5 12S6 6.5 12 6.5 21.5 12 21.5 12 18 17.5 12 17.5 2.5 12 2.5 12Z"/><circle cx="12" cy="12" r="2.4"/></svg></i><div><h3>Monitor</h3><p>Watch activity, loops and outcomes as they happen.</p></div></li>
-        <li><b>05</b><i aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16.5 20 20.5M8.5 11l1.6 1.6 3.2-3.4"/></svg></i><div><h3>Audit</h3><p>Review logs, trails and decisions with confidence.</p></div></li>
-        <li><b>06</b><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 17.5 9 8l4 6 2.2-3.2L20 17.5"/><path d="M4 20h16"/></svg></i><div><h3>Scale</h3><p>Roll out governed agents across teams without losing control.</p></div></li>
+        <li><b>01</b><i aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16.5 20 20.5"/></svg></i><div><h3>Discover</h3><p>Map every agent, tool and workflow in your stack.</p></div><img class="ny-step-arrow" src="assets/ui/icons/Arrow 1.svg" alt="" aria-hidden="true"/></li>
+        <li><b>02</b><i aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+          <path d="M28 12H32C33.0609 12 34.0783 12.4214 34.8284 13.1716C35.5786 13.9217 36 14.9391 36 16V26" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke="#5A22B8"/>
+          <path d="M28.4199 30.4043L35.9999 34.8003V44.0003" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke="#5A22B8"/>
+          <path d="M29.592 29.2219C29.1075 29.5035 28.7055 29.9073 28.4261 30.3931C28.1467 30.8789 27.9998 31.4295 28 31.9899V38.0159C28 38.5764 28.1472 39.1272 28.4269 39.613C28.7067 40.0988 29.1091 40.5025 29.594 40.7839L34.394 43.5679C34.8819 43.851 35.4359 44.0001 36 44.0001C36.5641 44.0001 37.1181 43.851 37.606 43.5679L42.406 40.7839C42.8909 40.5025 43.2933 40.0988 43.5731 39.613C43.8528 39.1272 44 38.5764 44 38.0159V31.9899C44.0002 31.4295 43.8533 30.8789 43.5739 30.3931C43.2945 29.9073 42.8925 29.5035 42.408 29.2219L37.608 26.4339C37.151 26.1681 36.6352 26.0196 36.1068 26.0018C35.5784 25.984 35.0539 26.0974 34.58 26.3319L29.592 29.2219Z" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke="#5A22B8"/>
+          <path d="M36 34.8003L43.58 30.4043" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke="#5A22B8"/>
+          <path d="M4.41992 8.4043L11.9999 12.8003V32.0003C11.9999 33.0612 12.4213 34.0786 13.1715 34.8287C13.9216 35.5789 14.9391 36.0003 15.9999 36.0003H19.9999" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke="#5A22B8"/>
+          <path d="M5.592 7.22296C5.10751 7.50455 4.70546 7.90843 4.42607 8.39419C4.14669 8.87996 3.99976 9.43058 4 9.99096V16.017C3.99997 16.5775 4.14719 17.1283 4.42694 17.6141C4.70669 18.0998 5.10914 18.5036 5.594 18.785L10.394 21.569C10.8819 21.852 11.4359 22.0011 12 22.0011C12.5641 22.0011 13.1181 21.852 13.606 21.569L18.406 18.785C18.8909 18.5036 19.2933 18.0998 19.5731 17.6141C19.8528 17.1283 20 16.5775 20 16.017V9.99096C20.0002 9.43058 19.8533 8.87996 19.5739 8.39419C19.2945 7.90843 18.8925 7.50455 18.408 7.22296L13.608 4.43496C13.1512 4.16882 12.6355 4.02003 12.1071 4.00189C11.5787 3.98374 11.054 4.0968 10.58 4.33096L5.592 7.22296Z" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke="#5A22B8"/>
+          <path d="M12 12.8003L19.58 8.4043" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke="#5A22B8"/>
+          </svg></i><div><h3>Connect</h3><p>Bring agents, data and tools into one control plane.</p></div><img class="ny-step-arrow" src="assets/ui/icons/Arrow 1.svg" alt="" aria-hidden="true"/></li>
+        <li><b>03</b><i aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+          <path d="M20 36V22" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke="#5A22B8"/>
+          <path d="M22.238 4.40899C22.7864 4.13991 23.3891 4 24 4C24.6109 4 25.2136 4.13991 25.762 4.40899L41.442 12.101C41.6451 12.2005 41.8084 12.3659 41.9054 12.5702C42.0024 12.7744 42.0272 13.0056 41.976 13.2258C41.9247 13.446 41.8002 13.6424 41.623 13.7828C41.4457 13.9232 41.2261 13.9994 41 13.999H7.00001C6.77405 13.999 6.55475 13.9225 6.37784 13.7819C6.20094 13.6413 6.07686 13.4449 6.02584 13.2248C5.97481 13.0047 5.99983 12.7738 6.09683 12.5697C6.19383 12.3656 6.35709 12.2004 6.56001 12.101L22.238 4.40899Z" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke="#5A22B8"/>
+          <path d="M28 36V22" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke="#5A22B8"/>
+          <path d="M36 36V22" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke="#5A22B8"/>
+          <path d="M6 44H42" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke="#5A22B8"/>
+          <path d="M12 36V22" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke="#5A22B8"/>
+          </svg></i><div><h3>Govern</h3><p>Set roles, policies and guardrails for each agent.</p></div><img class="ny-step-arrow" src="assets/ui/icons/Arrow 1.svg" alt="" aria-hidden="true"/></li>
+        <li><b>04</b><i aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <path d="M2.74936 16.4645C2.63824 16.1651 2.63824 15.8358 2.74936 15.5365C3.83162 12.9123 5.66871 10.6685 8.02772 9.08968C10.3867 7.51082 13.1614 6.66797 16 6.66797C18.8386 6.66797 21.6133 7.51082 23.9723 9.08968C26.3313 10.6685 28.1684 12.9123 29.2507 15.5365C29.3618 15.8358 29.3618 16.1651 29.2507 16.4645C28.1684 19.0887 26.3313 21.3324 23.9723 22.9113C21.6133 24.4901 18.8386 25.333 16 25.333C13.1614 25.333 10.3867 24.4901 8.02772 22.9113C5.66871 21.3324 3.83162 19.0887 2.74936 16.4645Z" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#5A22B8"/>
+          <path d="M20 16C20 18.2091 18.2091 20 16 20C13.7909 20 12 18.2091 12 16C12 13.7909 13.7909 12 16 12C18.2091 12 20 13.7909 20 16Z" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#5A22B8"/>
+          </svg></i><div><h3>Monitor</h3><p>Watch activity, loops and outcomes as they happen.</p></div><img class="ny-step-arrow" src="assets/ui/icons/Arrow 1.svg" alt="" aria-hidden="true"/></li>
+        <li><b>05</b><i aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16.5 20 20.5M8.5 11l1.6 1.6 3.2-3.4"/></svg></i><div><h3>Audit</h3><p>Review logs, trails and decisions with confidence.</p></div><img class="ny-step-arrow" src="assets/ui/icons/Arrow 1.svg" alt="" aria-hidden="true"/></li>
+        <li><b>06</b><i aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+          <path d="M24 6H10C8.93913 6 7.92172 6.42143 7.17157 7.17157C6.42143 7.92172 6 8.93913 6 10V38C6 39.0609 6.42143 40.0783 7.17157 40.8284C7.92172 41.5786 8.93913 42 10 42H38C39.0609 42 40.0783 41.5786 40.8284 40.8284C41.5786 40.0783 42 39.0609 42 38V24" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke="#5A22B8"/>
+          <path d="M28 30H18V20" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke="#5A22B8"/>
+          <path d="M32 6H42V16" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke="#5A22B8"/>
+          <path d="M42 6L18 30" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke="#5A22B8"/>
+          </svg></i><div><h3>Scale</h3><p>Roll out governed agents across teams without losing control.</p></div></li>
       </ol>
     </div>
   </section>
@@ -144,13 +243,13 @@
     <div class="container ny-impact-inner">
       <div>
         <h2>Our <span>Impact</span></h2>
-        <p>NIYOOS helps organizations govern AI with a measurable lift in trust, control and scale.</p>
+        <p>NIYOOS helps organizations operate AI agents responsibly, efficiently and at scale.</p>
       </div>
       <div class="ny-metrics">
-        <article><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg></i><strong>Full view</strong><span>Visibility across every agent and workflow.</span></article>
-        <article><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 5 6v6c0 4.2 2.8 7.2 7 8.5 4.2-1.3 7-4.3 7-8.5V6l-7-3Z"/></svg></i><strong>Lower risk</strong><span>Fewer uncontrolled actions and policy gaps.</span></article>
-        <article><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13 3 5 14h6l-1 7 8-11h-6l1-7Z"/></svg></i><strong>More efficiency</strong><span>Governed agents teams can actually use.</span></article>
-        <article><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 12.5 11 15.5 16.5 9"/><circle cx="12" cy="12" r="8.5"/></svg></i><strong>Trust &amp; control</strong><span>Audit-ready records for every decision.</span></article>
+        <article><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg></i><strong>Stronger Governance</strong><span>Consistent policies across every agent and workflow.</span></article>
+        <article><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 5 6v6c0 4.2 2.8 7.2 7 8.5 4.2-1.3 7-4.3 7-8.5V6l-7-3Z"/><path d="m9 12 2 2 4-5"/></svg></i><strong>Lower Risk</strong><span>Detect issues early and prevent costly incidents.</span></article>
+        <article><i aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15 9.5c-.5-1.8-4.7-2.1-5.5.1-.8 2.4 5.6 1.8 5.4 4.6-.2 2.3-4.8 2.7-6 .3M12 6.5v11"/></svg></i><strong>Cost Efficiency</strong><span>Control spend and optimize resource utilization.</span></article>
+        <article><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 3h8l4 4v14H4V3h4Zm0 0v4h8V3m-8 9 2 2 4-4m-6 7h8"/></svg></i><strong>Trust &amp; Compliance</strong><span>Audit-ready records and policy enforcement by design.</span></article>
       </div>
     </div>
   </section>
@@ -159,29 +258,43 @@
     <div class="container">
       <div>
         <h2>AI Agents, <span>Under Control.</span></h2>
-        <p>Put a control plane around every agent before it reaches production.</p>
-        <a class="ny-btn ny-btn-primary" href="#features">Explore Platform →</a>
+        <p>Gain visibility. Enforce policies. Reduce risk. Scale with confidence.</p>
+        <a class="ny-btn ny-btn-primary" href="#features">Explore NIYOOS →</a>
       </div>
     </div>
   </section>
 
   <section class="ny-more" id="more">
     <div class="container">
-      <h2>More from <span>NIYOOS</span></h2>
+      <div class="ny-more-head"><h2>More from <span>NIYOOS</span></h2><a class="ny-coming" href="contact.html">Coming Next →</a></div>
       <div class="ny-more-grid">
-        <article><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 8a4 4 0 0 1 8 0c0 3-4 3.2-4 6"/><circle cx="12" cy="18" r="1"/></svg></i><div><h3>Integrations</h3><p>Connect the tools, models and data your agents already use.</p></div></article>
-        <article><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/></svg></i><div><h3>Enterprise readiness</h3><p>Policies, roles and audit trails built for regulated teams.</p></div></article>
-        <article><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 8 4 12l4 4M16 8l4 4-4 4M13 6l-2 12"/></svg></i><div><h3>Developer controls</h3><p>APIs and workflows that keep guardrails close to the work.</p></div></article>
+        <article><i aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+          <path d="M28 12H32C33.0609 12 34.0783 12.4214 34.8284 13.1716C35.5786 13.9217 36 14.9391 36 16V26" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke="#5A22B8"/>
+          <path d="M28.4199 30.4043L35.9999 34.8003V44.0003" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke="#5A22B8"/>
+          <path d="M29.592 29.2219C29.1075 29.5035 28.7055 29.9073 28.4261 30.3931C28.1467 30.8789 27.9998 31.4295 28 31.9899V38.0159C28 38.5764 28.1472 39.1272 28.4269 39.613C28.7067 40.0988 29.1091 40.5025 29.594 40.7839L34.394 43.5679C34.8819 43.851 35.4359 44.0001 36 44.0001C36.5641 44.0001 37.1181 43.851 37.606 43.5679L42.406 40.7839C42.8909 40.5025 43.2933 40.0988 43.5731 39.613C43.8528 39.1272 44 38.5764 44 38.0159V31.9899C44.0002 31.4295 43.8533 30.8789 43.5739 30.3931C43.2945 29.9073 42.8925 29.5035 42.408 29.2219L37.608 26.4339C37.151 26.1681 36.6352 26.0196 36.1068 26.0018C35.5784 25.984 35.0539 26.0974 34.58 26.3319L29.592 29.2219Z" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke="#5A22B8"/>
+          <path d="M36 34.8003L43.58 30.4043" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke="#5A22B8"/>
+          <path d="M4.41992 8.4043L11.9999 12.8003V32.0003C11.9999 33.0612 12.4213 34.0786 13.1715 34.8287C13.9216 35.5789 14.9391 36.0003 15.9999 36.0003H19.9999" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke="#5A22B8"/>
+          <path d="M5.592 7.22296C5.10751 7.50455 4.70546 7.90843 4.42607 8.39419C4.14669 8.87996 3.99976 9.43058 4 9.99096V16.017C3.99997 16.5775 4.14719 17.1283 4.42694 17.6141C4.70669 18.0998 5.10914 18.5036 5.594 18.785L10.394 21.569C10.8819 21.852 11.4359 22.0011 12 22.0011C12.5641 22.0011 13.1181 21.852 13.606 21.569L18.406 18.785C18.8909 18.5036 19.2933 18.0998 19.5731 17.6141C19.8528 17.1283 20 16.5775 20 16.017V9.99096C20.0002 9.43058 19.8533 8.87996 19.5739 8.39419C19.2945 7.90843 18.8925 7.50455 18.408 7.22296L13.608 4.43496C13.1512 4.16882 12.6355 4.02003 12.1071 4.00189C11.5787 3.98374 11.054 4.0968 10.58 4.33096L5.592 7.22296Z" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke="#5A22B8"/>
+          <path d="M12 12.8003L19.58 8.4043" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke="#5A22B8"/>
+          </svg></i><div><h3>Integrations</h3><p>Connect with leading LLMs, tools and cloud platforms to extend governance everywhere.</p></div></article>
+        <article><i aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+          <path d="M20 36V22" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke="#5A22B8"/>
+          <path d="M22.238 4.40899C22.7864 4.13991 23.3891 4 24 4C24.6109 4 25.2136 4.13991 25.762 4.40899L41.442 12.101C41.6451 12.2005 41.8084 12.3659 41.9054 12.5702C42.0024 12.7744 42.0272 13.0056 41.976 13.2258C41.9247 13.446 41.8002 13.6424 41.623 13.7828C41.4457 13.9232 41.2261 13.9994 41 13.999H7.00001C6.77405 13.999 6.55475 13.9225 6.37784 13.7819C6.20094 13.6413 6.07686 13.4449 6.02584 13.2248C5.97481 13.0047 5.99983 12.7738 6.09683 12.5697C6.19383 12.3656 6.35709 12.2004 6.56001 12.101L22.238 4.40899Z" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke="#5A22B8"/>
+          <path d="M28 36V22" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke="#5A22B8"/>
+          <path d="M36 36V22" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke="#5A22B8"/>
+          <path d="M6 44H42" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke="#5A22B8"/>
+          <path d="M12 36V22" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke="#5A22B8"/>
+          </svg></i><div><h3>Enterprise Governance</h3><p>Role-based access, SSO, data residency and enterprise-grade security controls.</p></div></article>
+        <article><i aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+          <path d="M36 32L44 24L36 16" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke="#5A22B8"/>
+          <path d="M12 16L4 24L12 32" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke="#5A22B8"/>
+          <path d="M29 8L19 40" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke="#5A22B8"/>
+          </svg></i><div><h3>Developer Resources</h3><p>APIs, SDKs and documentation to build and govern AI agents programmatically.</p></div></article>
       </div>
-      <a class="ny-coming" href="contact.html">Coming Next →</a>
     </div>
   </section>
 </main>
-<footer class="site-footer"><div class="container footer-main"><div class="footer-brand"><a href="index.html" aria-label="Loktara Ventures home"><img src="assets/ui/logo.svg" alt="Loktara Ventures" width="242" height="64"/></a><p>Building a brighter tomorrow.</p></div>
-<div class="footer-col"><h4>Company</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="what-we-do.html">What We Do</a></li><li><a href="our-ventures.html">Our Ventures</a></li><li><a href="ecosystem.html">Our Ecosystem</a></li><li><a href="approach.html">Our Approach</a></li><li><a href="insights.html">Insights</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-<div class="footer-col"><h4>For</h4><ul><li><a href="for-founders.html">For Founders</a></li><li><a href="for-business.html">For Businesses</a></li><li><a href="for-partners.html">Investors &amp; Partners</a></li></ul></div>
-<div class="footer-col"><h4>Legal</h4><ul><li><a href="#">Privacy Policy</a></li><li><a href="terms-of-service.html">Terms of Use</a></li><li><a href="legal.html">Refund &amp; Cancellation</a></li></ul></div>
-<div class="footer-col"><h4>Follow Us</h4><div class="socials"><a href="https://www.youtube.com/" aria-label="YouTube"><svg viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#f00"/><path d="m13 9 10 7-10 7z" fill="#fff"/></svg></a><a href="https://x.com/" aria-label="X" class="ny-x">𝕏</a><a href="https://www.linkedin.com/company/loktara-ventures/" aria-label="LinkedIn"><svg viewBox="0 0 32 32"><rect width="32" height="32" rx="3" fill="#0076b2"/><path fill="#fff" d="M7 12h4v13H7zm2-6a2.3 2.3 0 1 1 0 4.6A2.3 2.3 0 0 1 9 6zm5 6h4v1.8c.7-1.2 2-2.1 3.8-2.1 4 0 4.8 2.5 4.8 6V25h-4v-5.9c0-1.5 0-3.4-2-3.4s-2.6 1.6-2.6 3.3V25h-4z"/></svg></a></div></div></div><div class="footer-bottom"><div class="container"><span>© 2026 Loktara Ventures Private Limited. All rights reserved.</span><span class="tagline">Building a brighter tomorrow.</span></div></div></footer>
-<script src="script.js?v=20"></script>
+<div data-site-footer></div>
+<script src="js/site-components.js"></script><script src="script.js?v=20"></script>
 </body>
 </html>

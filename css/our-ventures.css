@@ -5,25 +5,14 @@ body.page-ventures {
   background-color: #F8FAFC;
 }
 
-/* Container override for 1200px Figma content grid */
+/* Match the shared site content width and align page sections with the navbar. */
 .page-ventures .container {
-  max-width: 1200px;
+  max-width: calc(var(--container) + var(--gutter) * 2);
   margin-left: auto;
   margin-right: auto;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-/* Keep the shared header's full navigation width; the narrower content grid
-   below is for page sections, not the desktop navigation row. */
-.page-ventures .site-header .container {
-  max-width: calc(var(--container) + var(--gutter) * 2);
   padding-left: var(--gutter);
   padding-right: var(--gutter);
 }
-
-.page-ventures .nav-links { gap: clamp(12px, 1.5vw, 20px); }
-.page-ventures .header-inner { gap: 16px; }
 
 /* ==========================================================================
    1. HERO SECTION (1280 × 548px)
@@ -757,30 +746,41 @@ body.page-ventures {
 .page-ventures .ven-tabs-section{padding-top:28px;padding-bottom:24px}
 .page-ventures .ven-tab-btn{height:120px}
 .page-ventures .ven-tab-btn.active{border-color:#E2E8F0;box-shadow:0 2px 8px rgba(0,0,0,.02)}
-.page-ventures .ven-grid{gap:24px;align-items:stretch}
-.page-ventures .ven-card{display:flex;color:var(--text-primary);text-decoration:none;cursor:pointer}
+.page-ventures .ven-head-section .container,
+.page-ventures .ven-grid-section .container{max-width:calc(var(--container) + var(--gutter) * 2)}
+.page-ventures .ven-head-section{padding:24px 0 29px}
+.page-ventures .ven-head-grid{grid-template-columns:1.1fr 1fr;gap:48px}
+.page-ventures .ven-head-left h2{font-size:40px;line-height:1.15}
+.page-ventures .ven-grid{width:100%;max-width:1070px;margin-inline:auto;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;align-items:stretch}
+.page-ventures .ven-card{position:relative;display:flex;min-height:430px;flex-direction:column;color:var(--text-primary);text-decoration:none;cursor:pointer}
 .page-ventures .ven-card:focus-visible{outline:3px solid var(--navy-800);outline-offset:3px}
-.page-ventures .ven-card-media{height:auto;aspect-ratio:1.92;background:#f1f5f9}
+.page-ventures .ven-card-media{position:relative;inset:auto;width:100%;height:auto;aspect-ratio:1.96;flex:none;background:#f1f5f9}
 .page-ventures .ven-card-media img{object-position:right center}
-.page-ventures .ven-card-body{padding:16px;gap:0}
+.page-ventures .ven-card-body{position:relative;z-index:1;display:flex;width:100%;height:auto;min-height:0;flex:1;flex-direction:column;padding:12px 14px 16px;gap:0}
 .page-ventures .ven-card-brand{display:block;width:118px;height:24px;object-fit:contain;object-position:left center;margin:0 0 8px}
 .page-ventures .ven-card-brand.peerports-brand{width:104px;height:18px;margin-bottom:3px}
 .page-ventures .ven-card-brand.niyoos-brand{width:96px;height:22px}
 .page-ventures .ven-card-kicker{display:block;margin:0 0 5px;color:#64748b;font-size:9px;font-weight:600;letter-spacing:.9px;line-height:12px}
-.page-ventures .ven-card-title{margin:0 0 5px;color:#111827;font:600 18px/1.28 var(--font-display)}
+.page-ventures .ven-card-title{margin:0 0 5px;color:#111827;font:600 16px/1.3 var(--font-display)}
 .page-ventures .ven-card-title .brand-pink{color:#ed1765}
 .page-ventures .ven-card-title .brand-blue{color:#1854f0}
-.page-ventures .ven-card-desc{min-height:0;margin:0 0 12px;color:#334155;font-size:13px;line-height:1.5}
-.page-ventures .ven-card-features{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:0 0 14px}
+.page-ventures .ven-card-desc{flex:none;min-height:0;margin:0 0 12px;color:#334155;font-size:12px;line-height:1.5}
+.page-ventures .ven-card-features{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:6px 0 14px}
 .page-ventures .ven-card-features span{display:flex;align-items:center;gap:5px;min-width:0;color:#111827;font-size:10px;font-weight:500;line-height:1.25}
 .page-ventures .ven-card-features img{width:18px;height:18px;flex:none;object-fit:contain}
 .page-ventures .ven-card-link{margin-top:auto;font-size:13px;font-weight:600}
 .page-ventures .ven-card-coming{grid-column:auto}
+@media(min-width:1025px) and (max-width:1279px){
+ .page-ventures .ven-grid{max-width:none;grid-template-columns:repeat(3,minmax(0,1fr))}
+ .page-ventures .ven-card{width:100%;height:auto}
+}
 @media(max-width:768px){
  .page-ventures .ven-tabs-section{padding-top:24px;padding-bottom:18px}
  .page-ventures .ven-tab-btn{height:112px}
- .page-ventures .ven-card-media{height:auto;aspect-ratio:1.92}
- .page-ventures .ven-card-body{padding:16px}
+ .page-ventures .ven-card{display:flex;min-height:0;aspect-ratio:auto}
+ .page-ventures .ven-card{width:100%;height:auto}
+ .page-ventures .ven-card-media{position:relative;inset:auto;width:100%;height:auto;aspect-ratio:1.92}
+ .page-ventures .ven-card-body{position:relative;width:100%;height:auto;min-height:0;padding:16px}
  .page-ventures .ven-card-title{font-size:18px}
  .page-ventures .ven-card-desc{font-size:14px}
  .page-ventures .ven-card-features span{font-size:10px}
@@ -789,8 +789,19 @@ body.page-ventures {
 .page-ventures .ven-card-body>.ven-card-brand{width:118px!important;height:24px!important;max-width:100%;object-fit:contain;object-position:left center;align-self:flex-start;flex:none;margin:0 0 8px}
 .page-ventures .ven-card-body>.ven-card-brand.peerports-brand{width:104px!important;height:20px!important;margin-bottom:3px}
 .page-ventures .ven-card-body>.ven-card-brand.niyoos-brand{width:96px!important;height:24px!important}
-.page-ventures .ven-card-features{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;align-items:start;gap:8px;margin:0 0 14px}
+.page-ventures .ven-card-features{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;align-items:start;gap:8px;margin:6px 0 14px!important}
 .page-ventures .ven-card-features>span{display:flex!important;flex-direction:row;align-items:center;gap:5px;min-width:0}
 .page-ventures .ven-card-features img{display:block;width:18px!important;height:18px!important;max-width:18px;flex:none;object-fit:contain}
-.page-ventures .ven-card-media{height:auto!important;aspect-ratio:1.92;overflow:hidden}
+.page-ventures .ven-card-media{height:auto!important;aspect-ratio:1.96;overflow:hidden}
 .page-ventures .ven-card-media>img{display:block;width:100%;height:100%;object-fit:cover;object-position:right center}
+@media(min-width:769px) and (max-width:1024px){
+ .page-ventures .ven-grid{max-width:none;grid-template-columns:repeat(2,minmax(0,1fr))}
+ .page-ventures .ven-card{width:100%;height:auto}
+}
+@media(max-width:768px){
+ .page-ventures .ven-head-section{padding:24px 0 20px}
+ .page-ventures .ven-head-left h2{font-size:34px}
+ .page-ventures .ven-grid{max-width:none;grid-template-columns:1fr}
+ .page-ventures .ven-card-media{width:100%;height:auto!important;aspect-ratio:1.92;margin-inline:0}
+ .page-ventures .ven-card-body{width:100%;margin-inline:0}
+}

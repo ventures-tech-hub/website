@@ -222,6 +222,7 @@ a, button, summary, .card-link { -webkit-tap-highlight-color: transparent; }
 .socials { display: flex; align-items: center; gap: 16px; }
 .socials a { display: block; line-height: 0; }
 .socials svg { width: 32px; height: 32px; }
+.socials .ny-x { font-size: 27px; line-height: 1; color: var(--n-950); }
 .footer-bottom { background: var(--n-50); }
 .footer-bottom .container { display: flex; justify-content: space-between; gap: 16px; padding-top: 32px; padding-bottom: 32px; font-size: 14px; line-height: 20px; color: var(--text-primary); }
 
@@ -286,9 +287,45 @@ a, button, summary, .card-link { -webkit-tap-highlight-color: transparent; }
 }
 .nw { white-space: nowrap; }
 .card-link { cursor: pointer; }
-/* Figma Card component: Hover and Pressed tint the card; the heading colour stays the same */
-.card-link, .insight-card { transition: background-color .2s ease; }
-.card-link:hover, .card-link:active, .insight-card:hover, .insight-card:active { background-color: #FFF7F0; }
+
+/* Shared card interaction: hover tints the surface; pressing enlarges the corners. */
+main :is(
+  .card, .card-link, .about-card, .bring-card, .path-card, .insight-card,
+  .venture-card, .ven-card, .cat-card, .diff-card, .eco-card, .role-card,
+  .ab-mvp-card, .ab-why-card, .fb-keys-card, .fb-bring-card, .fb-pw-card,
+  .ff-keys-card, .ff-bring-card, .pt-keys-card, .pt-why-card, .pt-type-card,
+  .ct-help-card, .ct-loc-card, .pp-feature-card, .pr-feature-card, .pr-mini-card,
+  .ny-feature-card, .related-card, .popular-card
+) {
+  transition: background-color .2s ease, border-radius .2s ease;
+}
+main :is(
+  .card, .card-link, .about-card, .bring-card, .path-card, .insight-card,
+  .venture-card, .ven-card, .cat-card, .diff-card, .eco-card, .role-card,
+  .ab-mvp-card, .ab-why-card, .fb-keys-card, .fb-bring-card, .fb-pw-card,
+  .ff-keys-card, .ff-bring-card, .pt-keys-card, .pt-why-card, .pt-type-card,
+  .ct-help-card, .ct-loc-card, .pp-feature-card, .pr-feature-card, .pr-mini-card,
+  .ny-feature-card, .related-card, .popular-card
+):hover {
+  background-color: #FFF4E8 !important;
+  transform: none !important;
+}
+main :is(
+  .card, .card-link, .about-card, .bring-card, .path-card, .insight-card,
+  .venture-card, .ven-card, .cat-card, .diff-card, .eco-card, .role-card,
+  .ab-mvp-card, .ab-why-card, .fb-keys-card, .fb-bring-card, .fb-pw-card,
+  .ff-keys-card, .ff-bring-card, .pt-keys-card, .pt-why-card, .pt-type-card,
+  .ct-help-card, .ct-loc-card, .pp-feature-card, .pr-feature-card, .pr-mini-card,
+  .ny-feature-card, .related-card, .popular-card
+):active {
+  border-radius: 36px !important;
+}
+main .path-card:hover .path-body,
+main .path-card:active .path-body,
+main .ven-card:hover .ven-card-body,
+main .ven-card:active .ven-card-body {
+  background-color: #FFF4E8 !important;
+}
 
 /* ---------- Numbered step switcher (mobile) ---------- */
 .step-tabs-head { display: none; }
@@ -372,4 +409,31 @@ a, button, summary, .card-link { -webkit-tap-highlight-color: transparent; }
   .page-hero-actions { flex-direction: column; align-items: flex-start; gap: 16px; margin-top: 20px; }
   .page-hero-actions .btn { width: 238px; max-width: 100%; }
   .eyebrow-line::before { width: 40px; }
+}
+
+/* Keep the first section at the same height on every page. This final shared
+   rule intentionally overrides page-specific banner sizing. */
+@media (min-width: 769px) {
+  .home-hero,
+  .page-hero,
+  .ct-hero,
+  .eco-hero,
+  .ny-hero,
+  .pp-hero,
+  .pr-hero {
+    height: 680px !important;
+    min-height: 680px !important;
+  }
+}
+@media (max-width: 768px) {
+  .home-hero,
+  .page-hero,
+  .ct-hero,
+  .eco-hero,
+  .ny-hero,
+  .pp-hero,
+  .pr-hero {
+    height: 844px !important;
+    min-height: 844px !important;
+  }
 }

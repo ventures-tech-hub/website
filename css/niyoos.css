@@ -68,7 +68,7 @@
 .ny-features{padding:8px 0 64px}
 .ny-feature-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px;margin-top:28px}
 .ny-feature-card{overflow:hidden;border:1px solid #e6e2f2;border-radius:14px;background:#fff;box-shadow:0 8px 22px rgba(40,20,80,.06)}
-.ny-feature-card img{width:100%;height:150px;object-fit:cover}
+.ny-feature-card img{width:100%;height:170px;object-fit:cover}
 .ny-feature-card h3{padding:14px 14px 0;font-family:var(--font-display);font-size:18px}
 .ny-feature-card p{padding:8px 14px 16px;color:#475569;font-size:14px;line-height:1.45}
 .ny-how{padding:56px 0 64px;background:linear-gradient(180deg,#f4f0ff,#f7f8fc)}
@@ -88,7 +88,7 @@
 .ny-metrics svg{width:28px;height:28px;fill:none;stroke:#c4b5fd;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .ny-metrics strong{display:block;margin-top:10px;font-family:var(--font-display);font-size:22px}
 .ny-metrics span{display:block;margin-top:6px;color:#c9c3d8;font-size:13px;line-height:1.35}
-.ny-cta{min-height:280px;display:flex;align-items:center;background:linear-gradient(90deg,#12081f 0%,rgba(28,10,58,.82) 42%,rgba(8,6,20,.2) 100%),url("../assets/ui/img/enhanced/ven-ny-d.jpg") right center/cover no-repeat;color:#fff}
+.ny-cta{min-height:280px;display:flex;align-items:center;background: url("../assets/ui/img/enhanced/ven-ny-n.jpg") right center/cover no-repeat;color:#fff}
 .ny-cta h2{color:#fff}
 .ny-cta p{max-width:440px;margin-top:12px;color:#e8e4f6}
 .ny-cta .ny-btn{margin-top:20px}
@@ -102,6 +102,48 @@
 .page-niyoos .site-footer{background:#eef1f8}
 .page-niyoos .footer-bottom{background:#f8fafc}
 .page-niyoos .ny-x{font-size:27px;line-height:1;color:#111}
+/* Screenshot-matched NIYOOS hero */
+.page-niyoos{background:#03030a;color:#fff}
+.ny-hero{min-height:680px;background:#03030a;color:#fff}
+.ny-hero-inner{min-height:680px;padding:110px 0 70px}
+.ny-back{color:#ff6416;font-size:15px;font-weight:500}
+.ny-back-arrow{font-size:18px}
+.ny-hero-grid{grid-template-columns:minmax(0,455px) minmax(0,1fr);gap:30px;align-items:start;margin-top:30px}
+.ny-brand{gap:14px;flex-wrap:nowrap}
+.ny-brand img{width:226px;flex:none}
+.ny-brand span{padding:7px 10px;border-color:#3a3a4a;background:#10111a;color:#f3f4f8;font-size:11px;letter-spacing:0}
+.ny-hero h1{margin-top:20px;font-size:52px;line-height:1.16;letter-spacing:-.55px}
+.ny-hero h1 span{color:#9857f5}
+.ny-hero-copy>p{max-width:455px;margin-top:15px;color:#f1f0f5;font-size:17px;line-height:1.65}
+.ny-actions{gap:22px;margin-top:24px}
+.ny-btn{min-height:49px;padding:0 20px;border-radius:9px;font-size:15px;font-weight:600}
+.ny-btn-primary{background:#7734ec}
+.ny-btn-outline{min-width:174px;border-color:#d4d4dc;color:#fff}
+.ny-dash{grid-template-columns:150px minmax(0,1fr);height:428px;min-height:0;margin-top:4px;border:1px solid #8b47f4;border-radius:12px;background:#07080d;box-shadow:0 0 26px #6f28d044}
+.ny-dash-side{padding:14px 11px;background:#0b0b11}
+.ny-dash-brand{gap:8px;margin:0 5px 16px;font-size:15px;letter-spacing:.04em}
+.ny-dash-brand b{display:grid;width:34px;height:34px;place-items:center;border:1.5px solid #9b4aff;border-radius:9px;background:transparent;color:#aa66ff;font-size:29px;font-weight:400;line-height:1}
+.ny-dash-brand span{display:flex;flex-direction:column;gap:1px}.ny-dash-brand small{color:#a7a6b0;font:8px/1.2 var(--font-body);letter-spacing:0}
+.ny-dash-side ul{display:grid;gap:4px}
+.ny-dash-side li{display:flex;align-items:center;gap:9px;margin:0;padding:8px 9px;border-radius:5px;color:#d4d3dc;font-size:10px;font-weight:400;line-height:1.2}
+.ny-dash-side li i{width:13px;color:#e8e6f0;font-size:12px;font-style:normal;text-align:center}
+.ny-dash-side li.is-on{background:#472387;color:#fff;font-weight:600}
+.ny-dash-main{display:grid;grid-template-rows:auto auto auto minmax(0,1fr) auto;gap:8px;min-width:0;padding:12px 12px 10px}
+.ny-dash-top{display:flex;min-height:28px;align-items:center;justify-content:space-between;color:#f7f6fa}
+.ny-dash-top>div:first-child{display:grid;gap:3px}.ny-dash-top strong{font-size:13px}.ny-dash-top small{color:#bbb9c5;font-size:8px;font-weight:400}
+.ny-account{display:flex;align-items:center;gap:6px;font-size:8px}.ny-account>span:nth-child(2){display:grid;gap:1px}.ny-account small{font-size:7px}.ny-avatar{display:grid;width:22px;height:22px;place-items:center;border-radius:50%;background:#b6a5ef;color:#171322;font-weight:700}.ny-account>b{margin-left:6px;color:#aaa}
+.ny-dash-filters{display:flex;justify-content:flex-end;gap:6px;color:#eceaf4;font-size:8px}.ny-dash-filters span{padding:4px 7px;border:1px solid #383641;border-radius:5px}
+.ny-stats{grid-template-columns:repeat(4,minmax(0,1fr));gap:7px;margin:0}
+.ny-stats article{position:relative;min-height:67px;padding:9px 9px;border:1px solid #292933;border-radius:8px;background:#0c0d13}
+.ny-stats small{font-size:8px}.ny-stats b{margin-top:5px;font-size:18px}.ny-stats em{display:block;margin-top:4px;color:#8bd8a0;font-size:7px;font-style:normal;white-space:nowrap}.ny-compliance-ring{position:absolute;top:15px;right:10px;width:29px;height:29px;border:4px solid #7652db;border-right-color:#302443;border-radius:50%}
+.ny-dash-split{grid-template-columns:1.2fr 1fr;gap:8px;min-height:0;margin:0}
+.ny-chart,.ny-spend{min-width:0;overflow:hidden;border:1px solid #292933;border-radius:8px;background:#0b0c12}
+.ny-chart{padding:8px 8px 6px}.ny-chart>header,.ny-spend>header,.ny-feed>header,.ny-policy>header{display:flex;align-items:center;justify-content:space-between;color:#f6f5fa}.ny-chart>header strong,.ny-spend>header strong,.ny-feed>header strong,.ny-policy>header strong{font-size:9px}.ny-chart>header span{padding:3px 5px;border:1px solid #51436e;border-radius:4px;color:#eee;font-size:7px}
+.ny-chart-plot{display:grid;grid-template-columns:19px 1fr;align-items:stretch;height:104px;margin-top:6px}.ny-y-labels{display:flex;flex-direction:column;justify-content:space-between;color:#92909d;font-size:6px}.ny-chart-plot svg{width:100%;height:100%;background:repeating-linear-gradient(to bottom,transparent 0,transparent 24%,#252430 25%)}.ny-chart-days{display:flex;justify-content:space-between;margin:4px 0 0 20px;color:#9997a5;font-size:6px}
+.ny-spend{padding:8px}.ny-spend>header>span{color:#9994a6;font-size:12px}.ny-spend-body{display:grid;grid-template-columns:1fr 1.25fr;gap:7px;align-items:center;height:calc(100% - 18px)}.ny-spend-donut{display:grid;position:relative;width:92px;height:92px;place-items:center;border-radius:50%;background:conic-gradient(#8950ed 0 37%,#ba8aff 37% 62%,#d9c6ff 62% 82%,#46345e 82% 100%);justify-self:center}.ny-spend-donut:after{position:absolute;inset:12px;border-radius:50%;background:#0b0c12;content:""}.ny-spend-donut b{z-index:1;color:#fff;font-size:12px;text-align:center}.ny-spend-donut small{display:block;margin-top:3px;color:#aaa7b2;font-size:7px;font-weight:400}.ny-spend-body ul{display:grid;gap:9px;color:#eee;font-size:7px}.ny-spend-body li{display:grid;grid-template-columns:7px 1fr;gap:4px;align-items:center}.ny-spend-body li>b{grid-column:2;color:#c5c2ce;font-size:7px;font-weight:400}.ny-spend-body li>i{grid-row:1/3;width:6px;height:6px;border-radius:50%;background:#9b5cff}.ny-spend-body li:nth-child(2)>i{background:#bc8aff}.ny-spend-body li:nth-child(3)>i{background:#d5c2ff}.ny-spend-body li:nth-child(4)>i{background:#55466b}
+.ny-dash-bottom{display:grid;grid-template-columns:1.2fr 1fr;gap:8px;min-height:0}.ny-feed,.ny-policy{min-width:0;overflow:hidden;padding:8px;border:1px solid #292933;border-radius:8px;background:#0b0c12}.ny-feed>header a{color:#a66aff;font-size:7px}.ny-feed ul,.ny-policy ul{display:grid;gap:8px;margin-top:7px}.ny-feed li{display:grid;grid-template-columns:10px 1fr auto;gap:5px;align-items:center;min-width:0;color:#dad8e2;font-size:7px;line-height:1.2}.ny-feed li i{display:grid;width:10px;height:10px;place-items:center;border:1px solid #9d4b14;border-radius:50%;background:#381d11;color:#ff9c43;font-size:7px;font-style:normal}.ny-feed li em{color:#a4a1ad;font-size:6px;font-style:normal;white-space:nowrap}.ny-policy li{display:flex;justify-content:space-between;gap:4px;padding-bottom:5px;border-bottom:1px solid #20212a;color:#d7d5df;font-size:7px}.ny-policy li b{padding:1px 5px;border:1px solid #155d3f;border-radius:8px;color:#5acb92;font-size:6px;font-weight:500;white-space:nowrap}
+@media(max-width:980px){.ny-hero-inner{padding-inline:24px}.ny-hero-grid{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:20px}.ny-brand{flex-wrap:wrap}.ny-brand img{width:190px}.ny-dash{grid-template-columns:110px minmax(0,1fr);height:400px}.ny-dash-side{padding-inline:8px}.ny-dash-main{padding:9px}.ny-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.ny-stats article{min-height:54px}.ny-stats em{display:none}}
+@media(max-width:700px){.ny-hero{min-height:844px}.ny-hero-inner{min-height:844px;padding:28px 20px 40px}.ny-hero-grid{grid-template-columns:1fr;gap:24px;margin-top:22px}.ny-brand{gap:9px}.ny-brand img{width:192px}.ny-brand span{font-size:9px}.ny-hero h1{margin-top:18px;font-size:42px;line-height:1.08}.ny-hero-copy>p{font-size:15px;line-height:1.55}.ny-actions{flex-direction:row;flex-wrap:wrap;gap:10px}.ny-btn{min-height:44px;padding-inline:14px;font-size:13px}.ny-dash{grid-template-columns:78px minmax(0,1fr);height:340px;margin:0;border-radius:9px}.ny-dash-side{padding:8px 5px}.ny-dash-brand{margin:0 2px 10px;font-size:9px}.ny-dash-brand b{width:22px;height:22px;font-size:19px}.ny-dash-brand small{font-size:5px}.ny-dash-side li{gap:3px;padding:7px 4px;font-size:7px}.ny-dash-side li i{width:9px;font-size:8px}.ny-dash-main{gap:5px;padding:7px 6px}.ny-dash-top strong{font-size:10px}.ny-dash-top small{font-size:6px}.ny-account{font-size:6px}.ny-avatar{width:16px;height:16px}.ny-dash-filters{font-size:6px}.ny-dash-filters span{padding:3px 4px}.ny-stats{gap:4px}.ny-stats article{min-height:42px;padding:5px}.ny-stats small{font-size:6px}.ny-stats b{font-size:12px}.ny-stats em{display:none}.ny-compliance-ring{top:9px;right:6px;width:17px;height:17px;border-width:2px}.ny-dash-split,.ny-dash-bottom{gap:4px}.ny-chart,.ny-spend,.ny-feed,.ny-policy{padding:5px}.ny-chart>header strong,.ny-spend>header strong,.ny-feed>header strong,.ny-policy>header strong{font-size:7px}.ny-chart-plot{height:74px;grid-template-columns:13px 1fr}.ny-chart-days{margin-left:14px;font-size:4px}.ny-spend-body{grid-template-columns:1fr;height:calc(100% - 12px)}.ny-spend-donut{width:48px;height:48px}.ny-spend-donut:after{inset:7px}.ny-spend-donut b{font-size:7px}.ny-spend-donut small{font-size:5px}.ny-spend-body ul{gap:4px;font-size:5px}.ny-spend-body li>b{font-size:5px}.ny-feed ul,.ny-policy ul{gap:5px;margin-top:5px}.ny-feed li,.ny-policy li{font-size:5px}.ny-feed li em{font-size:4px}.ny-policy li b{font-size:4px;padding:1px 3px}}
 @media(max-width:980px){
   .ny-hero-grid,.ny-about-grid,.ny-impact-inner{grid-template-columns:1fr}
   .ny-feature-grid{grid-template-columns:repeat(3,1fr)}
@@ -137,4 +179,129 @@
   .page-niyoos .footer-main{grid-template-columns:1fr 1fr}
   .page-niyoos .footer-brand{grid-column:1/-1}
   .page-niyoos .footer-bottom .tagline{display:none}
+}
+
+/* Keep the shared site navigation visible on the dark product hero. */
+.page-niyoos .site-header,.page-niyoos .site-header.scrolled{background:#fff;box-shadow:none}
+.page-niyoos .nav-links a,.page-niyoos .nav-links a.active{color:#051e42}
+
+/* Secondary sections follow the supplied NIYOOS desktop reference. */
+.ny-about,.ny-split,.ny-features,.ny-impact,.ny-more{background:#f7f9fb}
+.ny-about{padding:48px 0 44px}
+.ny-about-grid{grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:38px;align-items:start}
+.ny-about-visual{grid-template-columns:minmax(0,1.92fr) minmax(0,1fr);gap:20px}
+.ny-about-visual img{height:383px;border-radius:14px}
+.ny-about p{margin-top:16px;font-size:16px;line-height:1.6}
+.ny-control-card{padding:26px 32px;border-radius:13px;background:#141414}
+.ny-control-card strong{font-size:30px;line-height:1.25}
+.ny-control-card ul{gap:13px;margin-top:26px}
+.ny-control-card li{display:flex;align-items:center;gap:16px;padding:0;color:#f7f6fa;font-size:14px;font-weight:600}
+.ny-control-card li:before{display:none}
+.ny-control-card li svg{width:27px;height:27px;flex:none;fill:none;stroke:#9857f5;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ny-two{gap:72px;padding:80px 0 82px}
+.ny-list{gap:18px;margin-top:26px}
+.ny-list li{display:flex;align-items:center;min-height:24px;padding:0 0 0 48px;font-size:17px;line-height:1.35}
+.ny-list li:before{display:none}
+.ny-list li svg{position:absolute;left:0;top:0;width:28px;height:28px;fill:none;stroke:#7133d4;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ny-features{padding:0 0 64px}
+.ny-feature-head>p{margin-top:14px}
+.ny-feature-grid{gap:24px;margin-top:32px}
+.ny-feature-card{border-radius:13px;box-shadow:0 7px 18px rgba(20,35,55,.06)}
+.ny-feature-image{position:relative}
+.ny-feature-card img{height:190px}
+.ny-feature-image i{position:absolute;right:10px;bottom:-11px;display:grid;width:38px;height:38px;place-items:center;border:2px solid #fff;border-radius:8px;background:#fff;color:#7133d4}
+.ny-feature-image svg{width:27px;height:27px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ny-feature-card h3{padding-top:20px}
+.ny-how{padding:52px 0 56px;background:linear-gradient(116deg,#f9fafb 0%,#effbfc 55%,#f2f3fb 100%)}
+.ny-how>.container>p{margin-top:14px}
+.ny-steps{gap:18px;margin-top:34px}
+.ny-steps li:not(:last-child):after{color:#1d2939}
+.ny-steps b{background:#591bc5}
+.ny-steps i{color:#6425d7}
+.ny-impact{padding:48px 0}
+.ny-impact-inner{grid-template-columns:minmax(0,.8fr) minmax(0,1.75fr);gap:48px}
+.ny-metrics{gap:16px}
+.ny-metrics article{min-height:194px;padding:20px 22px;border-radius:13px;background:#141414;text-align:left}
+.ny-metrics svg{width:40px;height:40px;stroke:#9857f5}
+.ny-metrics strong{margin-top:15px;font-size:20px;line-height:1.2}
+.ny-metrics span{margin-top:7px;color:#f0eef4;font-size:14px;line-height:1.5}
+.ny-cta{min-height:300px;background-image:linear-gradient(90deg,rgba(4,8,26,.94) 0%,rgba(14,9,42,.78) 48%,rgba(8,6,20,.1) 100%),url("../assets/ui/img/enhanced/ven-ny-n.jpg");background-position:center;background-size:cover}
+.ny-cta h2{font-size:44px}
+.ny-cta p{font-size:16px}
+.ny-more{padding:50px 0 60px}
+.ny-more-head{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.ny-more-head h2{font-size:42px;line-height:1.05}
+.ny-more-grid{gap:22px;margin-top:44px}
+.ny-more-grid article{min-height:150px;padding:22px 24px;gap:22px;border-color:#dce4ed;border-radius:12px;box-shadow:0 6px 16px rgba(20,35,55,.04)}
+.ny-more-grid article>i{flex:none;padding-top:1px}
+.ny-more-grid svg{width:42px;height:42px;color:#6425d7}
+.ny-more-grid h3{font-size:18px;line-height:1.25}
+.ny-more-grid p{margin-top:8px;color:#243248;font-size:14px;line-height:1.65}
+.ny-coming{display:block;width:max-content;margin:0;color:#7133d4;font-size:14px;font-weight:700}
+@media(max-width:980px){
+  .ny-about-grid{grid-template-columns:1fr;gap:30px}
+  .ny-about-visual{grid-template-columns:minmax(0,1.8fr) minmax(220px,1fr)}
+  .ny-impact-inner{grid-template-columns:1fr;gap:28px}
+  .ny-metrics{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .ny-feature-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(max-width:768px){
+  .ny-about{padding:34px 0 20px}
+  .ny-about-visual{grid-template-columns:1fr;gap:14px}
+  .ny-about-visual img{height:240px}
+  .ny-control-card{padding:22px}
+  .ny-two{gap:36px;padding:44px 0}
+  .ny-list{gap:15px}
+  .ny-list li{font-size:16px}
+  .ny-features{padding-bottom:42px}
+  .ny-feature-grid{grid-template-columns:1fr;gap:20px}
+  .ny-feature-card img{height:220px}
+  .ny-how{padding:40px 0 44px}
+  .ny-steps{gap:22px;margin-top:24px}
+  .ny-impact{padding:38px 0}
+  .ny-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ny-metrics article{min-height:170px}
+  .ny-cta{min-height:320px;background-position:65% center}
+  .ny-cta h2{font-size:32px}
+  .ny-more{padding:38px 0 44px}
+  .ny-more-head{align-items:flex-start}
+  .ny-more-head h2{font-size:30px}
+  .ny-more-grid{grid-template-columns:1fr;gap:14px;margin-top:24px}
+}
+.ny-steps li:not(:last-child):after{content:none}
+.ny-step-arrow{position:absolute;top:7px;left:calc(50% - 32px);width:65px;height:15px;max-width:none}
+@media(min-width:769px) and (max-width:980px){.ny-steps li:nth-child(3) .ny-step-arrow{display:none}}
+@media(max-width:768px){.ny-step-arrow{top:auto;bottom:-19px;left:-19px;transform:rotate(90deg)}}
+
+/* Match the NIYOOS wordmark and dashboard proportions in the supplied frame. */
+.ny-brand { gap: 14px; }
+.ny-brand-logo { display: flex; flex: 0 0 220px; align-items: center; gap: 8px; }
+.ny-brand .ny-brand-mark { display: block; flex: none; width: 44px !important; height: 48px; object-fit: contain; }
+.ny-brand .ny-wordmark { display: block; padding: 0; border: 0; border-radius: 0; background: transparent; color: #f8f8fb; font: 400 33px/1 var(--font-body); letter-spacing: 1px; white-space: nowrap; }
+.ny-brand .ny-wordmark-infinity { display: inline; padding: 0; border: 0; background: transparent; color: inherit; font-size: 35px; letter-spacing: -2px; }
+.ny-brand .ny-wordmark small { display: block; margin: 1px 0 0 2px; color: #b9b8c2; font: 400 12px/1.1 var(--font-body); letter-spacing: 0; }
+.ny-brand .ny-company-tag { padding: 7px 10px; border: 1px solid #3a3a4a; border-radius: 5px; background: #10111a; color: #f3f4f8; font-size: 11px; letter-spacing: 0; white-space: nowrap; }
+.ny-dash-brand b { display: grid; width: 34px; height: 34px; place-items: center; border: 0; border-radius: 0; background: transparent; }
+.ny-dash-brand b svg { display: block; width: 34px; height: 38px; fill: none; stroke: #a66aff; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.ny-dash-split { grid-template-columns: minmax(0,1.05fr) minmax(0,.95fr); min-height: 138px; }
+.ny-dash-bottom { min-height: 114px; }
+.ny-feature-card { min-height: 400px; }
+.ny-feature-card p { font-size: 16px; line-height: 1.55; }
+@media(max-width:980px){
+  .ny-brand-logo { flex-basis: 204px; }
+  .ny-brand .ny-wordmark { font-size: 30px; }
+  .ny-brand .ny-wordmark-infinity { font-size: 32px; }
+  .ny-brand .ny-wordmark small { font-size: 10px; }
+  .ny-dash-split { min-height: 130px; }
+  .ny-dash-bottom { min-height: 100px; }
+}
+@media(max-width:768px){
+  .ny-brand-logo { flex-basis: auto; }
+  .ny-brand .ny-brand-mark { width: 38px !important; height: 42px; }
+  .ny-brand .ny-wordmark { font-size: 27px; }
+  .ny-brand .ny-wordmark-infinity { font-size: 29px; }
+  .ny-brand .ny-wordmark small { font-size: 9px; }
+  .ny-brand .ny-company-tag { font-size: 9px; }
+  .ny-dash-split { min-height: 0; }
+  .ny-dash-bottom { min-height: 0; }
 }

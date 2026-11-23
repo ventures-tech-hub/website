@@ -2,6 +2,8 @@
 /* ---------- Hero (Figma values) ---------- */
 .home-hero {
   --hero-h: 680px;
+  height: var(--hero-h);
+  min-height: var(--hero-h);
   --tint: 237 238 241;
   --hero-pt: 164px;
   --hero-copy: 593px;
@@ -13,7 +15,7 @@
 .hero-chips .ico { width: 24px; height: 24px; }
 @media (max-width: 768px) {
   /* Figma 390×844 hero: copy starts 96px down (64px header + 32px) */
-  section.home-hero { --hero-pt: 96px; }
+  section.home-hero { --hero-pt: 96px; height: auto; min-height: 844px; }
   .home-hero { --tint: 237 238 241; --fade-m: linear-gradient(180deg, rgb(237 238 241) 0%, rgb(237 238 241 / 0.95) 32.5%, rgb(237 238 241 / 0.7) 55.7%, rgb(237 238 241 / 0) 65.9%); }
   .hero-chips { flex-wrap: nowrap; gap: 20px; width: auto; max-width: none; margin-top: 24px; }
   .hero-chips li { flex-direction: column; align-items: flex-start; gap: 8px; font-size: 14px; line-height: 20px; }
@@ -136,7 +138,7 @@ main section .eyebrow + h2 { margin-top: 8px; }
 .venture-pp .venture-logo, .venture-ny .venture-logo { height: 32px; }
 .venture-pp .venture-badge { background: #E0E6FD; color: #0E3C83; }
 .venture-ny .venture-badge { background: #E1D9FE; color: #1A1AE7; }
-.venture-kicker { margin-top: 12px; font-size: 7px; line-height: 10px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: #94A3B8; }
+.venture-kicker { margin-top: 7px; font-size: 7px; line-height: 10px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: #94A3B8; }
 .venture-title { max-width: 260px; margin-top: 9px; font-family: var(--font-display); font-size: 20px; line-height: 24px; font-weight: 600; color: #141414; }
 .venture-kicker + .venture-title { margin-top: 2px; }
 .venture-ny .venture-title { margin-top: 26px; }
@@ -297,7 +299,7 @@ main section .eyebrow + h2 { margin-top: 8px; }
   /* Figma mobile card: title 20/26 (24px line step), desc 11/15, then 20px to the features and 20px to the button */
   .venture-title { max-width: none; margin-top: 18px; }
   .venture-ny .venture-title { margin-top: 16px; }
-  .venture-kicker { margin-top: 16px; font-size: 8px; line-height: 10px; }
+  .venture-kicker { margin-top: 7px; font-size: 8px; line-height: 10px; }
   .venture-kicker + .venture-title { margin-top: 8px; }
   .venture-desc { max-width: 255px; margin-top: 8px; }
   .venture-ny .venture-desc { max-width: 268px; }
@@ -386,7 +388,7 @@ main section .eyebrow + h2 { margin-top: 8px; }
 @media (min-width: 769px) {
   .home-ventures .venture-body {
     box-sizing: border-box;
-    width: 48%;
+    width: 42%;
     min-width: 0;
     padding: 16px;
   }
@@ -400,6 +402,7 @@ main section .eyebrow + h2 { margin-top: 8px; }
   .home-ventures .venture-title,
   .home-ventures .venture-desc,
   .home-ventures .venture-kicker { max-width: 100%; }
+  .home-ventures .venture-pp .venture-kicker + .venture-title { margin-top: 7px; }
   .home-ventures .venture-feats {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -414,20 +417,6 @@ main section .eyebrow + h2 { margin-top: 8px; }
   .home-ventures .venture-track { grid-template-columns: minmax(0, 1fr); }
   .home-ventures .venture-card { height: 286px; }
   .home-ventures .venture-body { width: 48%; }
-}
-
-/* Pathway cards spring to a rounder shape while hovered, focused, or pressed. */
-.home-paths .path-card {
-  border-radius: var(--radius-lg);
-  transition: border-radius .22s ease, background-color .2s ease, box-shadow .2s ease;
-}
-.home-paths .path-card:hover,
-.home-paths .path-card:active,
-.home-paths .path-card:focus-visible {
-  border-radius: 24px;
-}
-@media (prefers-reduced-motion: reduce) {
-  .home-paths .path-card { transition: none; }
 }
 
 /* Pathway cards use a large image banner and a roomy copy panel. */
@@ -476,15 +465,6 @@ main section .eyebrow + h2 { margin-top: 8px; }
   font-weight: 600;
   color: #c94e1c;
 }
-.home-paths .path-card:hover,
-.home-paths .path-card:active,
-.home-paths .path-card:focus-visible {
-  border-radius: 42px;
-  background: #fff8f2;
-}
-.home-paths .path-card:hover .path-body,
-.home-paths .path-card:active .path-body,
-.home-paths .path-card:focus-visible .path-body { background: #fff8f2; }
 @media (max-width: 768px) {
   .home-paths .card-grid-3 { gap: 18px; }
   .home-paths .path-media { height: 190px; }

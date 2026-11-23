@@ -1,26 +1,32 @@
-const header = document.querySelector(".site-header");
-const menuButton = document.querySelector(".menu-toggle");
-const nav = document.querySelector(".nav-links");
+function initSiteHeader() {
+  const header = document.querySelector(".site-header");
+  const menuButton = document.querySelector(".menu-toggle");
+  const nav = document.querySelector(".nav-links");
+  if (!header || !menuButton || !nav) return;
 
-const updateHeader = () => header.classList.toggle("scrolled", window.scrollY > 10);
-updateHeader();
-window.addEventListener("scroll", updateHeader, { passive: true });
+  const updateHeader = () => header.classList.toggle("scrolled", window.scrollY > 10);
+  updateHeader();
+  window.addEventListener("scroll", updateHeader, { passive: true });
 
-const setMenu = (isOpen) => {
-  menuButton.classList.toggle("open", isOpen);
-  nav.classList.toggle("open", isOpen);
-  document.body.classList.toggle("menu-open", isOpen);
-  menuButton.setAttribute("aria-expanded", String(isOpen));
-  menuButton.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
-};
+  const setMenu = (isOpen) => {
+    menuButton.classList.toggle("open", isOpen);
+    nav.classList.toggle("open", isOpen);
+    document.body.classList.toggle("menu-open", isOpen);
+    menuButton.setAttribute("aria-expanded", String(isOpen));
+    menuButton.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+  };
 
-menuButton.addEventListener("click", () => setMenu(!nav.classList.contains("open")));
-nav.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => setMenu(false)));
-document.addEventListener("keydown", (event) => {
-  if (event.key !== "Escape" || !nav.classList.contains("open")) return;
-  setMenu(false);
-  menuButton.focus();
-});
+  menuButton.addEventListener("click", () => setMenu(!nav.classList.contains("open")));
+  nav.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => setMenu(false)));
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape" || !nav.classList.contains("open")) return;
+    setMenu(false);
+    menuButton.focus();
+  });
+}
+
+if (document.querySelector(".site-header")) initSiteHeader();
+else document.addEventListener("site-components:ready", initSiteHeader, { once: true });
 
 // Whole card is clickable: follow the card's own link unless another control was clicked
 document.querySelectorAll(".card-link").forEach((card) => {
