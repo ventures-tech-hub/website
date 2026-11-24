@@ -45,7 +45,8 @@
     "insight.html": "insights.html",
     "contact.html": "contact.html"
   };
-  const page = location.pathname.split("/").filter(Boolean).pop() || "index.html";
+  const route = decodeURIComponent(location.pathname).replace(/\/+$/, "").split("/").pop() || "";
+  const page = !route ? "index.html" : route.endsWith(".html") ? route : `${route}.html`;
   const activeHref = activeByPage[page];
   const headerSlot = document.querySelector("[data-site-header]");
   const footerSlot = document.querySelector("[data-site-footer]");
