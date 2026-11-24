@@ -4,6 +4,7 @@
 
 /* ---------- Hero ---------- */
 .eco-hero { height: 680px; min-height: 680px; }
+@media (min-width: 769px) { .eco-hero { height: 540px !important; min-height: 540px !important; } }
 .eco-hero-bg { position: absolute; max-width: none; }
 .eco-hero-bg.desktop-bg { top: 0; left: -17.06%; width: 120.34%; height: auto; }
 .eco-hero-bg.mobile-bg { display: none; }
@@ -12,9 +13,10 @@
   inset: 0;
   background: linear-gradient(90deg, #FAFDFE 0%, rgba(250, 253, 254, .9) 41.84%, rgba(250, 253, 254, .6) 48.52%, rgba(250, 253, 254, 0) 78.3%);
 }
-.eco-hero-inner { height: 100%; padding-top: 127px; }
+.eco-hero-inner { height: 100%; padding-top: 118px; }
+@media (min-width: 769px) { .eco-hero-inner { padding-top: 118px !important; } }
 .eco-hero-copy { position: relative; z-index: 2; max-width: 580px; }
-.eco-hero-copy h1 { white-space: nowrap; }
+.eco-hero-copy h1 { margin-top: 14px; white-space: nowrap; }
 .eco-hero-copy p { margin-top: 25px; }
 .eco-hero-btn { position: relative; z-index: 2; margin-top: 32px; }
 
@@ -166,6 +168,7 @@
   .eco-hero-bg.desktop-bg { left: 0; width: 100%; height: 100%; object-fit: cover; object-position: 60% 0; }
   .eco-hero-fade { background: linear-gradient(180deg, #FAFDFE 0%, rgba(250, 253, 254, .9) 35%, rgba(250, 253, 254, .4) 60%, rgba(250, 253, 254, 0) 80%); }
   .eco-hero-inner { display: flex; flex-direction: column; align-items: flex-start; padding-top: 128px; }
+  .eco-hero-copy h1 { margin-top: 12px; white-space: normal; }
   .eco-orbit { position: relative; left: auto; top: auto; align-self: center; margin-top: 24px; }
   .eco-hero-btn { order: 3; margin-top: 24px; }
   .eco-head { grid-template-columns: 1fr; gap: 16px; }

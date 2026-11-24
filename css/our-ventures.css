@@ -51,7 +51,8 @@ body.page-ventures {
 }
 
 .ven-hero-panel { position: absolute; z-index: 2; right: clamp(34px, 7vw, 92px); bottom: 48px; display: flex; width: 250px; flex-direction: column; gap: 14px; padding: 24px 20px 20px; border-radius: 14px; background: rgb(3 27 57 / .86); color: #fff; font-family: var(--font-body); font-size: 16px; font-weight: 400; line-height: 26px; letter-spacing: 0; }
-.ven-hero-panel-last { padding-bottom: 8px; border-bottom: 2px solid #ff6300; width: max-content; }
+.ven-hero-panel-last { position: relative; padding-bottom: 8px; width: max-content; }
+.ven-hero-panel-last::after { position: absolute; right: 0; bottom: 0; left: 0; width: 90px; border-bottom: 2px solid #ff6300; content: ""; }
 
 .ven-hero .page-hero-inner {
   position: relative;

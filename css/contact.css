@@ -99,7 +99,8 @@
 }
 
 .ct-hero-panel { position:absolute; right:clamp(34px, 7vw, 92px); bottom:28px; z-index:4; display:flex; width:250px; flex-direction:column; gap:14px; padding:24px 20px 20px; border-radius:14px; background:rgb(3 27 57 / .86); color:#fff; font-size:16px; line-height:1.15; }
-.ct-hero-panel-last { width:max-content; padding-bottom:8px; border-bottom:2px solid #ff6300; }
+.ct-hero-panel-last { position:relative; width:max-content; padding-bottom:8px; }
+.ct-hero-panel-last::after { position:absolute; right:0; bottom:0; left:0; width:90px; border-bottom:2px solid #ff6300; content:""; }
 
 /* ==========================================================================
    Section 2: We're Here to Help (4 Cards)
@@ -146,12 +147,6 @@
   align-items: center;
   text-align: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-}
-
-.ct-help-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
-  border-color: #D1D5DB;
 }
 
 .ct-help-icon {

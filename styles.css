@@ -289,7 +289,7 @@ a, button, summary, .card-link { -webkit-tap-highlight-color: transparent; }
 .card-link { cursor: pointer; }
 
 /* Shared card interaction: hover tints the surface; pressing enlarges the corners. */
-main :is(
+main :is(a, button, [role="button"], .card-link:has(a[href])):is(
   .card, .card-link, .about-card, .bring-card, .path-card, .insight-card,
   .venture-card, .ven-card, .cat-card, .diff-card, .eco-card, .role-card,
   .ab-mvp-card, .ab-why-card, .fb-keys-card, .fb-bring-card, .fb-pw-card,
@@ -299,7 +299,7 @@ main :is(
 ) {
   transition: background-color .2s ease, border-radius .2s ease;
 }
-main :is(
+main :is(a, button, [role="button"], .card-link:has(a[href])):is(
   .card, .card-link, .about-card, .bring-card, .path-card, .insight-card,
   .venture-card, .ven-card, .cat-card, .diff-card, .eco-card, .role-card,
   .ab-mvp-card, .ab-why-card, .fb-keys-card, .fb-bring-card, .fb-pw-card,
@@ -310,7 +310,7 @@ main :is(
   background-color: #FFF4E8 !important;
   transform: none !important;
 }
-main :is(
+main :is(a, button, [role="button"], .card-link:has(a[href])):is(
   .card, .card-link, .about-card, .bring-card, .path-card, .insight-card,
   .venture-card, .ven-card, .cat-card, .diff-card, .eco-card, .role-card,
   .ab-mvp-card, .ab-why-card, .fb-keys-card, .fb-bring-card, .fb-pw-card,
@@ -320,8 +320,8 @@ main :is(
 ):active {
   border-radius: 36px !important;
 }
-main .path-card:hover .path-body,
-main .path-card:active .path-body,
+main .path-card:has(a[href]):hover .path-body,
+main .path-card:has(a[href]):active .path-body,
 main .ven-card:hover .ven-card-body,
 main .ven-card:active .ven-card-body {
   background-color: #FFF4E8 !important;

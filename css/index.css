@@ -5,10 +5,13 @@
   height: var(--hero-h);
   min-height: var(--hero-h);
   --tint: 237 238 241;
-  --hero-pt: 164px;
+  --hero-pt: 116px;
   --hero-copy: 593px;
   --fade-x: linear-gradient(90deg, rgb(237 238 241) 0%, rgb(237 238 241 / 0.95) 32.5%, rgb(237 238 241 / 0.7) 42.1%, rgb(237 238 241 / 0) 49.5%);
   --fade-y: linear-gradient(180deg, rgb(229 232 235) 0%, rgb(229 232 235 / 0.95) 16.7%, rgb(229 232 235 / 0.9) 26.9%, rgb(229 232 235 / 0) 30.1%);
+}
+@media (min-width: 769px) {
+  .home-hero { height: 604px !important; min-height: 604px !important; }
 }
 .hero-chips { display: flex; flex-wrap: wrap; gap: 12px 16px; width: max-content; max-width: calc(100vw - 2 * var(--gutter)); margin-top: 32px; }
 .hero-chips li { display: flex; align-items: center; gap: 4px; font-family: var(--font-display); font-size: 16px; line-height: 22px; font-weight: 600; color: #1A1A1A; }

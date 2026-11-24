@@ -6,7 +6,7 @@
 <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Archivo+Narrow:wght@400;500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css?v=32" /><link rel="stylesheet" href="css/insights.css" /><link rel="stylesheet" href="css/insight-article.css?v=1" />
+<link rel="stylesheet" href="styles.css?v=33" /><link rel="stylesheet" href="css/insights.css" /><link rel="stylesheet" href="css/insight-article.css?v=3" />
 </head>
 <body>
 <div data-site-header></div>
@@ -15,7 +15,19 @@
 <div class="article-layout"><article class="article-main">
 <div class="article-meta-top"><span class="tag" id="article-category"></span><span class="read-time"><span aria-hidden="true">◷</span> <span id="article-read-time"></span> min read</span></div>
 <h1 id="article-title"></h1><p class="article-deck" id="article-summary"></p>
-<div class="article-byline"><div class="article-author"><img src="assets/ui/img/enhanced/biz-av-1.png" alt=""/><span><strong id="article-author"></strong><small id="article-role"></small></span></div><span class="article-date"><span aria-hidden="true">▣</span><time id="article-date"></time></span><div class="article-share"><span>Share:</span><a href="#" aria-label="Share on Facebook">f</a><a href="#" aria-label="Share on X">𝕏</a><a href="#" aria-label="Share on WhatsApp">◉</a><button type="button" id="copy-link" aria-label="Copy article link">↗</button></div></div>
+<div class="article-byline"><div class="article-author"><img src="assets/ui/img/enhanced/biz-av-1.png" alt=""/><span><strong id="article-author"></strong><small id="article-role"></small></span></div><span class="article-date"><svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+  >
+    <path d="M8 2V5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" stroke="#1E293B" />
+    <path d="M16 2V5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" stroke="#1E293B" />
+    <path d="M5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3Z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" stroke="#1E293B" />
+    <path d="M3 9H21" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" stroke="#1E293B" />
+    <path d="M9 15L11 17L15 13" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" stroke="#1E293B" />
+  </svg><time id="article-date"></time></span><div class="article-share"><span>Share:</span><a href="#" aria-label="Share on Facebook">f</a><a href="#" aria-label="Share on X">𝕏</a><a href="#" aria-label="Share on WhatsApp">◉</a><button type="button" id="copy-link" aria-label="Copy article link">↗</button></div></div>
 <img class="article-hero-image" id="article-image" alt="" />
 <div class="article-content" id="article-content"></div>
 <blockquote class="article-quote" id="article-quote"></blockquote>
@@ -23,11 +35,14 @@
 <section class="article-related"><h2>More Insights</h2><div class="article-related-grid" id="related-posts"></div></section>
 </article>
 <aside class="article-sidebar">
-<label class="article-search"><span class="sr-only">Search insights</span><span aria-hidden="true">⌕</span><input type="search" placeholder="Search" id="article-search" /></label>
+<label class="article-search"><span class="sr-only">Search insights</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none"><circle cx="10.8" cy="10.8" r="7.2" stroke="currentColor" stroke-width="1.8"/><path d="m16.2 16.2 5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><input type="search" placeholder="Search" id="article-search" /></label>
 <section class="sidebar-box category-box"><h2>Categories</h2><ul id="article-categories"></ul></section>
 <section class="sidebar-box popular-box"><h2>Popular Posts</h2><div id="popular-posts"></div></section>
-<section class="article-newsletter"><span class="eyebrow">Stay Updated</span><h2>Get the Latest Insights from <span>Loktara.</span></h2><p>Subscribe to receive our latest thoughts, perspectives and updates directly in your inbox.</p><form><label><span class="sr-only">Email address</span><span aria-hidden="true">✉</span><input type="email" placeholder="Enter your email" required /></label><button type="submit">Subscribe →</button></form><small>No spam, Unsubscribe anytime.</small></section>
+<section class="article-newsletter"><span class="eyebrow">Stay Updated</span><h2>Get the Latest Insights from <span>Loktara.</span></h2><p>Subscribe to receive our latest thoughts, perspectives and updates directly in your inbox.</p><form><label><span class="sr-only">Email address</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <path d="M22 7L13.009 12.727C12.7039 12.9042 12.3573 12.9976 12.0045 12.9976C11.6517 12.9976 11.3051 12.9042 11 12.727L2 7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#475569"/>
+    <path d="M4 4H20C21.1046 4 22 4.89543 22 6V18C22 19.1046 21.1046 20 20 20H4C2.89543 20 2 19.1046 2 18V6C2 4.89543 2.89543 4 4 4Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#475569"/>
+    </svg><input type="email" placeholder="Enter your email" required /></label><button type="submit">Subscribe →</button></form><small>No spam, Unsubscribe anytime.</small></section>
 </aside></div></div></main>
 <div data-site-footer></div>
-<script src="js/site-components.js?v=2"></script><script src="script.js"></script><script src="js/insight-article-data.js"></script><script src="js/insight-article.js"></script>
+<script src="js/site-components.js?v=2"></script><script src="script.js"></script><script src="js/insight-article-data.js"></script><script src="js/insight-article.js?v=2"></script>
 </body></html>

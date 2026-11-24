@@ -6,6 +6,31 @@
   min-height: var(--hero-h);
 }
 
+@media (min-width: 769px) {
+  .wwd-hero .page-hero-inner,
+  .ins-hero .page-hero-inner,
+  .ap-hero .page-hero-inner,
+  .ven-hero .page-hero-inner,
+  .ff-hero .page-hero-inner,
+  .fb-hero .page-hero-inner,
+  .ct-hero-inner {
+    padding-top: 118px !important;
+  }
+  .wwd-hero,
+  .ins-hero,
+  .ap-hero,
+  .ven-hero {
+    height: 540px !important;
+    min-height: 540px !important;
+  }
+  .ff-hero,
+  .fb-hero,
+  .ct-hero {
+    height: 570px !important;
+    min-height: 570px !important;
+  }
+}
+
 @media (max-width: 768px) {
   .page-hero:not(.home-hero) {
     --hero-h: 844px;

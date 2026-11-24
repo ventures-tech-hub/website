@@ -31,13 +31,13 @@
   document.querySelector('#popular-posts').innerHTML = popular.slice(0,4).map((key) => popularCard(key,posts[key])).join('');
   const categoryList = [...new Set(Object.values(posts).map((item) => item[0]))];
   const categoryIcons = {
-    'Venture Building': 'ff-p-venture.svg',
-    'Startups & Founders': 'ff-k-founder.svg',
-    'Markets & Trends': 'biz-k-market.svg',
-    Technology: 'biz-s-tech.svg',
-    'Capital & Investment': 'biz-k-capital.svg',
-    'Business Growth': 'biz-k-strategy.svg',
-    'Industry Perspectives': 'pt-w-expert.svg'
+    'Venture Building': 'cc1.svg',
+    'Startups & Founders': 'cc2.svg',
+    'Markets & Trends': 'cc3.svg',
+    Technology: 'cc4.svg',
+    'Capital & Investment': 'cc5.svg',
+    'Business Growth': 'cc6.svg',
+    'Industry Perspectives': 'cc7.svg'
   };
   document.querySelector('#article-categories').innerHTML = categoryList.map((name) => `<li><a href="insights.html#all-insights"><img src="assets/ui/icons/${categoryIcons[name]}" alt=""/><span>${name}</span><small>${Object.values(posts).filter((item) => item[0] === name).length}</small></a></li>`).join('');
   document.querySelector('#copy-link').addEventListener('click', async () => {

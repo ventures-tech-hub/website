@@ -7,6 +7,9 @@
   --fade-x: linear-gradient(90deg, rgb(250 253 254) 0%, rgb(250 253 254 / 0.98) 19.4%, rgb(250 253 254 / 0.8) 31.4%, rgb(250 253 254 / 0.6) 39.9%, rgb(250 253 254 / 0) 47.6%);
   --fade-y: linear-gradient(180deg, rgb(155 201 246) 0%, rgb(155 201 246 / 0.9) 17.9%, rgb(155 201 246 / 0.38) 24.4%, rgb(155 201 246 / 0) 30.7%);
 }
+@media (min-width: 769px) {
+  .ab-hero { height: 540px !important; min-height: 500px !important; }
+}
 @media (max-width: 768px) {
   .ab-hero { --tint: 237 247 253; --fade-m: linear-gradient(180deg, rgb(237 247 253) 0%, rgb(237 247 253) 39%, rgb(237 247 253 / 0.75) 52.9%, rgb(237 247 253 / 0) 60.7%); }
 }
