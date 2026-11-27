@@ -1201,3 +1201,234 @@
   .ct-hero-panel-last { flex-basis:100%; width:max-content; }
 }
 
+
+/* Keep the wide Call Us icon visually balanced with the other contact icons. */
+.ct-help-icon.ct-icon-phone svg {
+  width: 65px;
+  height: 36px;
+  flex: none;
+}
+
+@media (max-width: 768px) {
+  .ct-help-icon.ct-icon-phone svg {
+    width: 65px;
+    height: 36px;
+  }
+}
+
+/* Contact cards respond only while one of their links is interactive. */
+.ct-help-card:has(a:hover),
+.ct-help-card:has(a:focus-visible) {
+  border-color: #F15C17;
+  background: #FFF4EC;
+  box-shadow: 0 10px 28px rgba(241, 92, 23, 0.12);
+}
+
+.ct-help-card:has(a:active) {
+  border-radius: 24px;
+}
+
+.ct-link-orange,
+.ct-card-btn {
+  transition: color 0.18s ease, background-color 0.18s ease, border-color 0.18s ease,
+    border-radius 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.ct-card-btn:hover,
+.ct-card-btn:focus-visible {
+  border-color: #F15C17;
+  background: #FFF0E5;
+  color: #C9470E;
+  box-shadow: 0 4px 12px rgba(241, 92, 23, 0.14);
+}
+
+.ct-card-btn:active {
+  border-radius: 14px;
+  transform: scale(0.98);
+  background: #FFE2CE;
+}
+
+.ct-link-orange:active {
+  color: #A93608;
+}
+
+/* Desktop two-column layout for the office and global coverage section. */
+.ct-locations {
+  background: #F7F9FB;
+}
+
+.ct-locations-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.95fr);
+  align-items: center;
+  gap: clamp(36px, 6vw, 84px);
+}
+
+.ct-locations-head {
+  margin-bottom: 24px;
+}
+
+.ct-locations-head h2 {
+  margin-bottom: 14px;
+}
+
+.ct-locations-head p {
+  max-width: 620px;
+}
+
+.ct-locations-cards {
+  display: block;
+}
+
+.ct-loc-card {
+  border-radius: 16px;
+}
+
+.ct-loc-media {
+  height: 120px;
+}
+
+.ct-loc-body {
+  position: relative;
+  min-height: 148px;
+  padding: 16px 20px 18px;
+}
+
+.ct-loc-title-row {
+  align-items: center;
+  gap: 10px;
+}
+
+.ct-loc-title-row svg {
+  width: 26px;
+  height: 26px;
+  margin: 0;
+}
+
+.ct-loc-addr {
+  padding-left: 36px;
+  margin-bottom: 2px;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.ct-loc-sub {
+  padding-left: 36px;
+  margin: 0;
+  font-size: 13px;
+}
+
+.ct-loc-body .ct-map-link {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  display: grid;
+  width: 28px;
+  height: 28px;
+  place-items: center;
+  border-radius: 50%;
+  color: #F15C17;
+  font-size: 22px;
+  line-height: 1;
+  text-decoration: none;
+  transition: background-color .18s ease, border-radius .18s ease, transform .18s ease;
+}
+
+.ct-loc-body .ct-map-link:hover,
+.ct-loc-body .ct-map-link:focus-visible {
+  background: #FFF0E5;
+}
+
+.ct-loc-body .ct-map-link:active {
+  border-radius: 9px;
+  transform: scale(.96);
+}
+
+.ct-map-card {
+  min-width: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 18px;
+  box-shadow: none;
+}
+
+.ct-map-img {
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  object-fit: contain;
+}
+
+@media (max-width: 1024px) {
+  .ct-locations-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ct-locations-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .ct-locations-head {
+    margin-bottom: 20px;
+  }
+
+  .ct-loc-body {
+    min-height: 0;
+    padding: 20px;
+  }
+
+  .ct-loc-addr,
+  .ct-loc-sub {
+    padding-left: 0;
+  }
+
+  .ct-loc-body .ct-map-link {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .ct-locations {
+    padding: 24px 0 60px;
+  }
+
+  .ct-locations .container {
+    max-width: none;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ct-locations .container {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+
+/* Reference palette for the Contact page form and FAQ area. */
+.page-contact {
+  background: #F7F9FB;
+}
+
+.ct-form-faq {
+  background-color: #F7F9FB;
+}
+
+.ct-field input,
+.ct-field textarea,
+.ct-field select,
+.ct-phone-group {
+  background-color: #FFFFFF;
+  border-color: #DCE5F1;
+}
+
+.ct-faq-item {
+  border-color: #DCE5F1;
+}

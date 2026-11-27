@@ -152,8 +152,8 @@
 
   /* How we work */
   .ab-how { padding-top: 0; }
-  .ab-how-fade { display: block; position: absolute; top: 0; left: 0; right: 0; height: 778px; z-index: 0; pointer-events: none; background: linear-gradient(180deg, rgba(244, 248, 251, 0) 0%, rgba(244, 248, 251, .7) 40%, rgba(244, 248, 251, .95) 56.05%, #F4F8FB 70.27%); }
-  .ab-how-grid { position: relative; row-gap: 32px; padding-bottom: 64px; }
+  .ab-how-fade { display: block; position: absolute; inset: 0; height: auto; z-index: 0; pointer-events: none; background: linear-gradient(180deg, rgba(244, 248, 251, 0) 0%, rgba(244, 248, 251, .7) 40%, rgba(244, 248, 251, .95) 56.05%, #F4F8FB 70.27%); }
+  .ab-how-grid { position: relative; row-gap: 32px; padding-bottom: 40px; }
   .ab-how-media { position: relative; z-index: 1; height: 254px; margin: 0 calc(-1 * var(--gutter)); border-radius: 0; }
   .ab-how-text { position: relative; z-index: 2; }
   .ab-how-text h2 { margin-top: 10px; }
@@ -161,7 +161,7 @@
   .ab-how-list { margin-top: 24px; gap: 16px; }
   .ab-how-list li { align-items: flex-start; gap: 12px; font-size: 18px; line-height: 24px; }
   .ab-how-list svg { width: 24px; height: 24px; margin-top: -2px; }
-  .ab-how-btn.mobile-only { display: flex !important; margin-top: 32px; }
+  .ab-how-btn.mobile-only { display: none !important; }
 
   /* Why */
   .ab-why { padding: 0 0 32px; }

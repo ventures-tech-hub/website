@@ -6,7 +6,7 @@
 .pr-hero { position: relative; height: 760px !important; min-height: 760px !important; overflow: hidden; background: #fbfaf9; }
 .pr-hero-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: right center; filter: none; }
 .pr-hero-fade { position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg, #fbfaf9 0%, #fbfaf9 22%, rgb(251 250 249 / .96) 33%, rgb(251 250 249 / .58) 43%, rgb(251 250 249 / .12) 51%, transparent 59%), linear-gradient(180deg, #fbfaf9 0%, #fbfaf9 18%, rgb(251 250 249 / .96) 24%, rgb(251 250 249 / .78) 29%, rgb(251 250 249 / .32) 34%, transparent 40%); }
-.pr-hero-inner { position: relative; z-index: 1; padding-top: 112px; }
+.pr-hero-inner { position: relative; z-index: 1; padding-top: 162px; }
 .pr-back { display: inline-block; color: #e55310; font-size: 15px; font-weight: 600; text-decoration: none; }
 .pr-copy { max-width: 560px; margin-top: 31px; }
 .pr-brand-row { display: flex; align-items: center; gap: 22px; }

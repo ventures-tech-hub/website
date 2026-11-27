@@ -9,8 +9,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Archivo+Narrow:wght@400;500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css?v=33" />
-<link rel="stylesheet" href="css/share-idea.css?v=7" />
+<link rel="stylesheet" href="styles.css?v=36" />
+<link rel="stylesheet" href="css/share-idea.css?v=13" />
 </head>
 <body>
 <div data-site-header></div>
@@ -53,7 +53,12 @@
             <label><span class="label-text">Your Solution <b>*</b></span><textarea name="solution" rows="3" placeholder="How does your product / service solve this problem?" required></textarea></label>
           </div>
         </fieldset>
-        <fieldset data-mobile-step="2"><legend><img src="assets/ui/icons/ff-p-growth.svg" alt="" />Progress &amp; Funding</legend>
+        <fieldset data-mobile-step="2"><legend><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <path d="M4 4V25.3333C4 26.0406 4.28095 26.7189 4.78105 27.219C5.28115 27.719 5.95942 28 6.66667 28H28" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#F15C17"/>
+          <path d="M24 22.6667V12" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#F15C17"/>
+          <path d="M17.333 22.666V6.66602" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#F15C17"/>
+          <path d="M10.667 22.666V18.666" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#F15C17"/>
+          </svg>Progress &amp; Funding</legend>
           <div class="idea-fields two-col">
             <label><span class="label-text">Current Status <b>*</b></span><select name="status" required><option value="" disabled selected>Select current status</option><option>Researching</option><option>Building</option><option>Launched</option><option>Generating Revenue</option></select></label>
             <label><span class="label-text">Traction / Validation <span>(Optional)</span></span><input name="traction" placeholder="e.g., users, revenue, pilots, key milestones" /></label>
@@ -61,14 +66,22 @@
             <label><span class="label-text">How Will You Use the Funds? <b>*</b></span><textarea name="fund-use" rows="2" placeholder="e.g., product development, team, market expansion" required></textarea></label>
           </div>
         </fieldset>
-        <fieldset data-mobile-step="2"><legend><img src="assets/ui/icons/ff-p-validate.svg" alt="" />Supporting Material</legend>
-          <label class="idea-full"><span class="label-text">Attach Pitch Deck / Other Documents <span>(Optional)</span></span><input class="file-input" type="file" name="attachment" accept=".pdf,.ppt,.pptx" /><small>PDF, PPT or PPTX · Max 10MB</small></label>
+        <fieldset data-mobile-step="2"><legend><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <path d="M7.99967 29.3327C7.29243 29.3327 6.61415 29.0517 6.11406 28.5516C5.61396 28.0515 5.33301 27.3733 5.33301 26.666V5.33269C5.33301 4.62544 5.61396 3.94717 6.11406 3.44707C6.61415 2.94697 7.29243 2.66602 7.99967 2.66602H18.6663C19.0884 2.66534 19.5065 2.74816 19.8964 2.90971C20.2863 3.07127 20.6404 3.30837 20.9383 3.60735L25.7223 8.39135C26.0221 8.68936 26.2599 9.04381 26.4219 9.43424C26.584 9.82466 26.667 10.2433 26.6663 10.666V26.666C26.6663 27.3733 26.3854 28.0515 25.8853 28.5516C25.3852 29.0517 24.7069 29.3327 23.9997 29.3327H7.99967Z" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#F15C17"/>
+          <path d="M18.667 2.66602V9.33268C18.667 9.6863 18.8075 10.0254 19.0575 10.2755C19.3076 10.5255 19.6467 10.666 20.0003 10.666H26.667" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#F15C17"/>
+          <path d="M13.3337 12H10.667" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#F15C17"/>
+          <path d="M21.3337 17.334H10.667" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#F15C17"/>
+          <path d="M21.3337 22.666H10.667" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#F15C17"/>
+          </svg>Supporting Material</legend>
+          <div class="idea-submit-row">
+            <label class="idea-upload-label"><span class="label-text">Attach Pitch Deck / Other Documents <span>(Optional)</span></span><span class="idea-upload-control"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 16V4m0 0L7 9m5-5 5 5M5 14v5h14v-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="idea-upload-copy"><span class="idea-upload-prompt">Upload file (PDF, PPT, PPTX)</span><span class="idea-upload-limit">Max 10MB</span></span><input class="file-input" type="file" name="attachment" accept=".pdf,.ppt,.pptx" aria-label="Attach pitch deck or other documents" /></span></label>
+            <button class="btn btn-primary idea-submit" type="submit">Submit Your Idea →</button>
+          </div>
         </fieldset>
         <div class="idea-step-controls" aria-label="Form navigation">
           <button class="btn btn-secondary idea-back" type="button">← Back</button>
           <span class="idea-step-label" aria-live="polite">Step 1 of 2</span>
           <button class="btn btn-primary idea-next" type="button">Continue →</button>
-          <button class="btn btn-primary idea-submit" type="submit">Submit Your Idea →</button>
         </div>
         <p class="idea-feedback" id="idea-feedback" role="status" aria-live="polite"></p>
       </form>
@@ -85,6 +98,11 @@ const stepButtons = ideaForm.querySelector('.idea-step-controls');
 const backButton = ideaForm.querySelector('.idea-back');
 const nextButton = ideaForm.querySelector('.idea-next');
 const submitButton = ideaForm.querySelector('.idea-submit');
+const attachmentInput = ideaForm.querySelector('[name="attachment"]');
+const attachmentPrompt = ideaForm.querySelector('.idea-upload-prompt');
+attachmentInput.addEventListener('change', () => {
+  attachmentPrompt.textContent = attachmentInput.files[0]?.name || 'Upload file (PDF, PPT, PPTX)';
+});
 const stepLabel = ideaForm.querySelector('.idea-step-label');
 const mobileForm = window.matchMedia('(max-width: 768px)');
 function syncFormMode() {
