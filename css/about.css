@@ -8,6 +8,7 @@
   --fade-y: linear-gradient(180deg, rgb(155 201 246) 0%, rgb(155 201 246 / 0.9) 17.9%, rgb(155 201 246 / 0.38) 24.4%, rgb(155 201 246 / 0) 30.7%); */
 }
 @media (min-width: 769px) {
+  .ab-hero .page-hero-inner { padding-top: 132px; padding-bottom: 62px; }
   .ab-hero { height: 540px !important; min-height: 500px !important; }
 }
 /* @media (max-width: 768px) {

@@ -14,6 +14,7 @@
   section.home-hero { --hero-pt: 162px; }
 }
 @media (min-width: 769px) {
+  .home-hero .page-hero-inner { padding-top: 132px; padding-bottom: 62px; }
   .home-hero { height: 680px !important; min-height: 680px !important; }
   .home-hero .page-hero-media img { object-fit: contain }
 }
