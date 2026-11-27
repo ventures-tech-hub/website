@@ -7,8 +7,8 @@
   --tint: 237 238 241;
   --hero-pt: 162px;
   --hero-copy: 593px;
-  --fade-x: linear-gradient(90deg, rgb(237 238 241) 0%, rgb(237 238 241 / 0.95) 32.5%, rgb(237 238 241 / 0.7) 42.1%, rgb(237 238 241 / 0) 49.5%);
-  --fade-y: linear-gradient(180deg, rgb(229 232 235) 0%, rgb(229 232 235 / 0.95) 16.7%, rgb(229 232 235 / 0.9) 26.9%, rgb(229 232 235 / 0) 30.1%);
+  /* --fade-x: linear-gradient(90deg, rgb(237 238 241) 0%, rgb(237 238 241 / 0.95) 32.5%, rgb(237 238 241 / 0.7) 42.1%, rgb(237 238 241 / 0) 49.5%);
+  --fade-y: linear-gradient(180deg, rgb(229 232 235) 0%, rgb(229 232 235 / 0.95) 16.7%, rgb(229 232 235 / 0.9) 26.9%, rgb(229 232 235 / 0) 30.1%); */
 }
 @media (min-width: 769px) {
   section.home-hero { --hero-pt: 162px; }
@@ -23,7 +23,7 @@
 @media (max-width: 768px) {
   /* Figma 390×844 hero: copy starts 96px down (64px header + 32px) */
   section.home-hero { --hero-pt: 96px; height: auto; min-height: 844px; }
-  .home-hero { --tint: 237 238 241; --fade-m: linear-gradient(180deg, rgb(237 238 241) 0%, rgb(237 238 241 / 0.95) 32.5%, rgb(237 238 241 / 0.7) 55.7%, rgb(237 238 241 / 0) 65.9%); }
+  /* .home-hero { --tint: 237 238 241; --fade-m: linear-gradient(180deg, rgb(237 238 241) 0%, rgb(237 238 241 / 0.95) 32.5%, rgb(237 238 241 / 0.7) 55.7%, rgb(237 238 241 / 0) 65.9%); } */
   .hero-chips { flex-wrap: nowrap; gap: 20px; width: auto; max-width: none; margin-top: 24px; }
   .hero-chips li { flex-direction: column; align-items: flex-start; gap: 8px; font-size: 14px; line-height: 20px; }
   .hero-chips .chip-venture { width: 54px; }
