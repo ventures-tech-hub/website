@@ -1,9 +1,9 @@
 /* Loktara Ventures — Home (Figma UI Design: Home desktop 1280 / mobile 390) */
 /* ---------- Hero (Figma values) ---------- */
 .home-hero {
-  --hero-h: 680px;
-  height: var(--hero-h);
-  min-height: var(--hero-h);
+  --hero-h: 100vh;
+  height: 100vh;
+  min-height: 100vh;
   --tint: 237 238 241;
   --hero-pt: 162px;
   --hero-copy: 593px;
@@ -14,26 +14,43 @@
   section.home-hero { --hero-pt: 162px; }
 }
 @media (min-width: 769px) {
-  .home-hero .page-hero-inner { padding-top: 132px; padding-bottom: 62px; }
-  .home-hero { height: 680px !important; min-height: 680px !important; }
-  .home-hero .page-hero-media img { object-fit: contain }
+  .home-hero .page-hero-inner { padding-top: 95px; padding-bottom: 32px; }
+  .home-hero { height: 570px !important; min-height: 570px !important; }
+  .home-hero .page-hero-media img { object-fit: cover; object-position: center; }
+}
+.home-hero .page-hero-media {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: rgb(var(--tint));
+}
+.home-hero.page-hero .page-hero-media img {
+  z-index: 1;
+  object-fit: contain;
+  object-position: right center;
+  transform: none;
+  -webkit-mask-image: none;
+  mask-image: none;
 }
 .hero-chips { display: flex; flex-wrap: wrap; gap: 12px 16px; width: max-content; max-width: calc(100vw - 2 * var(--gutter)); margin-top: 32px; }
 .hero-chips li { display: flex; align-items: center; gap: 4px; font-family: var(--font-display); font-size: 16px; line-height: 22px; font-weight: 600; color: #1A1A1A; }
 .hero-chips .ico { width: 24px; height: 24px; }
 @media (max-width: 768px) {
-  /* Figma 390×844 hero: copy starts 96px down (64px header + 32px) */
-  section.home-hero { --hero-pt: 96px; height: auto; min-height: 844px; }
+  /* Keep the complete mobile banner within the visible viewport. */
+  /* section.home-hero { --hero-pt: 84px; height: 100vh !important; height: 100svh !important; min-height: 100vh !important; min-height: 100svh !important; } */
+  .home-hero.page-hero .page-hero-media img { inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: center bottom; }
+  .home-hero .page-hero-copy h1 { font-size: clamp(32px, 9vw, 40px); line-height: 1.08; letter-spacing: 0; }
+  .home-hero .page-hero-copy h1 + p { margin-top: 14px; font-size: 14px; line-height: 1.5; }
   /* .home-hero { --tint: 237 238 241; --fade-m: linear-gradient(180deg, rgb(237 238 241) 0%, rgb(237 238 241 / 0.95) 32.5%, rgb(237 238 241 / 0.7) 55.7%, rgb(237 238 241 / 0) 65.9%); } */
-  .hero-chips { flex-wrap: nowrap; gap: 20px; width: auto; max-width: none; margin-top: 24px; }
-  .hero-chips li { flex-direction: column; align-items: flex-start; gap: 8px; font-size: 14px; line-height: 20px; }
+  .hero-chips { flex-wrap: wrap; gap: 12px 8px; width: 100%; max-width: 100%; margin-top: 16px; }
+  .hero-chips li { flex: 1 1 17%; min-width: 0; flex-direction: column; align-items: flex-start; gap: 4px; font-size: 11px; line-height: 14px; }
   .hero-chips .chip-venture { width: 54px; }
   .hero-chips .chip-ops { order: 3; }
   .hero-chips .chip-strategy { order: 4; }
   .hero-chips .chip-capital { order: 5; }
-  .hero-chips .ico { width: 40px; height: 40px; }
-  .home-hero .page-hero-actions { margin-top: 24px; }
-  .home-hero .page-hero-actions .btn { width: 229px; }
+  .hero-chips .ico { width: 30px; height: 30px; }
+  .home-hero .page-hero-actions { margin-top: 16px; gap: 10px; }
+  .home-hero .page-hero-actions .btn { width: 100%; min-height: 48px; }
 }
 
 .ico { display: block; flex: none; }

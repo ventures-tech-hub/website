@@ -25,10 +25,13 @@
   }
   .ff-hero,
   .fb-hero,
-  .ct-hero,
-  .ab-hero {
+  .ct-hero {
     height: 680px !important;
     min-height: 680px !important;
+  }
+  .ab-hero {
+    height: 500px !important;
+    min-height: 500px !important;
   }
 }
 
@@ -38,5 +41,9 @@
     --hero-pt: 112px;
     height: auto;
     min-height: var(--hero-h);
+  }
+  .ab-hero {
+    height: 780px !important;
+    min-height: 780px !important;
   }
 }
